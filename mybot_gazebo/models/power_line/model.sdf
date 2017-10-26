@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="power_line">
+
+	  <static>true</static>
+
+	  <link name='tower'>
+      <pose>0 0 0.0 0 0 0</pose>
+      <inertial>
+   		  <mass>1000</mass>
+	    </inertial>
+      <collision name='collision'>
+        <geometry>
+    	  	<mesh>
+				  	<uri>model://power_line/meshes/trial.dae</uri>
+				  </mesh>
+        </geometry>
+      </collision>
+      <visual name='visual'>
+       <geometry>
+ 				<mesh>
+					<uri>model://power_line/meshes/trial.dae</uri>
+				</mesh>
+       </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf>
