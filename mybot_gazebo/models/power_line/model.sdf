@@ -12,14 +12,14 @@
       <collision name='collision'>
         <geometry>
     	  	<mesh>
-				  	<uri>model://power_line/meshes/power_line.dae</uri>
+				  	<uri>model://power_line/meshes/sket_trial.dae</uri>
 				  </mesh>
         </geometry>
       </collision>
       <visual name='visual'>
        <geometry>
  				<mesh>
-					<uri>model://power_line/meshes/power_line.dae</uri>
+					<uri>model://power_line/meshes/sket_trial.dae</uri>
 				</mesh>
        </geometry>
       </visual>
