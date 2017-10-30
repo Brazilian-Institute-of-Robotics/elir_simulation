@@ -30,7 +30,7 @@
 
 	<node name="mybot_spawn2" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description2 -model tower2" /> -->
 
-	<node name="urdf_spawner_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model suspension_tower -z 4.0 -file $(find mybot_gazebo)/models/power_line/model.sdf"/>
+	<node name="urdf_spawner_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model suspension_tower -y 0.0 -z 4.0 -file $(find mybot_gazebo)/models/power_line/model.sdf"/>
 
 	<!-- <include file="$(find mybot_control)/launch/piro_control.launch" /> -->
 	<include file="$(find mybot_control)/launch/piro_joint_control.launch" />
