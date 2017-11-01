@@ -51,7 +51,7 @@
       <child>obs1</child>
     </joint>
 
-    <!-- <link name ='obs2'>
+    <link name ='obs2'>
       <pose>-5.4 0 0.925 0 0 0</pose>
       <inertial>
         <mass>45</mass>
@@ -75,7 +75,7 @@
     <joint name='obs2_line_joint' type='fixed'>
       <parent>line</parent>
       <child>obs2</child>
-    </joint> -->
+    </joint>
 
   </model>
 </sdf>
