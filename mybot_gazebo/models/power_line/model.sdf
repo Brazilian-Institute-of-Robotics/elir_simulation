@@ -25,19 +25,19 @@
       </visual>
     </link>
 
-    <link name ='obs1'>
+    <link name ='far_end_obs'>
       <pose>4.6 0 0.95 0 0 0</pose>
       <inertial>
         <mass>45</mass>
       </inertial>
-      <collision name ='obs1_collision'>
+      <collision name ='far_end_obs_collision'>
         <geometry>
           <mesh>
             <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
 				  </mesh>
         </geometry>
       </collision>
-      <visual name='obs1_visual'>
+      <visual name='far_end_obs_visual'>
         <geometry>
   			 	<mesh>
  					  <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
@@ -46,24 +46,24 @@
        </visual>
      </link>
 
-    <joint name='obs1_line_joint' type='fixed'>
+    <joint name='far_end_obs_line_joint' type='fixed'>
       <parent>line</parent>
-      <child>obs1</child>
+      <child>far_end_obs</child>
     </joint>
 
-    <link name ='obs2'>
+    <link name ='front_end_obs'>
       <pose>-5.4 0 0.925 0 0 0</pose>
       <inertial>
         <mass>45</mass>
       </inertial>
-      <collision name ='obs2_collision'>
+      <collision name ='front_end_obs_collision'>
         <geometry>
           <mesh>
             <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
           </mesh>
         </geometry>
       </collision>
-      <visual name='obs2_visual'>
+      <visual name='front_end_obs_visual'>
         <geometry>
           <mesh>
           <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
@@ -72,9 +72,35 @@
        </visual>
      </link>
 
-    <joint name='obs2_line_joint' type='fixed'>
+    <joint name='front_end_obs_line_joint' type='fixed'>
       <parent>line</parent>
-      <child>obs2</child>
+      <child>front_end_obs</child>
+    </joint>
+
+    <link name ='front_obs'>
+      <pose>-2.3 -0.04 0.03 0 -0.1745 0</pose>
+      <inertial>
+        <mass>45</mass>
+      </inertial>
+      <collision name ='front_obs_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://mybot_gazebo/models/power_line/meshes/obs2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_obs_visual'>
+        <geometry>
+          <mesh>
+          <uri>model://mybot_gazebo/models/power_line/meshes/obs2.dae</uri>
+        </mesh>
+        </geometry>
+       </visual>
+     </link>
+
+    <joint name='front_obs_line_joint' type='fixed'>
+      <parent>line</parent>
+      <child>front_obs</child>
     </joint>
 
   </model>
