@@ -4,7 +4,7 @@
 
 	  <static>true</static>
 
-	  <link name='tower'>
+	  <link name='line'>
       <pose>0 0 0.0 0 0 0</pose>
       <inertial>
    		  <mass>1000</mass>
@@ -24,6 +24,33 @@
        </geometry>
       </visual>
     </link>
+    
+    <link name ='obs1'>
+      <pose>2 0 0.0 0 0 0</pose>
+      <inertial>
+        <mass>45</mass>
+      </inertial>
+      <collision name ='obs1_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+				  </mesh>
+        </geometry>
+      </collision>
+      <visual name='obs1_visual'>
+        <geometry>
+  				<mesh>
+ 					<uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+ 				</mesh>
+        </geometry>
+       </visual>
+     </link>
+    </link>
+
+    <joint name='obs1_line_joint' type='fixed'>
+      <parent>line</parent>
+      <child>obs1</child>
+    </joint>
 
   </model>
 </sdf>
