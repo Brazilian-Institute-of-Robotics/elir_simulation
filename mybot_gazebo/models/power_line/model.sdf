@@ -24,9 +24,9 @@
        </geometry>
       </visual>
     </link>
-    
+
     <link name ='obs1'>
-      <pose>2 0 0.0 0 0 0</pose>
+      <pose>4.6 0 0.95 0 0 0</pose>
       <inertial>
         <mass>45</mass>
       </inertial>
@@ -39,18 +39,43 @@
       </collision>
       <visual name='obs1_visual'>
         <geometry>
-  				<mesh>
- 					<uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
- 				</mesh>
+  			 	<mesh>
+ 					  <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+ 				  </mesh>
         </geometry>
        </visual>
      </link>
-    </link>
 
     <joint name='obs1_line_joint' type='fixed'>
       <parent>line</parent>
       <child>obs1</child>
     </joint>
+
+    <!-- <link name ='obs2'>
+      <pose>-5.4 0 0.925 0 0 0</pose>
+      <inertial>
+        <mass>45</mass>
+      </inertial>
+      <collision name ='obs2_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='obs2_visual'>
+        <geometry>
+          <mesh>
+          <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+        </mesh>
+        </geometry>
+       </visual>
+     </link>
+
+    <joint name='obs2_line_joint' type='fixed'>
+      <parent>line</parent>
+      <child>obs2</child>
+    </joint> -->
 
   </model>
 </sdf>
