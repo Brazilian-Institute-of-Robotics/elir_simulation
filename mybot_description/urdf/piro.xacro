@@ -55,19 +55,23 @@
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.0 0.0722 0.3554"/>
     </visual>
-    <collision>
+    <collision name = 'base_body'>
       <geometry>
-        <box size="0.3 0.1434 0.232"/>
+        <box size="0.3219 0.1461 0.2357"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
     </collision>
-    <collision>
+    <collision name = 'central_stem'>
       <geometry>
-        <box size="0.03 0.03 0.232"/>
+        <box size="0.0367 0.0367 0.279"/>
       </geometry>
       <origin rpy="0 0.0 0" xyz="0.0 0.03 0.25"/>
     </collision>
-
+    <collision name ='central_claw_base'>
+      <geometry>
+        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+      </geometry>
+    </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00588 0.001 0.0171"/>
       <mass value="4.565"/>
