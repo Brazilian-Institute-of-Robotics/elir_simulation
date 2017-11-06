@@ -23,15 +23,17 @@
   <!-- Posicoes da base do sup_apoio para o centro do base link -->
   <!-- Parametros do base_link-->
   <link name="base_link">
-    <visual>
+    <!-- This visual represents the base body of the piro in which the arms will be coupled -->
+    <visual name = 'base_body'>
       <geometry>
-        <box size="0.3 0.1434 0.232"/>
+        <box size="0.3219 0.1461 0.2357"/>
       </geometry>
       <material name="grey"/>
     </visual>
-    <visual>
+    <!-- This visual represents the central stem -->
+    <visual name = 'central_stem'>
       <geometry>
-        <box size="0.034 0.034 0.279"/>
+        <box size="0.0367 0.0367 0.279"/>
       </geometry>
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0 0.0303 0.23365"/>
@@ -45,7 +47,8 @@
 			<origin xyz="0 0 ${-h_ap/2 + -h_eletr_ap/2}" rpy="0 0 0" />
 		</visual>
     -->
-    <visual>
+    <!-- This visual represents the claw's base in the central stem -->
+    <visual name = 'central_claw_base'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
