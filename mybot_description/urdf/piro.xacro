@@ -209,6 +209,7 @@
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
     </visual> -->
+
     <!-- This visual represents the back arm unit -->
     <visual name = 'back_arm'>
       <geometry>
@@ -246,6 +247,7 @@
   <!-- Angulo da junta2 -->
   <!-- Parametros da tracao-->
   <!-- TRACAO F -->
+  <!-- This link represents the front traction body unit -->
   <link name="tracao_f">
     <visual>
       <geometry>
