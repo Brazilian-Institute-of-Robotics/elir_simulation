@@ -86,7 +86,7 @@
     </inertial>
   </link>
 
-  <!-- this joint binds the base_link with the claw central unit (represented by the link garra). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180º) and a lower limit of -3,14 (-180º) -->
+  <!-- this joint binds the base_link with the claw central unit (represented by the link garra). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
   <joint name="joint_garra_ap" type="revolute">
     <parent link="base_link"/>
     <child link="garra_ap"/>
@@ -117,8 +117,16 @@
       <inertia ixx="0.000598" ixy="0.0" ixz="0.0" iyy="0.000866" iyz="0.000169" izz="0.000866"/>
     </inertial>
   </link>
-  <!-- Eixo AP -->
-  <!-- Parametros do eixo-->
+
+  <joint name="joint_eixo_tracao_ap" type="continuous">
+    <parent link="garra_ap"/>
+    <child link="eixo_tracao_ap"/>
+    <origin rpy="0 0 0" xyz="0.0 0.049 0.1345"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7" friction="1.0" />
+  </joint>
+
+  <!-- this link involves the central traction unit -->
   <link name="eixo_tracao_ap">
     <visual>
       <geometry>
@@ -136,13 +144,7 @@
       <inertia ixx="4.94e-05" ixy="0.0" ixz="0.0" iyy="6.11e-05" iyz="0.0" izz="4.94e-05"/>
     </inertial>
   </link>
-  <joint name="joint_eixo_tracao_ap" type="continuous">
-    <parent link="garra_ap"/>
-    <child link="eixo_tracao_ap"/>
-    <origin rpy="0 0 0" xyz="0.0 0.049 0.1345"/>
-    <axis xyz="0 1 0"/>
-    <dynamics damping="0.7" friction="1.0" />
-  </joint>
+
   <!-- JUNTA 1 -->
   <!-- Dimensoes do link1 collision -->
   <!-- Dimensoes do link1  -->
