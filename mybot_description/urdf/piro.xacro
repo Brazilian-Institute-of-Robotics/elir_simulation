@@ -87,7 +87,7 @@
     </inertial>
   </link>
 
-  <!-- this joint binds the base_link with the central claw unit (represented by the link garra_ap). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
+  <!-- this joint binds the base body (represented by the link base_link) with the central claw unit (represented by the link garra_ap). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
   <joint name="joint_garra_ap" type="revolute">
     <parent link="base_link"/>
     <child link="garra_ap"/>
@@ -150,6 +150,15 @@
     </inertial>
   </link>
 
+  <!-- This joint binds the base body (represented by the link base_link) and the front arm unit (represented by the link link1_f). it can rotate with the y axis fixed, it has an upper limit of 0.7 (40 degrees) and a lower limit of -1.74 (-100 degrees) -->
+  <joint name="joint1_f" type="revolute">
+    <parent link="base_link"/>
+    <child link="link1_f"/>
+    <origin rpy=" 0 -0.64 3.141592" xyz="-0.13 0.0 0.079"/>
+    <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
   <!-- This link represents the front arm unit  -->
   <link name="link1_f">
     <!-- <visual>
@@ -168,6 +177,7 @@
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </visual>
+    <!-- this collision is for the front arm unit -->
     <collision name = 'front_arm'>
       <geometry>
         <box size="0.4199 0.05 0.100"/>
@@ -181,36 +191,34 @@
     </inertial>
   </link>
 
-  <joint name="joint1_f" type="revolute">
+  <!-- This joint binds the base body (represented by the link base_link) and the back arm unit (represented by the link link1_t). it can rotate with the y axis fixed, it has an upper limit of 0.7 (40 degrees) and a lower limit of -1.74 (-100 degrees) -->
+  <joint name="joint1_t" type="revolute">
     <parent link="base_link"/>
-    <child link="link1_f"/>
-    <origin rpy=" 0 0 3.141592" xyz="-0.13 0.0 0.079"/>
+    <child link="link1_t"/>
+    <origin rpy="0 -0.64 0" xyz="0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
-  <!-- Link T1 -->
+
+  <!-- This link represents the front arm unit  -->
   <link name="link1_t">
-    <visual>
+    <!-- <visual>
       <geometry>
         <box size="0.185 0.102 0.102"/>
       </geometry>
       <material name="grey"/>
-
-
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
-    </visual>
+    </visual> -->
     <visual>
       <geometry>
-        <box size="0.405 0.102 0.03"/>
+        <box size="0.4199 0.05 0.100"/>
       </geometry>
       <material name="grey"/>
-
-
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </visual>
     <collision>
       <geometry>
-        <box size="0.185 0.102 0.102"/>
+        <box size="0.4199 0.05 0.100"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </collision>
@@ -220,13 +228,7 @@
       <inertia ixx="0.3971" ixy="0.0" ixz="0.0" iyy="2.2533" iyz="0.0" izz="2.3067"/>
     </inertial>
   </link>
-  <joint name="joint1_t" type="revolute">
-    <parent link="base_link"/>
-    <child link="link1_t"/>
-    <origin rpy="0 0 0" xyz="0.13 0.0 0.079"/>
-    <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
-    <axis xyz="0 1 0"/>
-  </joint>
+
   <!-- TRACAO -->
   <!-- Dimensoes da tracao -->
   <!-- Posicao da tracao em relacao a junta1-->
@@ -285,7 +287,7 @@
   <joint name="joint2_f" type="revolute">
     <parent link="link1_f"/>
     <child link="tracao_f"/>
-    <origin rpy="0 0 0" xyz="0.39 0.0 0.0"/>
+    <origin rpy="0 0.57 0" xyz="0.39 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
@@ -327,7 +329,7 @@
   <joint name="joint2_t" type="revolute">
     <parent link="link1_t"/>
     <child link="tracao_t"/>
-    <origin rpy="0 0 0" xyz="0.39 0.0 0.0"/>
+    <origin rpy="0 0.57 0" xyz="0.39 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
