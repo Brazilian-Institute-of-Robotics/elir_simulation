@@ -22,6 +22,8 @@
   <!-- Dimensoes do sup_apoio -->
   <!-- Posicoes da base do sup_apoio para o centro do base link -->
   <!-- Parametros do base_link-->
+
+  <!-- This link involves the base_body, the central stem and the central's claw base -->
   <link name="base_link">
     <!-- This visual represents the base body-->
     <visual name = 'base_body'>
@@ -84,6 +86,7 @@
     </inertial>
   </link>
 
+  <!-- this joint binds the base_link with the claw central unit (represented by the link garra). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180º) and a lower limit of -3,14 (-180º) -->
   <joint name="joint_garra_ap" type="revolute">
     <parent link="base_link"/>
     <child link="garra_ap"/>
@@ -91,14 +94,8 @@
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
-  <!-- GARRA DE APOIO -->
-  <!-- Garra da unidade de apoio -->
-  <!-- -->
-  <!-- dimensao da base do motor para seu centro-->
-  <!-- Posicao da junta da garra_apoio -->
-  <!-- Posicao do eixo de tracao da garra_apoio -->
-  <!-- Angulos da garra de apoio -->
-  <!-- Parametros da garra-->
+
+  <!-- this link involves the central claw unit -->
   <link name="garra_ap">
     <!-- This visual represents the central claw unit -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
