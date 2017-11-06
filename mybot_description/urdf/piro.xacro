@@ -23,7 +23,7 @@
   <!-- Posicoes da base do sup_apoio para o centro do base link -->
   <!-- Parametros do base_link-->
   <link name="base_link">
-    <!-- This visual represents the base body of the piro in which the arms will be coupled -->
+    <!-- This visual represents the base body-->
     <visual name = 'base_body'>
       <geometry>
         <box size="0.3219 0.1461 0.2357"/>
@@ -47,7 +47,9 @@
 			<origin xyz="0 0 ${-h_ap/2 + -h_eletr_ap/2}" rpy="0 0 0" />
 		</visual>
     -->
+
     <!-- This visual represents the claw's base in the central stem -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual name = 'central_claw_base'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
@@ -55,18 +57,21 @@
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.0 0.0722 0.3554"/>
     </visual>
+    <!-- This collision is for the base_body -->
     <collision name = 'base_body'>
       <geometry>
         <box size="0.3219 0.1461 0.2357"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.0 0.0 0"/>
     </collision>
+    <!-- This collision is for the central_stem -->
     <collision name = 'central_stem'>
       <geometry>
         <box size="0.0367 0.0367 0.279"/>
       </geometry>
       <origin rpy="0 0.0 0" xyz="0.0 0.03 0.25"/>
     </collision>
+    <!-- This collision is for the central_claw_base -->
     <collision name ='central_claw_base'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
@@ -95,17 +100,19 @@
   <!-- Angulos da garra de apoio -->
   <!-- Parametros da garra-->
   <link name="garra_ap">
-    <visual>
+    <!-- This visual represents the central claw unit -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <visual name = 'central_claw'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
       <material name="grey"/>
     </visual>
-    <collision>
+    <!-- This collision is for the central claw unit -->
+    <collision name = 'central_claw'>
       <geometry>
-        <box size="0.048 0.064 0.1851"/>
+        <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.017 0.09255"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.015953 0.116844"/>
