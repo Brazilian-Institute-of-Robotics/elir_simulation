@@ -86,7 +86,7 @@
     </inertial>
   </link>
 
-  <!-- this joint binds the base_link with the claw central unit (represented by the link garra). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
+  <!-- this joint binds the base_link with the claw central unit (represented by the link garra_ap). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
   <joint name="joint_garra_ap" type="revolute">
     <parent link="base_link"/>
     <child link="garra_ap"/>
@@ -118,6 +118,7 @@
     </inertial>
   </link>
 
+  <!-- this joint binds the claw central unit (represented by the link garra_ap) with the central traction unit (represented by the link eixo_tracao_ap). It can move contunuously with the y axis fixed. It moves forward and backward -->
   <joint name="joint_eixo_tracao_ap" type="continuous">
     <parent link="garra_ap"/>
     <child link="eixo_tracao_ap"/>
@@ -128,12 +129,12 @@
 
   <!-- this link involves the central traction unit -->
   <link name="eixo_tracao_ap">
-    <visual>
+    <visual name = 'central_traction'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
       </geometry>
     </visual>
-    <collision>
+    <collision name = 'central_traction'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
       </geometry>
