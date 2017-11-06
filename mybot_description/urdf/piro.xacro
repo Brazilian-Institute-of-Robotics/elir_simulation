@@ -23,7 +23,7 @@
   <!-- Posicoes da base do sup_apoio para o centro do base link -->
   <!-- Parametros do base_link-->
 
-  <!-- This link involves the base_body, the central stem and the central's claw base -->
+  <!-- This link represents the base_body, the central stem and the central's claw base -->
   <link name="base_link">
     <!-- This visual represents the base body-->
     <visual name = 'base_body'>
@@ -71,13 +71,14 @@
       <geometry>
         <box size="0.0367 0.0367 0.279"/>
       </geometry>
-      <origin rpy="0 0.0 0" xyz="0.0 0.03 0.25"/>
+      <origin rpy="0 0 0" xyz="0 0.0303 0.23365"/>
     </collision>
     <!-- This collision is for the central_claw_base -->
     <collision name ='central_claw_base'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
+      <origin rpy="0 0 0" xyz="0.0 0.0722 0.3554"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00588 0.001 0.0171"/>
@@ -95,7 +96,7 @@
     <axis xyz="0 0 1"/>
   </joint>
 
-  <!-- this link involves the central claw unit -->
+  <!-- this link represents the central claw unit -->
   <link name="garra_ap">
     <!-- This visual represents the central claw unit -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
@@ -127,7 +128,7 @@
     <dynamics damping="0.7" friction="1.0" />
   </joint>
 
-  <!-- this link involves the central traction unit -->
+  <!-- this link represents the central traction unit -->
   <link name="eixo_tracao_ap">
     <!-- This visual represents the central traction unit -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
@@ -149,37 +150,27 @@
     </inertial>
   </link>
 
-  <!-- JUNTA 1 -->
-  <!-- Dimensoes do link1 collision -->
-  <!-- Dimensoes do link1  -->
-  <!-- Link1 collision offset-->
-  <!-- Posicao do link1 -->
-  <!-- Posicao da junta1 -->
-  <!-- Angulo da junta1 -->
-  <!-- Parametros do link1-->
-  <!-- Link F1 -->
+  <!-- This link represents the front arm unit  -->
   <link name="link1_f">
-    <visual>
+    <!-- <visual>
       <geometry>
         <box size="0.185 0.102 0.102"/>
       </geometry>
       <material name="grey"/>
-
-
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
-    </visual>
-    <visual>
+    </visual> -->
+
+    <!-- This visual represents the front arm unit -->
+    <visual name = 'front_arm'>
       <geometry>
-        <box size="0.405 0.102 0.03"/>
+        <box size="0.4199 0.05 0.100"/>
       </geometry>
       <material name="grey"/>
-
-
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </visual>
-    <collision>
+    <collision name = 'front_arm'>
       <geometry>
-        <box size="0.185 0.102 0.102"/>
+        <box size="0.4199 0.05 0.100"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </collision>
@@ -189,6 +180,7 @@
       <inertia ixx="0.3971" ixy="0.0" ixz="0.0" iyy="2.2533" iyz="0.0" izz="2.3067"/>
     </inertial>
   </link>
+
   <joint name="joint1_f" type="revolute">
     <parent link="base_link"/>
     <child link="link1_f"/>
