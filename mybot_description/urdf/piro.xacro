@@ -154,7 +154,7 @@
   <joint name="joint1_f" type="revolute">
     <parent link="base_link"/>
     <child link="link1_f"/>
-    <origin rpy=" 0 -0.64 3.141592" xyz="-0.13 0.0 0.079"/>
+    <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
@@ -195,12 +195,12 @@
   <joint name="joint1_t" type="revolute">
     <parent link="base_link"/>
     <child link="link1_t"/>
-    <origin rpy="0 -0.64 0" xyz="0.13 0.0 0.079"/>
+    <origin rpy="0 -0.60 0" xyz="0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
-  <!-- This link represents the front arm unit  -->
+  <!-- This link represents the back arm unit  -->
   <link name="link1_t">
     <!-- <visual>
       <geometry>
@@ -209,14 +209,16 @@
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
     </visual> -->
-    <visual>
+    <!-- This visual represents the back arm unit -->
+    <visual name = 'back_arm'>
       <geometry>
         <box size="0.4199 0.05 0.100"/>
       </geometry>
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
     </visual>
-    <collision>
+    <!-- this collision is for the back arm unit -->
+    <collision name = 'back_arm'>
       <geometry>
         <box size="0.4199 0.05 0.100"/>
       </geometry>
