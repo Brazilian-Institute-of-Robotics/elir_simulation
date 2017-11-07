@@ -1,0 +1,51 @@
+
+      <!-- <link name="wire1">
+        <visual name="wire_bc1">
+          <pose> 0.2 3 19.2 0 0 0 </pose>
+          <geometry>
+            <mesh filename="package://mybot_description/meshes//cable.dae"/>
+          </geometry>
+        </visual> -->
+        <!-- <collision name = "wire_c1">
+          <geometry>
+            <cylinder>
+              <radius>.05</radius>
+              <length>12</length>
+            </cylinder>
+          </geometry>
+        </collision> -->
+      <!-- </link> -->
+      <!--
+      <link name="wire2">
+        <visual name="wire_bc2">
+          <pose> 0.2 3 22.8 0 1.5707 0 </pose>
+          <geometry>
+            <mesh filename="package://mybot_description/meshes//power_line.dae"/>
+          </geometry>
+        </visual>
+        <collision name = "wire_c2">
+          <geometry>
+            <cylinder>
+              <radius>.05</radius>
+              <length>12</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="wire3">
+        <visual name="wire_bc3">
+          <pose> 0.2 3 26.3 0 1.5707 0 </pose>
+          <geometry>
+            <mesh filename="package://mybot_description/meshes//power_line.dae"/>
+          </geometry>
+        </visual>
+        <collision name = "wire_c3">
+          <geometry>
+            <cylinder>
+              <radius>.05</radius>
+              <length>12</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link> -->

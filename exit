@@ -1,0 +1,41 @@
+[33mcommit de658f228eb308126929cf0efd8f03782f047c09[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Mon Oct 30 09:45:16 2017 -0300
+
+    bot in line with obstacles
+
+[33mcommit 4e5f6d18b53165aa4ac81a9fb3d7e559a8f8ff20[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Mon Oct 30 08:41:42 2017 -0300
+
+    Removed collada files that did not work, now has 2 lines: one with obstacle and one without, still trying to create a collada file through blender and has one collada file with a obstacle that needs to resize
+
+[33mcommit 6926a92d6ddcdece033806a9c7b2bd8448edb842[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Mon Oct 30 08:25:32 2017 -0300
+
+    add blender files and started to try creating collade files to pass to gazebo
+
+[33mcommit 95ee87930991c1515a3ba3eb3080292b7d288838[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Mon Oct 30 08:16:47 2017 -0300
+
+    changes to power line model
+
+[33mcommit 9d779d3f70150b60047514d0ac46911f9081e776[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Thu Oct 26 11:08:27 2017 -0300
+
+    Rest of folders
+
+[33mcommit 5275c9589241d3df94f8490c91e3209a0627ece4[m
+Author: Daniel Pinha <drjpinha@gmail.com>
+Date:   Thu Oct 26 11:05:22 2017 -0300
+
+    Adding folders
+
+[33mcommit 723e777c736197d23bcc0cce4f79dc1c8d58f2db[m
+Author: mhar-vell <marcoreis@me.com>
+Date:   Thu Oct 19 17:09:36 2017 -0300
+
+    Initial commit
