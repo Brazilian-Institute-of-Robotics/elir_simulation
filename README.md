@@ -16,5 +16,3 @@ ps3joy
 
 joint_state_controller
 joint_state_publisher
-
-if not install it
