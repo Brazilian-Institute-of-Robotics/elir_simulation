@@ -53,9 +53,9 @@ class Robot:
             self.change_time()
         if choice == 5:
             sys.exit(1)
-        # if choice == '':
-        #     print "Inserted an invalid number, going back to panel"
-        #     self.IHM_Panel()
+        if choice == None:
+            print "Inserted an invalid number, going back to panel"
+            self.IHM_Panel()
         else:
             print "Inserted an invalid number, going back to panel"
             self.IHM_Panel()
