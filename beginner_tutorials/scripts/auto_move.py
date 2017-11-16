@@ -36,13 +36,13 @@ class Robot:
     def IHM_Panel(self):
         print "\nCurrent speed:", self.speed
         print "Duration of movement in sec:", self.time
+        print "current time", rospy.Time.now().to_sec()
         print "\nTo move forward press 1"
         print "To move backwards press 2"
         print "To change the speed press 3"
         print "To change the duration of the movement press 4"
         print "To quit press 5"
         choice = input("\nInsert the number here: ")
-        print choice
         if choice == 1:
             self.move_forward()
         if choice == 2:
@@ -53,9 +53,9 @@ class Robot:
             self.change_time()
         if choice == 5:
             sys.exit(1)
-        if choice == None:
-            print "Inserted an invalid number, going back to panel"
-            self.IHM_Panel()
+        # if choice == None:
+        #     print "Inserted an invalid number, going back to panel"
+        #     self.IHM_Panel()
         else:
             print "Inserted an invalid number, going back to panel"
             self.IHM_Panel()
@@ -68,10 +68,16 @@ class Robot:
         self.traction_1b_path.publish(self.speed)
         self.traction_2b_path.publish(self.speed)
         current_time = 0
-        starting_time = rospy.Time.now().to_sec()
+        starting_time = rospy.get_time()
+        # print starting_time
+        # x = 0
         while current_time < self.time:
-            actual_time = rospy.Time.now().to_sec()
+            actual_time = rospy.get_time()
             current_time = actual_time - starting_time
+            # if x == 0:
+            #     print "actual time:", actual_time
+            #     print "current time:", current_time
+            #     x = 1
         self.traction_1c_path.publish(0)
         self.traction_1f_path.publish(0)
         self.traction_2f_path.publish(0)
