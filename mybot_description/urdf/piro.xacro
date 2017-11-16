@@ -403,7 +403,7 @@
       </geometry>
       <material name="grey"/>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
     </visual>
     <!-- This collision is for the front f1 traction unit -->
     <collision>
@@ -411,7 +411,7 @@
         <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -473,7 +473,7 @@
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
     </visual>
     <!-- This collision is for the front f2 traction unit -->
     <collision>
@@ -481,7 +481,7 @@
         <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -545,7 +545,7 @@
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
     </visual>
     <!-- This collision is for the back t1 traction unit -->
     <collision>
@@ -553,7 +553,7 @@
         <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -615,7 +615,7 @@
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
     </visual>
     <!-- This collision is for the back t2 traction unit -->
     <collision>
@@ -623,7 +623,7 @@
         <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
