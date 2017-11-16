@@ -124,16 +124,16 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual name = 'central_traction'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </visual>
     <!-- This collision is for the central traction unit -->
     <collision name = 'central_traction'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -146,7 +146,8 @@
   <joint name="joint1_f" type="revolute">
     <parent link="base_link"/>
     <child link="link1_f"/>
-    <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/>
+    <!-- <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/> -->
+    <origin rpy=" 0 0 3.141592" xyz="-0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
@@ -187,7 +188,8 @@
   <joint name="joint1_t" type="revolute">
     <parent link="base_link"/>
     <child link="link1_t"/>
-    <origin rpy="0 -0.60 0" xyz="0.13 0.0 0.079"/>
+    <!-- <origin rpy="0 -0.60 0" xyz="0.13 0.0 0.079"/> -->
+    <origin rpy=" 0 0 0" xyz="0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
@@ -401,18 +403,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.012 0.025"/> -->
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </visual>
     <!-- This collision is for the front f1 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -470,18 +473,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.012 0.025"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </visual>
     <!-- This collision is for the front f2 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -541,18 +545,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.012 0.025"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </visual>
     <!-- This collision is for the back t1 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -610,18 +615,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.012 0.025"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </visual>
     <!-- This collision is for the back t2 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/shaft_simple.dae"/>
+        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
+      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
