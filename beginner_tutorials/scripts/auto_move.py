@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 import rospy
 from std_msgs.msg import Float64
+from sensor_msgs.msg import LaserScan
+from std_msgs.msg import Float32
+from math import pi,pow,sqrt
 
 class Robot:
     def __init__(self):
@@ -22,6 +25,8 @@ class Robot:
         #create the topic for shaft 2b
         self.traction_2b_path = rospy.Publisher ('/robot/traction_2b_controller/command', Float64, queue_size=10)
 
+
+        self.hokuyo_path = rospy.Subscriber ('/robot/scan', LaserScan,    self.callback_hokuyo)
         #variable that contains the speed of the robot
         self.speed = Float64()
         #Initialize the speed as 2
@@ -29,7 +34,8 @@ class Robot:
 
         #Variable that contains the duration of movement and initializa as 3 secondes
         self.time = 3
-
+        self.hokuyu_info = Float32()
+        self.hojuyu_inc_angle = Float32()
         #Go to panel for decision making
         self.IHM_Panel()
 
@@ -41,7 +47,8 @@ class Robot:
         print "To move backwards press 2"
         print "To change the speed press 3"
         print "To change the duration of the movement press 4"
-        print "To quit press 5"
+        print "To move until find Obstacle press 5"
+        print "To quit press 6"
         choice = input("\nInsert the number here: ")
         if choice == 1:
             self.move_forward()
@@ -52,6 +59,8 @@ class Robot:
         if choice == 4:
             self.change_time()
         if choice == 5:
+            self.hokuyo()
+        if choice == 6:
             sys.exit(1)
         # if choice == None:
         #     print "Inserted an invalid number, going back to panel"
@@ -116,6 +125,71 @@ class Robot:
         print"Moving back to panel"
         self.IHM_Panel()
 
+    def callback_hokuyo(self, data):
+        self.hokuyu_info = data.ranges
+        self.hojuyu_inc_angle = data.angle_increment
+    def hokuyo(self):
+        largura = 0
+        while largura*1000 < 30:
+            print "Obstacle not detected, proceding!"
+            length = len(self.hokuyu_info)
+            pos_ini = Float32()
+            pos_final = Float32()
+            lock = 1
+            soma = 0
+            for pos in range(0,(length)):
+                if self.hokuyu_info[pos] != float('Inf'):
+                    soma = soma + self.hokuyu_info[pos]
+                    if lock == 1:
+                        pos_ini = pos
+                        lock = 0
+                else:
+                    if lock == 0:
+                        pos_final = pos - 1
+                        break
+            media = soma/(pos_final-pos_ini+1)
+            largura = media*self.hojuyu_inc_angle* ((pos_final-pos_ini)+1)
+            print "largura lida em mm:", largura*1000
+            self.traction_1c_path.publish(self.speed)
+            self.traction_1f_path.publish(self.speed)
+            self.traction_2f_path.publish(self.speed)
+            self.traction_1b_path.publish(self.speed)
+            self.traction_2b_path.publish(self.speed)
+        print "Obstacle detected, preparing to aprox. it"
+        self.traction_1c_path.publish(0)
+        self.traction_1f_path.publish(0)
+        self.traction_2f_path.publish(0)
+        self.traction_1b_path.publish(0)
+        self.traction_2b_path.publish(0)
+        self.aprox_obs(sqrt(pow(media,2)-pow(0.4,2)))
+        print"Moving back to panel"
+        self.IHM_Panel()
+
+    def aprox_obs(self,dist):
+        time = (dist/self.speed)*60
+        self.traction_1c_path.publish(self.speed)
+        self.traction_1f_path.publish(self.speed)
+        self.traction_2f_path.publish(self.speed)
+        self.traction_1b_path.publish(self.speed)
+        self.traction_2b_path.publish(self.speed)
+        current_time = 0
+        starting_time = rospy.get_time()
+        # print starting_time
+        # x = 0
+        while current_time < time:
+            actual_time = rospy.get_time()
+            current_time = actual_time - starting_time
+            # if x == 0:
+            #     print "actual time:", actual_time
+            #     print "current time:", current_time
+            #     x = 1
+        self.traction_1c_path.publish(0)
+        self.traction_1f_path.publish(0)
+        self.traction_2f_path.publish(0)
+        self.traction_1b_path.publish(0)
+        self.traction_2b_path.publish(0)
+        print "Moving back to panel"
+        self.IHM_Panel()
 if __name__ == '__main__':
         #Creates a object called turtle10 of the class Turtle
         piro3 = Robot()
