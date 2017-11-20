@@ -12,14 +12,14 @@
       <collision name ='obs_collision'>
         <geometry>
           <mesh>
-            <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+            <uri>model://mybot_gazebo/models/obstacle_1/meshes/obstacle_1.dae</uri>
 				  </mesh>
         </geometry>
       </collision>
       <visual name='obs_visual'>
         <geometry>
   			 	<mesh>
- 					  <uri>model://mybot_gazebo/models/power_line/meshes/obs1.dae</uri>
+ 					  <uri>model://mybot_gazebo/models/obstacle_1/meshes/obstacle_1.dae</uri>
  				  </mesh>
         </geometry>
        </visual>
