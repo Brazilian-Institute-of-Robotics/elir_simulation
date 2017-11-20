@@ -164,14 +164,14 @@
         <box size="0.4199 0.05 0.100"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </visual>
     <!-- this collision is for the front arm unit -->
     <collision name = 'front_arm'>
       <geometry>
         <box size="0.4199 0.05 0.100"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.09625 0.08644 0.00657"/>
@@ -206,14 +206,14 @@
         <box size="0.4199 0.05 0.100"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back arm unit -->
     <collision name = 'back_arm'>
       <geometry>
         <box size="0.4199 0.05 0.100"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.1885 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="-0.09625 0.08644 0.00657"/>
@@ -239,7 +239,7 @@
         <box size="0.233 0.100 0.100"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0885 0.0 0.0201"/>
+      <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </visual>
     <!-- This visual represents the front traction claw f2 support -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
@@ -264,7 +264,7 @@
       <geometry>
         <box size="0.233 0.100 0.100"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0885 0.0 0.0201"/>
+      <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </collision>
     <!-- this collision is for the front traction claw f2 support -->
     <collision name = 'front_traction_claw_f2_support'>
@@ -304,7 +304,7 @@
         <box size="0.233 0.100 0.100"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0885 0.0 0.0201"/>
+      <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </visual>
     <!-- This visual represents the  back traction claw f1 support -->
     <visual name = 'back_traction_claw_f1_support'>
@@ -327,7 +327,7 @@
       <geometry>
         <box size="0.233 0.100 0.100"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0885 0.0 0.0201"/>
+      <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </collision>
     <!-- this collision is for the back traction claw f1 support -->
     <collision name = 'back_traction_claw_f1_support'>
