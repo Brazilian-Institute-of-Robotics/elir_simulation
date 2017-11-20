@@ -27,7 +27,7 @@
   <!-- Spawn Cable -->
 	<node name="urdf_spawner_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model suspension_tower -x 0.0 -y -0.018 -z 1.0 -file $(find mybot_gazebo)/models/power_line/model.sdf"/>
 	<!-- Spawn one obstacle -->
-	<node name="urdf_obs_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model obs_tower -x 3.0 -y -0.02 -z 0.95 -file $(find mybot_gazebo)/models/obstacle_1/model.sdf"/>
+	<node name="urdf_obs_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model obs_tower -x -2.0 -y -0.02 -z 0.95 -file $(find mybot_gazebo)/models/obstacle_1/model.sdf"/>
 
 	<!-- Spawn another obstacle -->
 	<node name="urdf_obs_2_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model obs_2_tower -x 2.0 -y -0.018 -z 0.95 -file $(find mybot_gazebo)/models/obstacle_2/model.sdf"/>
