@@ -22,19 +22,12 @@
 
 	<!-- urdf xml robot description loaded on the Parameter Server, converting the xacro into a proper urdf file-->
 	<param name="robot_description" command="$(find xacro)/xacro '$(find mybot_description)/urdf/piro.xacro'" />
-
+	<!-- Spawn piro3 -->
 	<node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -x 0.0 -y 0.0 -z 0.55 -model piro2" />
-<!-- push robot_description to factory and spawn robot in gazebo -->
-<!-- Load the suspension tower model to the world-->
-	<!-- <param name="robot_description2" command="$(find xacro)/xacro '$(find mybot_description)/urdf/tower.xacro'" />
-
-	<node name="mybot_spawn2" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description2 -model tower2" /> -->
-
+  <!-- Spawn Cable -->
 	<node name="urdf_spawner_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model suspension_tower -x 0.0 -y -0.018 -z 1.0 -file $(find mybot_gazebo)/models/power_line/model.sdf"/>
-
+	<!-- Spawn one obstacle -->
 	<node name="urdf_obs_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"	args="-sdf -model obs_tower -x 3.0 -y -0.018 -z 0.95 -file $(find mybot_gazebo)/models/obstacle_1/model.sdf"/>
-
-	<!-- <include file="$(find mybot_control)/launch/piro_control.launch" /> -->
+  <!-- Call launch to allow joint control -->
 	<include file="$(find mybot_control)/launch/piro_joint_control.launch" />
-	<!-- <include file="$(find mybot_control)/launch/piro_trajectory_control.launch" /> -->
 </launch>
