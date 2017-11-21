@@ -30,7 +30,7 @@ class Robot:
         #variable that contains the speed of the robot
         self.speed = Float64()
         #Initialize the speed as 2
-        self.speed = 2
+        self.speed = 30
 
         #Variable that contains the duration of movement and initializa as 3 secondes
         self.time = 3
@@ -126,29 +126,56 @@ class Robot:
         self.IHM_Panel()
 
     def callback_hokuyo(self, data):
-        self.hokuyu_info = data.ranges
+        self.hokuyu_info = filter(lambda x: x != float('Inf'), data.ranges)
         self.hojuyu_inc_angle = data.angle_increment
+
+    # def hokuyo_OLDER_VERSIONS(self):
+    #     largura = 0
+    #     while largura*1000 < 30:
+    #         print "Obstacle not detected, proceding!"
+    #         length = len(self.hokuyu_info)
+    #         pos_ini = Float32()
+    #         pos_final = Float32()
+    #         lock = 1
+    #         soma = 0
+    #         for pos in range(0,(length)):
+    #             if self.hokuyu_info[pos] != float('Inf'):
+    #                 soma = soma + self.hokuyu_info[pos]
+    #                 if lock == 1:
+    #                     pos_ini = pos
+    #                     lock = 0
+    #             else:
+    #                 if lock == 0:
+    #                     pos_final = pos - 1
+    #                     break
+    #         media = soma/(pos_final-pos_ini+1)
+    #         largura = media*self.hojuyu_inc_angle* ((pos_final-pos_ini)+1)
+    #         print "largura lida em mm:", largura*1000
+    #         self.traction_1c_path.publish(self.speed)
+    #         self.traction_1f_path.publish(self.speed)
+    #         self.traction_2f_path.publish(self.speed)
+    #         self.traction_1b_path.publish(self.speed)
+    #         self.traction_2b_path.publish(self.speed)
+    #     print "Obstacle detected, preparing to aprox. it"
+    #     self.traction_1c_path.publish(0)
+    #     self.traction_1f_path.publish(0)
+    #     self.traction_2f_path.publish(0)
+    #     self.traction_1b_path.publish(0)
+    #     self.traction_2b_path.publish(0)
+    #     self.aprox_obs(sqrt(pow(media,2)-pow(0.4,2)))
+    #     print"Moving back to panel"
+    #     self.IHM_Panel()
+
     def hokuyo(self):
         largura = 0
         while largura*1000 < 30:
             print "Obstacle not detected, proceding!"
-            length = len(self.hokuyu_info)
-            pos_ini = Float32()
-            pos_final = Float32()
-            lock = 1
             soma = 0
+            hokuyu_info = self.hokuyu_info
+            length = len(hokuyu_info)
             for pos in range(0,(length)):
-                if self.hokuyu_info[pos] != float('Inf'):
-                    soma = soma + self.hokuyu_info[pos]
-                    if lock == 1:
-                        pos_ini = pos
-                        lock = 0
-                else:
-                    if lock == 0:
-                        pos_final = pos - 1
-                        break
-            media = soma/(pos_final-pos_ini+1)
-            largura = media*self.hojuyu_inc_angle* ((pos_final-pos_ini)+1)
+                soma = soma + hokuyu_info[pos]
+            largura = self.hojuyu_inc_angle*soma
             print "largura lida em mm:", largura*1000
             self.traction_1c_path.publish(self.speed)
             self.traction_1f_path.publish(self.speed)
@@ -161,7 +188,7 @@ class Robot:
         self.traction_2f_path.publish(0)
         self.traction_1b_path.publish(0)
         self.traction_2b_path.publish(0)
-        self.aprox_obs(sqrt(pow(media,2)-pow(0.4,2)))
+        self.aprox_obs(sqrt(pow(soma/length,2)-pow(0.4,2)))
         print"Moving back to panel"
         self.IHM_Panel()
 
