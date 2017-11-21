@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="obstacle_2">
+
+	  <static>true</static>
+
+    <link name ='obs_2'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>45</mass>
+      </inertial>
+      <collision name ='obs_2_collision'>
+        <geometry>
+          <mesh>
+            <uri>model://mybot_gazebo/meshes/obstacle_2.dae</uri>
+				  </mesh>
+        </geometry>
+      </collision>
+      <visual name='obs_2_visual'>
+        <geometry>
+  			 	<mesh>
+ 					  <uri>model://mybot_gazebo/meshes/obstacle_2.dae</uri>
+ 				  </mesh>
+        </geometry>
+       </visual>
+     </link>
+  </model>
+</sdf>

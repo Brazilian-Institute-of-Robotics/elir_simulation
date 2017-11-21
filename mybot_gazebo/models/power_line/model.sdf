@@ -12,20 +12,20 @@
       <collision name='collision'>
         <geometry>
     	  	<mesh>
-				  	<uri>model://mybot_gazebo/models/power_line/meshes/Line_test_5mm.dae</uri>
+				  	<uri>model://mybot_gazebo/models/power_line/meshes/cable_219m.dae</uri>
 				  </mesh>
         </geometry>
       </collision>
       <visual name='visual'>
        <geometry>
  				<mesh>
-					<uri>model://mybot_gazebo/models/power_line/meshes/Line_test_5mm.dae</uri>
+					<uri>model://mybot_gazebo/models/power_line/meshes/cable_219m.dae</uri>
 				</mesh>
        </geometry>
       </visual>
     </link>
 
-    <link name ='far_end_obs'>
+    <!-- <link name ='far_end_obs'>
       <pose>4.6 0 0.95 0 0 0</pose>
       <inertial>
         <mass>45</mass>
@@ -101,7 +101,7 @@
     <joint name='front_obs_line_joint' type='fixed'>
       <parent>line</parent>
       <child>front_obs</child>
-    </joint>
+    </joint> -->
 
   </model>
 </sdf>
