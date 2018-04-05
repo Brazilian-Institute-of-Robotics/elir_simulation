@@ -6,6 +6,7 @@
   <!-- ros_control plugin -->
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo" />
+  <xacro:property name="PI" value="3.141592" />
   <!-- BASE LINK-->
   <!-- Dimensoes da unidade de apoio -->
   <!-- Dimensoes da caixa eletronica -->
@@ -24,7 +25,7 @@
     <!-- This visual represents the base body-->
     <visual name = 'base_body'>
       <geometry>
-        <box size="0.3219 0.1461 0.2357"/>
+        <box size= "0.3219 0.1461 0.2357"/>
       </geometry>
       <material name="grey"/>
     </visual>
@@ -34,6 +35,7 @@
         <box size="0.0367 0.0367 0.279"/>
       </geometry>
       <material name="grey"/>
+      <!-- <xacro:insert_block name="a.test_central_stem_origin" /> -->
       <origin rpy="0 0 0" xyz="0 0.0303 0.23365"/>
     </visual>
     <!-- This visual represents the claw's base in the central stem -->
@@ -642,27 +644,30 @@
   <!-- Posicao do sonar de chao (em relacao ao base_link)-->
   <!-- Posicoes dos frames virtuais -->
   <!-- Apoio -->
-  <link name="laser">
+  <!-- Camera -->
+  <link name="stereo_camera_link">
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/hokuyo.dae"/>
+        <box size="0.03 0.175 0.033"/>
+        <material>Gazebo/Orange</material>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/hokuyo.dae"/>
+          <box size="0.03 0.175 0.033"/>
       </geometry>
     </collision>
     <inertial>
       <mass value="0.001"/>
-      <inertia ixx="4.94e-05" ixy="0.0" ixz="0.0" iyy="6.11e-05" iyz="0.0" izz="4.94e-05"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
   </link>
-  <joint name="hokuyo_base" type="fixed">
-    <parent link="tracao_f"/>
-    <child link="laser"/>
-    <origin rpy="0 3.661592 3.141592" xyz="0.233 0.0 -0.1"/>
+  <joint name="stereo_camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="stereo_camera_link"/>
+    <origin rpy="0 3.61592 0" xyz="-0.17 0.0 -0.05"/>
   </joint>
+
   <!-- Sonares -->
   <link name="obstacle_sonar_down">
     <visual>
@@ -685,7 +690,7 @@
   <joint name="obstacle_sonar_down_base" type="fixed">
     <parent link="tracao_f"/>
     <child link="obstacle_sonar_down"/>
-    <origin rpy="0 0 0" xyz="0.205 0.0 0.0569"/>
+    <origin rpy="0 0 0" xyz="0.24 0.0 0.0569"/>
   </joint>
 
   <link name="obstacle_sonar_up">
