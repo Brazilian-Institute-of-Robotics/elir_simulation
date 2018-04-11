@@ -6,7 +6,7 @@
   <!-- ros_control plugin -->
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo" />
-  <xacro:property name="PI" value="3.141592" />
+  <xacro:property name="M_PI" value="3.141592" />
   <!-- BASE LINK-->
   <!-- Dimensoes da unidade de apoio -->
   <!-- Dimensoes da caixa eletronica -->
@@ -79,7 +79,7 @@
   <joint name="joint_garra_ap" type="revolute">
     <parent link="base_link"/>
     <child link="garra_ap"/>
-    <origin rpy="0 0 3.141592" xyz="0.0 0.0722 0.3554"/>
+    <origin rpy="0 0 ${M_PI}" xyz="0.0 0.0722 0.3554"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -145,7 +145,7 @@
     <parent link="base_link"/>
     <child link="link1_f"/>
     <!-- <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/> -->
-    <origin rpy=" 0 -0.6 3.141592" xyz="-0.13 0.0 0.079"/>
+    <origin rpy=" 0 -0.6 ${M_PI}" xyz="-0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
@@ -259,7 +259,7 @@
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 3.141592" xyz="0.1765 -0.075 0.0521"/>
+      <origin rpy="0 0 ${M_PI}" xyz="0.1765 -0.075 0.0521"/>
     </visual>
     <!-- this collision is for the front traction body -->
     <collision name = 'front_traction_body'>
@@ -280,7 +280,7 @@
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
-      <origin rpy="0 0 3.141592" xyz="0.1765 -0.075 0.0521"/>
+      <origin rpy="0 0 ${M_PI}" xyz="0.1765 -0.075 0.0521"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.03499 0.0 0.0"/>
@@ -322,7 +322,7 @@
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 3.141592" xyz="0.1765 0.075 0.0521"/>
+      <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.075 0.0521"/>
     </visual>
     <!-- this collision is for the back traction body -->
     <collision name = 'back_traction_body'>
@@ -343,7 +343,7 @@
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
       </geometry>
-      <origin rpy="0 0 3.141592" xyz="0.1765 0.075 0.0521"/>
+      <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.075 0.0521"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.03499 0.0 0.0"/>
@@ -356,7 +356,7 @@
   <joint name="joint_garra_tracao_f1" type="revolute">
     <parent link="tracao_f"/>
     <child link="garra_tracao_f1"/>
-    <origin rpy="0 0 3.141592" xyz="0.0005 0.09 0.06985"/>
+    <origin rpy="0 0 ${M_PI}" xyz="0.0005 0.09 0.06985"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -569,7 +569,7 @@
   <joint name="joint_garra_tracao_t2" type="revolute">
     <parent link="tracao_t"/>
     <child link="garra_tracao_t2"/>
-    <origin rpy="0 0 3.141592" xyz="0.1765 0.09 0.06985"/>
+    <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.09 0.06985"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -645,7 +645,7 @@
   <!-- Posicoes dos frames virtuais -->
   <!-- Apoio -->
   <!-- Camera -->
-  <link name="stereo_camera_link">
+  <!--link name="stereo_camera_link">
     <visual>
       <geometry>
         <box size="0.03 0.175 0.033"/>
@@ -661,12 +661,65 @@
       <mass value="0.001"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
-  </link>
-  <joint name="stereo_camera_joint" type="fixed">
+  </link-->
+
+  <link name="zed_left_camera">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 1.57 0"/>
+            <geometry>
+                <cylinder radius="0.007" length=".031"/>
+            </geometry>
+            <material name="dark_grey">
+                <color rgba="0.1 0.1 0.1 1"/>
+            </material>
+        </visual>
+    </link>
+    <link name="zed_center">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://mybot_description/urdf/ZED.stl" />
+            </geometry>
+            <material name="light_grey">
+                <color rgba="0.8 0.8 0.8 0.8"/>
+            </material>
+        </visual>
+    </link>
+  <link name="zed_right_camera">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 1.57 0"/>
+            <geometry>
+                <cylinder radius="0.007" length=".031"/>
+            </geometry>
+            <material name="dark_grey">
+                <color rgba="0.1 0.1 0.1 1"/>
+            </material>
+        </visual>
+    </link>
+    <link name="zed_depth_camera" />
+    <joint name="zed_left_camera_joint" type="fixed">
+        <parent link="zed_center"/>
+        <child link="zed_left_camera"/>
+        <origin xyz="0 0.06 0" rpy="0 0 0" />
+    </joint>
+    <joint name="zed_depth_camera_joint" type="fixed">
+        <parent link="zed_left_camera"/>
+        <child link="zed_depth_camera"/>
+        <origin xyz="0 0 0" rpy="-1.5707963267948966 0 -1.5707963267948966" />
+    </joint>
+
+    <joint name="zed_right_camera_joint" type="fixed">
+        <parent link="zed_center"/>
+        <child link="zed_right_camera"/>
+        <origin xyz="0 -0.06 0" rpy="0 0 0" />
+    </joint>
+
+  <joint name="zed_camera_joint" type="fixed">
     <parent link="base_link"/>
-    <child link="stereo_camera_link"/>
-    <origin rpy="0 3.61592 0" xyz="-0.17 0.0 -0.05"/>
+    <child link="zed_center"/>
+    <origin rpy="0 0 ${M_PI}" xyz="-0.17 0.0 -0.05"/>
   </joint>
+
 
   <!-- Sonares -->
   <link name="obstacle_sonar_down">
