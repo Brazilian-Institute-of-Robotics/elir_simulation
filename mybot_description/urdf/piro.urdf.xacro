@@ -678,7 +678,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="package://mybot_description/urdf/ZED.stl" />
+                <mesh filename="package://mybot_description/meshes/ZED.stl" />
             </geometry>
             <material name="light_grey">
                 <color rgba="0.8 0.8 0.8 0.8"/>
@@ -714,38 +714,32 @@
         <origin xyz="0 -0.06 0" rpy="0 0 0" />
     </joint>
 
+    <link name="flir_camera">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://mybot_description/meshes/LeptonBreakoutBoardWithLepton3.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="light_grey">
+                <color rgba="0.8 0.8 0.8 0.8"/>
+            </material>
+        </visual>
+    </link>
+
+
   <joint name="zed_camera_joint" type="fixed">
     <parent link="base_link"/>
     <child link="zed_center"/>
     <origin rpy="0 0 ${M_PI}" xyz="-0.17 0.0 -0.05"/>
   </joint>
 
-
-  <!-- Sonares -->
-  <link name="obstacle_sonar_down">
-    <visual>
-      <geometry>
-        <mesh filename="package://mybot_description/meshes/maxsonar.dae"/>
-      </geometry>
-      <material name="grey"/>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename="package://mybot_description/meshes/maxsonar.dae"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="1e-5"/>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
-    </inertial>
-  </link>
-  <joint name="obstacle_sonar_down_base" type="fixed">
-    <parent link="tracao_f"/>
-    <child link="obstacle_sonar_down"/>
-    <origin rpy="0 0 0" xyz="0.24 0.0 0.0569"/>
+  <joint name="flir_camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="flir_camera"/>
+    <origin rpy="0 ${-M_PI/2} 0" xyz="-0.17 0.0 0.00"/>
   </joint>
 
+  <!-- Sonares -->
   <link name="obstacle_sonar_up">
     <visual>
       <geometry>
@@ -805,6 +799,8 @@
 		<child link="ground_sonar" />
 		<origin xyz="0 0 -0.135" rpy="0 0 0" />
 	</joint>
+
+
   <!-- FRAMES VIRTUAIS NO CABO -->
   <!-- Tracao -->
   <!--

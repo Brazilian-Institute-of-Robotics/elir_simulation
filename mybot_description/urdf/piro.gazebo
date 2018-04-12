@@ -196,8 +196,6 @@
   </xacro:macro>
 
   <xacro:sonar_sensor name="obstacle_sonar_up" ros_topic="sonar/up" update_rate="20" min_range="0.1524" max_range="100" field_of_view="1.0471" ray_count="100" />
-  <!--xacro:sonar_sensor name="obstacle_sonar_down" ros_topic="sonar/down" update_rate="20" min_range="0.1524" max_range="0.645" field_of_view="1.0471" ray_count="1" />
-  <xacro:sonar_sensor name="ground_sonar" ros_topic="sonar/ground" update_rate="20" min_range="0.1524" max_range="0.645" field_of_view="60" ray_count="1" /-->
-
+  <!--xacro:sonar_sensor name="ground_sonar" ros_topic="sonar/ground" update_rate="20" min_range="0.1524" max_range="0.645" field_of_view="60" ray_count="1" /--> 
 
 </robot>
