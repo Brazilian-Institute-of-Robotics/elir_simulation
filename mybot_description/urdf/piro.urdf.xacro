@@ -163,15 +163,47 @@
     <!-- This visual represents the front arm unit -->
     <visual name = 'front_arm'>
       <geometry>
-        <box size="0.4199 0.05 0.100"/>
+        <box size="0.19 0.100 0.05"/>
       </geometry>
       <material name="grey"/>
       <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </visual>
+    <visual name = 'base_left_pallet'>
+      <geometry>
+        <mesh filename="package://mybot_description/meshes/PIR-M01-003-0_HolderWingWide.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+      <origin rpy="${M_PI/2} 0 0" xyz="0 0.085 ${-0.05/2}"/>
+    </visual>
+    <visual name = 'base_right_pallet'>
+      <geometry>
+        <mesh filename="package://mybot_description/meshes/PIR-M01-003-0_HolderWingWide.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+      <origin rpy="-${M_PI/2} 0 0" xyz="0 -0.085 ${0.05/2}"/>
+    </visual>
+        
+    <visual name = 'traction_left_pallet'>
+      <geometry>
+        <mesh filename="package://mybot_description/meshes/PIR-M01-002-0_HolderWing.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+      <origin rpy="${M_PI/2} -${M_PI} 0" xyz="${0.20995*2} 0.06 ${0.05/2}"/>
+    </visual>]
+
+    <visual name = 'traction_right_pallet'>
+      <geometry>
+        <mesh filename="package://mybot_description/meshes/PIR-M01-002-0_HolderWing.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+      <origin rpy="-${M_PI/2} -${M_PI} 0" xyz="${0.20995*2} -0.06 -${0.05/2}"/>
+    </visual>
+
+
     <!-- this collision is for the front arm unit -->
     <collision name = 'front_arm'>
       <geometry>
-        <box size="0.4199 0.05 0.100"/>
+        <box size="0.19 0.100 0.05"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </collision>

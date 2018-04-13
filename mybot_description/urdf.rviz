@@ -88,6 +88,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        flir_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         garra_ap:
           Alpha: 1
           Show Axes: false
@@ -128,17 +133,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        obstacle_sonar_down:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         obstacle_sonar_up:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        stereo_camera:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -149,6 +144,25 @@ Visualization Manager:
           Show Trail: false
           Value: true
         tracao_t:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_center:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_depth_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        zed_left_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        zed_right_camera:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -198,7 +212,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.12009001
+      Distance: 1.56938875
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -213,10 +227,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.165398002
+      Pitch: 0.265397966
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.14539766
+      Yaw: 0.790399194
     Saved: ~
 Window Geometry:
   Displays:
