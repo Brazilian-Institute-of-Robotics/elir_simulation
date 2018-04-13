@@ -157,6 +157,38 @@
     </sensor>
   </gazebo>
 
+  <!--gazebo reference ="flir_camera">
+    <sensor:camera name="thermal_cam_sensor">
+      <imageSize>640 480</imageSize>
+      <imageFormat>R8G8B8</imageFormat>
+      <hfov>90</hfov>
+      <nearClip>0.01</nearClip>
+      <farClip>100</farClip>
+      <updateRate>5</updateRate>
+      <controller:gazebo_ros_thermal_camera name="thermal_cam_controller" plugin="libgazebo_ros_thermal_depth_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>5</updateRate>
+        <cameraName>thermal_cam</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>thermal_cam_optical_frame</frameName>
+        <hackBaseline>0</hackBaseline>
+        <CxPrime>320.5</CxPrime>
+        <Cx>320.5</Cx>
+        <Cy>240.5</Cy>
+        <focalLength>320</focalLength>
+        <distortionK1>0.00000001</distortionK1>
+        <distortionK2>0.00000001</distortionK2>
+        <distortionK3>0.00000001</distortionK3>
+        <distortionT1>0.00000001</distortionT1>
+        <distortionT2>0.00000001</distortionT2>
+        <interface:camera name="thermal_cam_iface"/>
+      </controller:gazebo_ros_thermal_camera>
+    </sensor:camera>
+    <turnGravityOff>true</turnGravityOff>
+    <material>PR2/Blue</material>
+</gazebo-->
+
   <xacro:macro name="sonar_sensor" params="name ros_topic update_rate min_range max_range field_of_view ray_count">
     <gazebo reference="${name}">
       <sensor type="ray" name="${name}">
@@ -197,5 +229,4 @@
 
   <xacro:sonar_sensor name="obstacle_sonar_up" ros_topic="sonar/up" update_rate="20" min_range="0.1524" max_range="100" field_of_view="1.0471" ray_count="100" />
   <!--xacro:sonar_sensor name="ground_sonar" ros_topic="sonar/ground" update_rate="20" min_range="0.1524" max_range="0.645" field_of_view="60" ray_count="1" /--> 
-
 </robot>

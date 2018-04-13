@@ -11,7 +11,10 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   mybot_description
   xacro
-)
+  hector_gazebo_plugins
+  hector_gazebo_thermal_camera
+  robot_state_publisher
+  joint_state_publisher)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
