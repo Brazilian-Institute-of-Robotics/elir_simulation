@@ -20,6 +20,7 @@
 		<arg name="world_name" value="$(find mybot_gazebo)/worlds/mybot.world"/>
 		<arg name="gui" value="true"/>
 		<arg name="paused" value="true"/>
+		<arg name="verbose" default="true"/>
 	</include>
 	
   <!-- Spawn Cable -->
