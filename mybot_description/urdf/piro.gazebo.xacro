@@ -1,4 +1,8 @@
-<robot name="robo_cemig" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="robo_cemig" xmlns:xacro="http://www.ros.org/wiki/xacro"
+xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <robotNamespace>/robot</robotNamespace>
@@ -93,9 +97,6 @@
         </clip>
         <noise>
           <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.
-               That pixel's noise value is added to each of its color
-               channels, which at that point lie in the range [0,1]. -->
           <mean>0.0</mean>
           <stddev>0.007</stddev>
         </noise>
@@ -103,7 +104,7 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>elir/zed_left_camera</cameraName>
+        <cameraName>detection/zed_left_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera_link</frameName>
@@ -133,9 +134,6 @@
         </clip>
         <noise>
           <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.
-               That pixel's noise value is added to each of its color
-               channels, which at that point lie in the range [0,1]. -->
           <mean>0.0</mean>
           <stddev>0.007</stddev>
         </noise>
@@ -143,7 +141,7 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>elir/zed_right_camera</cameraName>
+        <cameraName>detection/zed_right_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera_link</frameName>
@@ -156,38 +154,35 @@
       </plugin>
     </sensor>
   </gazebo>
-
-  <!--gazebo reference ="flir_camera">
-    <sensor:camera name="thermal_cam_sensor">
-      <imageSize>640 480</imageSize>
-      <imageFormat>R8G8B8</imageFormat>
-      <hfov>90</hfov>
-      <nearClip>0.01</nearClip>
-      <farClip>100</farClip>
-      <updateRate>5</updateRate>
-      <controller:gazebo_ros_thermal_camera name="thermal_cam_controller" plugin="libgazebo_ros_thermal_depth_camera.so">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>5</updateRate>
-        <cameraName>thermal_cam</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>thermal_cam_optical_frame</frameName>
-        <hackBaseline>0</hackBaseline>
-        <CxPrime>320.5</CxPrime>
-        <Cx>320.5</Cx>
-        <Cy>240.5</Cy>
-        <focalLength>320</focalLength>
-        <distortionK1>0.00000001</distortionK1>
-        <distortionK2>0.00000001</distortionK2>
-        <distortionK3>0.00000001</distortionK3>
-        <distortionT1>0.00000001</distortionT1>
-        <distortionT2>0.00000001</distortionT2>
-        <interface:camera name="thermal_cam_iface"/>
-      </controller:gazebo_ros_thermal_camera>
-    </sensor:camera>
-    <turnGravityOff>true</turnGravityOff>
-    <material>PR2/Blue</material>
-</gazebo-->
+ 
+ <xacro:macro name="ir_camera" params="name ros_topic update_rate height width">
+    <gazebo reference="${name}">
+      <sensor type="camera" name="thermal_camera_sensor">
+        <update_rate>30</update_rate>
+        
+        <camera>
+          <horizontal_fov>${90.0*M_PI/180.0}</horizontal_fov>
+          <image>
+            <format>R8G8B8</format>
+            <width>${width}</width>
+            <height>${height}</height>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>300</far>
+          </clip>
+        </camera>
+        
+        <plugin name="thermal_camera_controller" filename="libgazebo_ros_thermal_camera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>${update_rate}</updateRate>
+          <imageTopicName>/${ros_topic}/image_raw</imageTopicName>
+          <cameraInfoTopicName>/${ros_topic}/camera_info</cameraInfoTopicName>
+          <frameName>${name}_optical_frame</frameName>
+        </plugin>
+      </sensor>
+    </gazebo>
+</xacro:macro>
 
   <xacro:macro name="sonar_sensor" params="name ros_topic update_rate min_range max_range field_of_view ray_count">
     <gazebo reference="${name}">
@@ -227,6 +222,6 @@
     </gazebo>
   </xacro:macro>
 
-  <xacro:sonar_sensor name="obstacle_sonar_up" ros_topic="sonar/up" update_rate="20" min_range="0.1524" max_range="100" field_of_view="1.0471" ray_count="100" />
-  <!--xacro:sonar_sensor name="ground_sonar" ros_topic="sonar/ground" update_rate="20" min_range="0.1524" max_range="0.645" field_of_view="60" ray_count="1" /--> 
+  <xacro:sonar_sensor name="ground_sonar" ros_topic="perception/ground_sonar" update_rate="20" min_range="0.0" max_range="100" field_of_view="1.0471" ray_count="1" />
+  <xacro:ir_camera name="flir_camera" ros_topic = "perception/flir_camera" update_rate = "30" height = "800" width = "800" />
 </robot>

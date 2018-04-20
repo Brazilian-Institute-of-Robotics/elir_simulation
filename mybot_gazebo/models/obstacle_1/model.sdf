@@ -1,5 +1,5 @@
 <?xml version='1.0'?>
-<sdf version='1.4'>
+<sdf version='1.6'>
   <model name="obstacle_1">
 
 	  <static>true</static>
@@ -22,6 +22,12 @@
  					  <uri>model://mybot_gazebo/models/obstacle_1/meshes/obstacle_1.dae</uri>
  				  </mesh>
         </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>1 0 0 1</specular>
+            <emissive>1 0 0 1</emissive>
+          </material>
        </visual>
      </link>
   </model>

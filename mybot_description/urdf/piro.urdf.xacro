@@ -5,7 +5,7 @@
   <!-- Gazebo -->
   <!-- ros_control plugin -->
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
-  <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo" />
+  <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo.xacro" />
   <xacro:property name="M_PI" value="3.141592" />
   <!-- BASE LINK-->
   <!-- Dimensoes da unidade de apoio -->
@@ -779,7 +779,7 @@
 
     <link name="flir_camera">
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <origin xyz="0 0 0" rpy="0 ${M_PI/2} 0"/>
             <geometry>
                 <mesh filename="package://mybot_description/meshes/LeptonBreakoutBoardWithLepton3.stl" scale="0.001 0.001 0.001"/>
             </geometry>
@@ -788,18 +788,22 @@
             </material>
         </visual>
     </link>
+    
+    <!--<gazebo reference="flir_camera">
+      <material>Gazebo/Blue</material>
+    </gazebo>-->
 
 
   <joint name="zed_camera_joint" type="fixed">
     <parent link="base_link"/>
     <child link="zed_center"/>
-    <origin rpy="0 0 ${M_PI}" xyz="-0.17 0.0 -0.05"/>
+    <origin rpy="0 0 0" xyz="0.17 0.0 -0.1"/>
   </joint>
 
   <joint name="flir_camera_joint" type="fixed">
     <parent link="base_link"/>
     <child link="flir_camera"/>
-    <origin rpy="0 ${-M_PI/2} 0" xyz="-0.17 0.0 0.00"/>
+    <origin rpy="0 0 0" xyz="0.17 0.0 -0.05"/>
   </joint>
 
   <!-- Sonares -->
@@ -856,6 +860,8 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
 	</link>
+
+
 
 	<joint name="ground_sonar_base" type="fixed">
 		<parent link="base_link" />

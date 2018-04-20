@@ -22,6 +22,12 @@
  					  <uri>model://mybot_gazebo/meshes/obstacle_2.dae</uri>
  				  </mesh>
         </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+            <specular>1 0 0 1</specular>
+            <emissive>1 0 0 1</emissive>
+          </material>
        </visual>
      </link>
   </model>
