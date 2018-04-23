@@ -215,6 +215,10 @@
     </inertial>
   </link>
 
+  <gazebo reference="traction_left_pallet">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
   <!-- This joint binds the base body (represented by the link base_link) and the back arm unit (represented by the link link1_t). it can rotate with the y axis fixed, it has an upper limit of 0.7 (40 degrees) and a lower limit of -1.74 (-100 degrees) -->
   <joint name="joint1_t" type="revolute">
     <parent link="base_link"/>
@@ -789,9 +793,7 @@
         </visual>
     </link>
     
-    <!--<gazebo reference="flir_camera">
-      <material>Gazebo/Blue</material>
-    </gazebo>-->
+
 
 
   <joint name="zed_camera_joint" type="fixed">
@@ -844,29 +846,36 @@
     <origin rpy="0 0 0" xyz="0.024 0.075 0.19615"/>
   </joint>
 
-	<link name="ground_sonar" >
+<link name="ground_sonar" >
 		<visual>
 			<geometry>
-				<mesh filename="package://mybot_description/meshes/groundsonar.dae"/>
+      <mesh filename="package://mybot_description/meshes/groundsonar.dae"/>
 			</geometry>
-		</visual>
+      <origin rpy="0 ${-M_PI/2} 0" />
+    </visual>
+    
     <collision>
       <geometry>
         <mesh filename="package://mybot_description/meshes/groundsonar.dae"/>
       </geometry>
+      <origin rpy="0 ${-M_PI/2} 0" />
     </collision>
+
     <inertial>
       <mass value="1e-5"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
 	</link>
 
+  <gazebo reference="ground_sonar">
+    <material>Gazebo/Blue</material>
+  </gazebo>
 
 
 	<joint name="ground_sonar_base" type="fixed">
 		<parent link="base_link" />
 		<child link="ground_sonar" />
-		<origin xyz="0 0 -0.135" rpy="0 0 0" />
+		<origin xyz="0 0 -0.155" rpy="0 ${M_PI/2} 0" />
 	</joint>
 
 

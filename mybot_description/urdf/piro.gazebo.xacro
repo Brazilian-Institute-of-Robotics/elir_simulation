@@ -222,6 +222,6 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     </gazebo>
   </xacro:macro>
 
-  <xacro:sonar_sensor name="ground_sonar" ros_topic="perception/ground_sonar" update_rate="20" min_range="0.0" max_range="100" field_of_view="1.0471" ray_count="1" />
+  <xacro:sonar_sensor name="ground_sonar" ros_topic="perception/ground_sonar" update_rate="30" min_range="0.1" max_range="100" field_of_view="1.0471" ray_count="1" />
   <xacro:ir_camera name="flir_camera" ros_topic = "perception/flir_camera" update_rate = "30" height = "800" width = "800" />
 </robot>
