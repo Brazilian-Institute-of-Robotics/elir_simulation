@@ -54,7 +54,6 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    #Num.msg
-   Pose.msg
    #Twist.msg
    #Message2.msg
  )
@@ -72,8 +71,6 @@ find_package(catkin REQUIRED COMPONENTS
  add_action_files(
    DIRECTORY action
    FILES
-   Fibonacci.action
-   pow.action
 )
 
 ## Generate added messages and services with any dependencies listed here

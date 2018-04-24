@@ -9,9 +9,3 @@ sudo apt-get install ros-kinetic-xacro
 sudo apt-get install ros-kinetic-ps3joy
 sudo apt-get install ros-kinetic-joint-state-controller
 sudo apt-get install ros-kinetic-joint-state-publisher
-
-
-
-
-cwd=$(pwd)
-echo export PATH=\$PATH:$(pwd) >>~/.bashrc
