@@ -3,7 +3,19 @@
 Scripts for simulate piro on gazebo
 
 ## Package Dependencies
-Check with rospack list in terminal to see if the following packages:
+
+In order to install all the dependencies, go to the install folder:
+```
+$ ~/catkin_ws/src/piro_simulation/install
+```
+
+Run the insall.sh file
+
+```
+$ ./install.sh
+```
+
+You can check with rospack list in terminal to see if the following packages were installed:
 ```
 Velocity_controllers
 
