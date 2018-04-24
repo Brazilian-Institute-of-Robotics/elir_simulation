@@ -6,14 +6,14 @@ robot:
     joints:
       - joint1_f
       - joint2_f
-      - joint1_t
-      - joint2_t
+      - joint1_b
+      - joint2_b
 
     gains: # Required because we're controlling an effort interface
       joint1_f: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
       joint2_f: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint1_t: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint2_t: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint1_b: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint2_b: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
 
     state_publish_rate:  20          # Override default
     action_monitor_rate: 20            # Override default
@@ -26,15 +26,15 @@ robot:
       - joint_garra_ap
       - joint_garra_tracao_f1
       - joint_garra_tracao_f2
-      - joint_garra_tracao_t1
-      - joint_garra_tracao_t2
+      - joint_garra_tracao_b1
+      - joint_garra_tracao_b2
 
     gains: # Required because we're controlling an effort interface
       joint_garra_ap: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
       joint_garra_tracao_f1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
       joint_garra_tracao_f2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint_garra_tracao_t1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint_garra_tracao_t2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint_garra_tracao_b1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint_garra_tracao_b2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
 
     state_publish_rate:  20          # Override default
     action_monitor_rate: 20            # Override default
@@ -47,15 +47,15 @@ robot:
       - joint_eixo_tracao_ap
       - joint_eixo_tracao_f1
       - joint_eixo_tracao_f2
-      - joint_eixo_tracao_t1
-      - joint_eixo_tracao_t2
+      - joint_eixo_tracao_b1
+      - joint_eixo_tracao_b2
 
     gains: # Required because we're controlling an effort interface
       joint_eixo_tracao_ap: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
       joint_eixo_tracao_f1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
       joint_eixo_tracao_f2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint_eixo_tracao_t1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
-      joint_eixo_tracao_t2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint_eixo_tracao_b1: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint_eixo_tracao_b2: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
 
     state_publish_rate:  20          # Override default
     action_monitor_rate: 20            # Override default
@@ -83,10 +83,10 @@ robot:
 
   #traction_1b_controller:
     #type: velocity_controllers/JointVelocityController
-    #joint: joint_eixo_tracao_t1
+    #joint: joint_eixo_tracao_b1
     #pid: {p: 32.0, i: 0.01, d: 0.0}
 
   #traction_2b_controller:
     #type: velocity_controllers/JointVelocityController
-    #joint: joint_eixo_tracao_t2
+    #joint: joint_eixo_tracao_b2
     #pid: {p: 32.0, i: 0.01, d: 0.0}

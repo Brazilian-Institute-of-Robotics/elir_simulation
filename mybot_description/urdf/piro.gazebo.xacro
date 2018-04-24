@@ -29,7 +29,7 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     <dampingFactor>0.01</dampingFactor>
     <material name="grey"/>
     </gazebo>
-  <gazebo reference="tracao_t">
+  <gazebo reference="tracao_b">
     <dampingFactor>0.01</dampingFactor>
     <material name="grey"/>
     </gazebo>
@@ -46,11 +46,11 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     <dampingFactor>0.02</dampingFactor>
     <material name="grey"/>
     </gazebo>
-  <gazebo reference="garra_tracao_t1">
+  <gazebo reference="garra_tracao_b1">
     <dampingFactor>0.02</dampingFactor>
     <material name="grey"/>
     </gazebo>
-  <gazebo reference="garra_tracao_t2">
+  <gazebo reference="garra_tracao_b2">
     <dampingFactor>0.02</dampingFactor>
     <material name="grey"/>
     </gazebo>
@@ -70,12 +70,12 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
     <mu2>0.3</mu2>
     <material name="black"/>
     </gazebo>
-  <gazebo reference="eixo_tracao_t1">
+  <gazebo reference="eixo_tracao_b1">
     <mu1>0.3</mu1>
     <mu2>0.3</mu2>
     <material name="black"/>
     </gazebo>
-  <gazebo reference="eixo_tracao_t2">
+  <gazebo reference="eixo_tracao_b2">
     <mu1>0.3</mu1>
     <mu2>0.3</mu2>
     <material name="black"/>

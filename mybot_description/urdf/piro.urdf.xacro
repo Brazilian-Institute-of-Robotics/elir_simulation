@@ -141,9 +141,9 @@
   </link>
 
   <!-- This joint binds the base body (represented by the link base_link) and the front arm unit (represented by the link link1_f). it can rotate with the y axis fixed, it has an upper limit of 0.7 (40 degrees) and a lower limit of -1.74 (-100 degrees) -->
-  <joint name="joint1_f" type="revolute">
+  <joint name="joint1_b" type="revolute">
     <parent link="base_link"/>
-    <child link="link1_f"/>
+    <child link="link1_b"/>
     <!-- <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/> -->
     <origin rpy=" 0 -0.6 ${M_PI}" xyz="-0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
@@ -151,7 +151,7 @@
   </joint>
 
   <!-- This link represents the front arm unit  -->
-  <link name="link1_f">
+  <link name="link1_b">
     <!-- <visual>
       <geometry>
         <box size="0.185 0.102 0.102"/>
@@ -161,7 +161,7 @@
     </visual> -->
 
     <!-- This visual represents the front arm unit -->
-    <visual name = 'front_arm'>
+    <visual name = 'back_arm'>
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
@@ -202,7 +202,7 @@
 
 
     <!-- this collision is for the front arm unit -->
-    <collision name = 'front_arm'>
+    <collision name = 'back_arm'>
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
@@ -216,9 +216,9 @@
   </link>
 
   <!-- This joint binds the base body (represented by the link base_link) and the back arm unit (represented by the link link1_t). it can rotate with the y axis fixed, it has an upper limit of 0.7 (40 degrees) and a lower limit of -1.74 (-100 degrees) -->
-  <joint name="joint1_t" type="revolute">
+  <joint name="joint1_f" type="revolute">
     <parent link="base_link"/>
-    <child link="link1_t"/>
+    <child link="link1_f"/>
     <!-- <origin rpy="0 -0.60 0" xyz="0.13 0.0 0.079"/> -->
     <origin rpy=" 0 -0.6 0" xyz="0.13 0.0 0.079"/>
     <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
@@ -226,7 +226,7 @@
   </joint>
 
   <!-- This link represents the back arm unit  -->
-  <link name="link1_t">
+  <link name="link1_f">
     <!-- <visual>
       <geometry>
         <box size="0.185 0.102 0.102"/>
@@ -236,7 +236,7 @@
     </visual> -->
 
     <!-- This visual represents the back arm unit -->
-    <visual name = 'back_arm'>
+    <visual name = 'front_arm'>
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
@@ -274,7 +274,7 @@
       <material name="black"/>
       <origin rpy="-${M_PI/2} -${M_PI} 0" xyz="${0.20995*2} -0.06 -${0.05/2}"/>
     </visual>
-    <collision name = 'back_arm'>
+    <collision name = 'front_arm'>
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
@@ -352,17 +352,17 @@
     </inertial>
   </link>
 
-  <!-- This joint binds the back arm unit (represented by the link link1_t) and the back traction body unit (represented by the link tracao_t). It can rotate with the y axis fixed, it has an upper limit of 2.18 (125 degrees) and a lower limit of -1.0 (-57 degrees) -->
-  <joint name="joint2_t" type="revolute">
-    <parent link="link1_t"/>
-    <child link="tracao_t"/>
+  <!-- This joint binds the back arm unit (represented by the link link1_t) and the back traction body unit (represented by the link tracao_b). It can rotate with the y axis fixed, it has an upper limit of 2.18 (125 degrees) and a lower limit of -1.0 (-57 degrees) -->
+  <joint name="joint2_b" type="revolute">
+    <parent link="link1_b"/>
+    <child link="tracao_b"/>
     <origin rpy="0 0.57 0" xyz="0.39 0.0 0.0"/>
     <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
   <!-- This link represents the back traction body unit that contains back traction body, claw f1 support and claw f2 support -->
-  <link name="tracao_t">
+  <link name="tracao_b">
     <!-- This visual represents the  back traction body -->
     <visual name = 'back_traction_body'>
       <geometry>
@@ -558,16 +558,16 @@
 
   <!-- GARRAS TRACAO TRASEIRA -->
   <!-- T1 -->
-  <!-- This joint binds the front traction body unit (represented by the link tracao_f) and the back t1 claw unit (represented by the link garra_tracao_t1). It can rotate with the z axis fixed, it has an upper limit of 3.14 (360 degrees) and lower limit of -3.14 (-360 degrees) -->
-  <joint name="joint_garra_tracao_t1" type="revolute">
-    <parent link="tracao_t"/>
-    <child link="garra_tracao_t1"/>
+  <!-- This joint binds the front traction body unit (represented by the link tracao_f) and the back t1 claw unit (represented by the link garra_tracao_b1). It can rotate with the z axis fixed, it has an upper limit of 3.14 (360 degrees) and lower limit of -3.14 (-360 degrees) -->
+  <joint name="joint_garra_tracao_b1" type="revolute">
+    <parent link="tracao_b"/>
+    <child link="garra_tracao_b1"/>
     <origin rpy="0 0 0" xyz="0.0005 -0.09 0.06985"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
   <!-- this link represents the back t1 claw unit -->
-  <link name="garra_tracao_t1">
+  <link name="garra_tracao_b1">
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <!-- This visual represents the back t1 claw unit -->
     <visual>
@@ -592,16 +592,16 @@
   </link>
 
   <!-- Eixo T1 -->
-  <!-- this joint binds the back t1 claw unit (represented by the link garra_tracao_t1) with the back t1 traction unit (represented by the link eixo_tracao_t1). It can move contunuously with the y axis fixed. It moves forward and backward -->
-  <joint name="joint_eixo_tracao_t1" type="continuous">
-    <parent link="garra_tracao_t1"/>
-    <child link="eixo_tracao_t1"/>
+  <!-- this joint binds the back t1 claw unit (represented by the link garra_tracao_b1) with the back t1 traction unit (represented by the link eixo_tracao_b1). It can move contunuously with the y axis fixed. It moves forward and backward -->
+  <joint name="joint_eixo_tracao_b1" type="continuous">
+    <parent link="garra_tracao_b1"/>
+    <child link="eixo_tracao_b1"/>
     <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
   <!-- this link represents the back t1 traction unit -->
-  <link name="eixo_tracao_t1">
+  <link name="eixo_tracao_b1">
     <!-- This visual represents the back t1 traction unit -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
@@ -628,16 +628,16 @@
   </link>
 
   <!-- T2 -->
-  <!-- This joint binds the front traction body unit (represented by the link tracao_f) and the back t2 claw unit (represented by the link garra_tracao_t2). It can rotate with the z axis fixed, it has an upper limit of 3.14 (360 degrees) and lower limit of -3.14 (-360 degrees) -->
-  <joint name="joint_garra_tracao_t2" type="revolute">
-    <parent link="tracao_t"/>
-    <child link="garra_tracao_t2"/>
+  <!-- This joint binds the front traction body unit (represented by the link tracao_f) and the back t2 claw unit (represented by the link garra_tracao_b2). It can rotate with the z axis fixed, it has an upper limit of 3.14 (360 degrees) and lower limit of -3.14 (-360 degrees) -->
+  <joint name="joint_garra_tracao_b2" type="revolute">
+    <parent link="tracao_b"/>
+    <child link="garra_tracao_b2"/>
     <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.09 0.06985"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
   <!-- this link represents the back t2 claw unit -->
-  <link name="garra_tracao_t2">
+  <link name="garra_tracao_b2">
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <!-- This visual represents the back t2 claw unit -->
     <visual>
@@ -662,16 +662,16 @@
   </link>
 
   <!-- Eixo F2 -->
-  <!-- this joint binds the back t2 claw unit (represented by the link garra_tracao_t2) with the back t2 traction unit (represented by the link eixo_tracao_t2). It can move contunuously with the y axis fixed. It moves forward and backward -->
-  <joint name="joint_eixo_tracao_t2" type="continuous">
-    <parent link="garra_tracao_t2"/>
-    <child link="eixo_tracao_t2"/>
+  <!-- this joint binds the back t2 claw unit (represented by the link garra_tracao_b2) with the back t2 traction unit (represented by the link eixo_tracao_b2). It can move contunuously with the y axis fixed. It moves forward and backward -->
+  <joint name="joint_eixo_tracao_b2" type="continuous">
+    <parent link="garra_tracao_b2"/>
+    <child link="eixo_tracao_b2"/>
     <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
   <!-- this link represents the back t2 traction unit -->
-  <link name="eixo_tracao_t2">
+  <link name="eixo_tracao_b2">
     <!-- This visual represents the back t2 traction unit -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
@@ -881,8 +881,8 @@
 	<link name="cabo_ap"/>
 	<link name="cabo_tracao_f1"/>
 	<link name="cabo_tracao_f2"/>
-	<link name="cabo_tracao_t1"/>
-	<link name="cabo_tracao_t2"/>
+	<link name="cabo_tracao_b1"/>
+	<link name="cabo_tracao_b2"/>
 
 	<joint name="joint_cabo_ap" type="fixed">
 		<parent link="base_link" />
@@ -902,15 +902,15 @@
 		<origin xyz="${x_joint_garra_tracao2} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
 	</joint>
 
-	<joint name="joint_cabo_tracao_t1" type="fixed">
-		<parent link="tracao_t" />
-		<child link="cabo_tracao_t1" />
+	<joint name="joint_cabo_tracao_b1" type="fixed">
+		<parent link="tracao_b" />
+		<child link="cabo_tracao_b1" />
 		<origin xyz="${x_joint_garra_tracao1} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
 	</joint>
 
-	<joint name="joint_cabo_tracao_t2" type="fixed">
-		<parent link="tracao_t" />
-		<child link="cabo_tracao_t2" />
+	<joint name="joint_cabo_tracao_b2" type="fixed">
+		<parent link="tracao_b" />
+		<child link="cabo_tracao_b2" />
 		<origin xyz="${x_joint_garra_tracao2} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
 	</joint>-->
   <!-- ROS Control-->
@@ -937,7 +937,7 @@
   </transmission>
   <transmission name="tran_joint_1t">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint1_t">
+    <joint name="joint1_b">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo22">
@@ -947,7 +947,7 @@
   </transmission>
   <transmission name="tran_joint_2t">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint2_t">
+    <joint name="joint2_b">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo24">
@@ -988,7 +988,7 @@
   </transmission>
   <transmission name="tran_claw_t1">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_garra_tracao_t1">
+    <joint name="joint_garra_tracao_b1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo25">
@@ -998,7 +998,7 @@
   </transmission>
   <transmission name="tran_claw_t2">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_garra_tracao_t2">
+    <joint name="joint_garra_tracao_b2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo27">
@@ -1039,7 +1039,7 @@
   </transmission>
   <transmission name="tran_tracao_1t">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_eixo_tracao_t1">
+    <joint name="joint_eixo_tracao_b1">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo26">
@@ -1049,7 +1049,7 @@
   </transmission>
   <transmission name="tran_tracao_2t">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_eixo_tracao_t2">
+    <joint name="joint_eixo_tracao_b2">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="servo28">
