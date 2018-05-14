@@ -163,7 +163,7 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
         <update_rate>30</update_rate>
         
         <camera>
-          <horizontal_fov>${90.0*M_PI/180.0}</horizontal_fov>
+          <horizontal_fov>${51*M_PI/180.0}</horizontal_fov>
           <image>
             <format>R8G8B8</format>
             <width>${width}</width>
@@ -225,5 +225,5 @@ xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
   </xacro:macro>
 
   <xacro:sonar_sensor name="ground_sonar" ros_topic="perception/ground_sonar" update_rate="30" min_range="0.1" max_range="100" field_of_view="1.0471" ray_count="1" />
-  <xacro:ir_camera name="flir_camera" ros_topic = "perception/flir_camera" update_rate = "30" height = "800" width = "800" />
+  <xacro:ir_camera name="flir_camera" ros_topic = "perception/flir_camera" update_rate = "8.6" height = "80" width = "60" />
 </robot>
