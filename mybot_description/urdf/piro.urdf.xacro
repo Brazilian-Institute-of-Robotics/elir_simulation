@@ -7,21 +7,9 @@
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo.xacro" />
   <xacro:property name="M_PI" value="3.141592" />
-  <!-- BASE LINK-->
-  <!-- Dimensoes da unidade de apoio -->
-  <!-- Dimensoes da caixa eletronica -->
-  <!--
-	<xacro:property name="l_eletr_ap" value="0.240" />
-	<xacro:property name="h_eletr_ap" value="0.120" />
-	<xacro:property name="w_eletr_ap" value="0.120" />
-  -->
-  <!-- Suporte da garra da unidade de apoio -->
-  <!-- Dimensoes do sup_apoio -->  
-  <!-- Posicoes da base do sup_apoio para o centro do base link -->
   <!-- Parametros do box_link-->
-
-<link name="base_link">
-    <!-- This visual represents the base body-->
+  <link name="base_link">
+    <!-- This visual represents the dummy link for robot base body-->
     <visual name = 'base_body'>
       <geometry>
         <box size= "0.3219 0.1461 0.2357"/>
@@ -35,8 +23,9 @@
     <child link="box_link"/>
     <axis xyz="0.0 0.0 0.0"/>
     <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
-  </joint>>
-  <!-- This link represents the base_body, the central stem and the central's claw base -->
+  </joint>
+
+  <!-- This link represents the base body of the robot, the central stem and the central's claw base -->
   <link name="box_link">
     <!-- This visual represents the base body-->
     <visual name = 'base_body'>
@@ -712,36 +701,6 @@
       <inertia ixx="4.94e-05" ixy="0.0" ixz="0.0" iyy="6.11e-05" iyz="0.0" izz="4.94e-05"/>
     </inertial>
   </link>
-
-  <!-- SENSORES -->
-  <!-- Hokuyo -->
-  <!-- Posicao do Hokuyo (em relacao a junta 3)-->
-  <!-- Posicao do sonar baixo (em relacao a junta 3)-->
-  <!-- Posicao do sonar alto (em relacao a garra)-->
-  <!-- Dimensoes do suporte do sonar alto -->
-  <!-- Posicao do suporte do sonar alto -->
-  <!-- Posicao do sonar de chao (em relacao ao box_link)-->
-  <!-- Posicoes dos frames virtuais -->
-  <!-- Apoio -->
-  <!-- Camera -->
-  <!--link name="stereo_camera_link">
-    <visual>
-      <geometry>
-        <box size="0.03 0.175 0.033"/>
-        <material>Gazebo/Orange</material>
-      </geometry>
-    </visual>
-    <collision>
-      <geometry>
-          <box size="0.03 0.175 0.033"/>
-      </geometry>
-    </collision>
-    <inertial>
-      <mass value="0.001"/>
-      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
-    </inertial>
-  </link-->
-
   <link name="zed_left_camera">
         <visual>
             <origin xyz="0 0 0" rpy="0 1.57 0"/>
@@ -855,44 +814,7 @@
 	</joint>
 
 
-  <!-- FRAMES VIRTUAIS NO CABO -->
-  <!-- Tracao -->
-  <!--
-	<link name="cabo_ap"/>
-	<link name="cabo_tracao_f1"/>
-	<link name="cabo_tracao_f2"/>
-	<link name="cabo_tracao_b1"/>
-	<link name="cabo_tracao_b2"/>
-
-	<joint name="joint_cabo_ap" type="fixed">
-		<parent link="box_link" />
-		<child link="cabo_ap" />
-		<origin xyz="${x_joint_cabo_ap} ${y_joint_cabo_ap} ${z_joint_cabo_ap + h_ap/2}" rpy="0 0 0" />
-	</joint>
-
-	<joint name="joint_cabo_tracao_f1" type="fixed">
-		<parent link="tracao_f" />
-		<child link="cabo_tracao_f1" />
-		<origin xyz="${x_joint_garra_tracao1} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
-	</joint>
-
-	<joint name="joint_cabo_tracao_f2" type="fixed">
-		<parent link="tracao_f" />
-		<child link="cabo_tracao_f2" />
-		<origin xyz="${x_joint_garra_tracao2} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
-	</joint>
-
-	<joint name="joint_cabo_tracao_b1" type="fixed">
-		<parent link="tracao_b" />
-		<child link="cabo_tracao_b1" />
-		<origin xyz="${x_joint_garra_tracao1} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
-	</joint>
-
-	<joint name="joint_cabo_tracao_b2" type="fixed">
-		<parent link="tracao_b" />
-		<child link="cabo_tracao_b2" />
-		<origin xyz="${x_joint_garra_tracao2} ${y_joint_cabo_tracao} ${z_joint_cabo_tracao + h_tracao/2 + z_tracao}" rpy="0 0 0" />
-	</joint>-->
+ 
   <!-- ROS Control-->
   <!-- Juntas -->
   <transmission name="tran_joint_1f">
