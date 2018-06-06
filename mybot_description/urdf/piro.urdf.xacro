@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="robo_cemig" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="elir_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Properties -->
   <!-- Macros -->
   <!-- Gazebo -->
