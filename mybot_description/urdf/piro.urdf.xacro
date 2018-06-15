@@ -127,16 +127,16 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual name = 'central_traction'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- This collision is for the central traction unit -->
     <collision name = 'central_traction'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <origin rpy="1.57 0 0" xyz="0.0 0.05 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -313,21 +313,21 @@
     </visual>
     <!-- This visual represents the front traction claw f2 support -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
-    <visual name = 'front_traction_claw_f2_support'>
+    <visual name = 'front_traction_claw_f1_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <material name="black"/>
-      <origin rpy="0 0 0" xyz="0.0005 0.075 0.0521"/>
+      <origin rpy="0 0 0" xyz="${0.006 +0.051/2} ${0.05+0.045/2} ${0.05}"/>
     </visual>
     <!-- This visual represents the front traction claw f1 support -->
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
-    <visual name = 'front_traction_claw_f1_support'>
+    <visual name = 'front_traction_claw_f2_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <material name="black"/>
-      <origin rpy="0 0 ${M_PI}" xyz="0.1765 -0.075 0.0521"/>
+      <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.051/2} ${-0.05-0.045/2} ${0.05}"/>
     </visual>
     <!-- this collision is for the front traction body -->
     <collision name = 'front_traction_body'>
@@ -339,14 +339,14 @@
     <!-- this collision is for the front traction claw f2 support -->
     <collision name = 'front_traction_claw_f2_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <origin rpy="0 0 0" xyz="0.0005 0.075 0.0521"/>
     </collision>
     <!-- this collision is for the front traction claw f1 support -->
     <collision name = 'front_traction_claw_f1_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <origin rpy="0 0 ${M_PI}" xyz="0.1765 -0.075 0.0521"/>
     </collision>
@@ -379,18 +379,18 @@
     <!-- This visual represents the  back traction claw f1 support -->
     <visual name = 'back_traction_claw_f1_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <material name="black"/>
-      <origin rpy="0 0 0" xyz="0.0005 -0.075 0.0521"/>
+      <origin rpy="0 0 0" xyz="${0.006 +0.051/2} ${0.05+0.045/2} ${0.05}"/>
     </visual>
     <!-- This visual represents the  back traction claw f2 support -->
     <visual name = 'back_traction_claw_f2_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <material name="black"/>
-      <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.075 0.0521"/>
+      <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.051/2} ${-0.05-0.045/2} ${0.05}"/>
     </visual>
     <!-- this collision is for the back traction body -->
     <collision name = 'back_traction_body'>
@@ -402,14 +402,14 @@
     <!-- this collision is for the back traction claw f1 support -->
     <collision name = 'back_traction_claw_f1_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <origin rpy="0 0 0" xyz="0.0005 -0.075 0.0521"/>
     </collision>
     <!-- this collision is for the back traction claw f2 support -->
     <collision name = 'back_traction_claw_f2_support'>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
+        <box size="0.051 0.045 0.036 "/> 
       </geometry>
       <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.075 0.0521"/>
     </collision>
@@ -424,7 +424,7 @@
   <joint name="joint_garra_tracao_f1" type="revolute">
     <parent link="tracao_f"/>
     <child link="garra_tracao_f1"/>
-    <origin rpy="0 0 ${M_PI}" xyz="0.0005 0.09 0.06985"/>
+    <origin rpy="0 0 ${M_PI}" xyz="${0.006+0.011} ${0.05+0.028} ${0.05+0.018+0.0045}"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -438,14 +438,14 @@
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the front f1 claw unit -->
     <collision>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.015953 0.116844"/>
@@ -458,7 +458,7 @@
   <joint name="joint_eixo_tracao_f1" type="continuous">
     <parent link="garra_tracao_f1"/>
     <child link="eixo_tracao_f1"/>
-    <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
+    <origin rpy="0 0 0" xyz="0.0 0.025 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
@@ -469,19 +469,17 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <material name="grey"/>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- This collision is for the front f1 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -494,7 +492,7 @@
   <joint name="joint_garra_tracao_f2" type="revolute">
     <parent link="tracao_f"/>
     <child link="garra_tracao_f2"/>
-    <origin rpy="0 0 0" xyz="0.1765 -0.09 0.06985"/>
+    <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.011} ${-0.05-0.028} ${0.05+0.018+0.0045}"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -508,14 +506,14 @@
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the front f2 claw unit -->
     <collision>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.015953 0.116844"/>
@@ -539,19 +537,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- This collision is for the front f2 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
+      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -567,7 +565,7 @@
   <joint name="joint_garra_tracao_b1" type="revolute">
     <parent link="tracao_b"/>
     <child link="garra_tracao_b1"/>
-    <origin rpy="0 0 0" xyz="0.0005 -0.09 0.06985"/>
+    <origin rpy="0 0 ${M_PI}" xyz="${0.006+0.011} ${0.05+0.028} ${0.05+0.018+0.0045}"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -580,14 +578,14 @@
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back t1 claw unit -->
     <collision>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.015953 0.116844"/>
@@ -611,19 +609,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- This collision is for the back t1 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.045 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -637,7 +635,7 @@
   <joint name="joint_garra_tracao_b2" type="revolute">
     <parent link="tracao_b"/>
     <child link="garra_tracao_b2"/>
-    <origin rpy="0 0 ${M_PI}" xyz="0.1765 0.09 0.06985"/>
+    <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.011} ${-0.05-0.028} ${0.05+0.018+0.0045}"/>
     <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 0 1"/>
   </joint>
@@ -650,14 +648,14 @@
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back t2 claw unit -->
     <collision>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.012 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.015953 0.116844"/>
@@ -681,19 +679,19 @@
     <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
     <visual>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- This collision is for the back t2 traction unit -->
     <collision>
       <geometry>
-        <mesh filename="package://mybot_description/meshes/Shaft_piro3_V2.dae"/>
+         <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.055 0.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
