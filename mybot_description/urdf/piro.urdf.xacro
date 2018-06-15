@@ -317,7 +317,7 @@
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
       </geometry>
-      <material name="black"/>
+      <material name="grey"/>
       <origin rpy="0 0 0" xyz="${0.006 +0.051/2} ${0.05+0.045/2} ${0.05}"/>
     </visual>
     <!-- This visual represents the front traction claw f1 support -->
@@ -326,7 +326,7 @@
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
       </geometry>
-      <material name="black"/>
+      <material name="grey"/>
       <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.051/2} ${-0.05-0.045/2} ${0.05}"/>
     </visual>
     <!-- this collision is for the front traction body -->
@@ -381,7 +381,7 @@
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
       </geometry>
-      <material name="black"/>
+      <material name="grey"/>
       <origin rpy="0 0 0" xyz="${0.006 +0.051/2} ${0.05+0.045/2} ${0.05}"/>
     </visual>
     <!-- This visual represents the  back traction claw f2 support -->
@@ -389,7 +389,7 @@
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
       </geometry>
-      <material name="black"/>
+      <material name="grey"/>
       <origin rpy="0 0 0" xyz="${0.233 -0.006 -0.051/2} ${-0.05-0.045/2} ${0.05}"/>
     </visual>
     <!-- this collision is for the back traction body -->
@@ -458,7 +458,7 @@
   <joint name="joint_eixo_tracao_f1" type="continuous">
     <parent link="garra_tracao_f1"/>
     <child link="eixo_tracao_f1"/>
-    <origin rpy="0 0 0" xyz="0.0 0.025 0.172"/>
+    <origin rpy="0 0 0" xyz="0.0 ${0.052+0.006} 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
@@ -472,14 +472,14 @@
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </visual>
     <!-- This collision is for the front f1 traction unit -->
     <collision>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -526,7 +526,7 @@
   <joint name="joint_eixo_tracao_f2" type="continuous">
     <parent link="garra_tracao_f2"/>
     <child link="eixo_tracao_f2"/>
-    <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
+    <origin rpy="0 0 0" xyz="0.0 ${0.052+0.006} 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
@@ -539,17 +539,15 @@
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </visual>
     <!-- This collision is for the front f2 traction unit -->
     <collision>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="1.57 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -599,7 +597,7 @@
   <joint name="joint_eixo_tracao_b1" type="continuous">
     <parent link="garra_tracao_b1"/>
     <child link="eixo_tracao_b1"/>
-    <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
+    <origin rpy="0 0 0" xyz="0.0 ${0.052+0.006} 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
@@ -611,17 +609,15 @@
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </visual>
     <!-- This collision is for the back t1 traction unit -->
     <collision>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
@@ -669,7 +665,7 @@
   <joint name="joint_eixo_tracao_b2" type="continuous">
     <parent link="garra_tracao_b2"/>
     <child link="eixo_tracao_b2"/>
-    <origin rpy="0 0 0" xyz="0.0 0.06 0.172"/>
+    <origin rpy="0 0 0" xyz="0.0 ${0.052+0.006} 0.172"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7" friction="1.0" />
   </joint>
@@ -681,17 +677,15 @@
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
       <material name="grey"/>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </visual>
     <!-- This collision is for the back t2 traction unit -->
     <collision>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <!-- <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/> -->
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <origin rpy="0 0 0" xyz="-0.0275 0 ${-0.061/2}"/>
     </collision>
     <inertial>
       <origin rpy="0 0 0" xyz="0.0 0.026065 0.0"/>
