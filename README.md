@@ -1,12 +1,11 @@
-# Piro Simulation
+# ELIR Simulation
 
-Scripts for simulate piro on gazebo
+Scripts for simulate ELIR on gazebo!
 
-## Package Dependencies
-
-In order to install all the dependencies, go to the install folder:
+## Installing Package Dependencies
+Considering that you already have ROS Kinetic installed, go to install folder:
 ```
-$ ~/catkin_ws/src/piro_simulation/install
+$ ~/catkin_ws/src/elir_simulation/install
 ```
 
 Run the insall.sh file
@@ -37,9 +36,22 @@ joint_state_controller
 
 joint_state_publisher
 ```
+## Avaiable Applications
 
-## Running the Package
-Step by step guide to run the package:
+In order to visualize your robot on rviz:
+
+```
+$ roslaunch mybot_description piro_view.launch
+```
+
+In order to run your World on gazebo:
+
+```
+$ mybot_gazebo mybot_world.launch
+```
+
+## Manually installing the Dependencies
+Step by step guide to install package dependencies:
 
 1. Install ROS kinetic
 
@@ -104,21 +116,6 @@ Step by step guide to run the package:
   2. Inside catkin_ws do a catkin_make
   
   3. Launch the world
-
-## Understanding the launch files
-
-In order to visualize your robot on rviz:
-
-```
-$ roslaunch mybot_description piro_view.launch
-```
-
-In order to run your World on gazebo:
-
-```
-$ mybot_gazebo mybot_world.launch
-```
-
 
   ## Versions
   The version of gazebo is the 7 and [ROS] is kinetic    
