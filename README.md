@@ -38,16 +38,16 @@ joint_state_publisher
 ```
 ## Avaiable Applications
 
-In order to visualize your robot on rviz:
+RVIZ Visualization:
 
 ```
-$ roslaunch mybot_description piro_view.launch
+$ roslaunch mybot_description elir_view.launch
 ```
 
-In order to run your World on gazebo:
+Gazebo Simulation:
 
 ```
-$ mybot_gazebo mybot_world.launch
+$ roslaunch mybot_gazebo mybot_world.launch
 ```
 
 ## Manually installing the Dependencies
