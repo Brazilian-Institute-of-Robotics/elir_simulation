@@ -1,7 +1,7 @@
 <launch>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
-  <rosparam file="$(find mybot_control)/config/piro_joint_control.yaml" command="load"/>
+  <rosparam file="$(find mybot_control)/config/elir_joint_control.yaml" command="load"/>
 
   <!-- load the controllers -->
   <node name="controller_spawner_joint" pkg="controller_manager" type="spawner" respawn="false"

@@ -5,7 +5,7 @@
   <!-- Gazebo -->
   <!-- ros_control plugin -->
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
-  <xacro:include filename="$(find mybot_description)/urdf/piro.gazebo.xacro" />
+  <xacro:include filename="$(find mybot_description)/urdf/elir.gazebo.xacro" />
   <xacro:property name="M_PI" value="3.141592" />
   <!-- Parametros do box_link-->
   <link name="base_link">
@@ -44,7 +44,7 @@
       <origin rpy="0 0 0" xyz="0 0.0303 0.23365"/>
     </visual>
     <!-- This visual represents the claw's base in the central stem -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name = 'central_claw_base'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/dxl_mx106.dae"/>
@@ -92,7 +92,7 @@
   <!-- this link represents the central claw unit -->
   <link name="garra_ap">
     <!-- This visual represents the central claw unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name = 'central_claw'>
       <geometry>
         <mesh filename="package://mybot_description/meshes/claw.dae"/>
@@ -124,7 +124,7 @@
   <!-- this link represents the central traction unit -->
   <link name="eixo_tracao_ap">
     <!-- This visual represents the central traction unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name = 'central_traction'>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
@@ -312,7 +312,7 @@
       <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </visual>
     <!-- This visual represents the front traction claw f2 support -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name = 'front_traction_claw_f1_support'>
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
@@ -321,7 +321,7 @@
       <origin rpy="0 0 0" xyz="${0.006 +0.051/2} ${0.05+0.045/2} ${0.05}"/>
     </visual>
     <!-- This visual represents the front traction claw f1 support -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual name = 'front_traction_claw_f2_support'>
       <geometry>
         <box size="0.051 0.045 0.036 "/> 
@@ -431,7 +431,7 @@
 
   <!-- this link represents the front f1 claw unit -->
   <link name="garra_tracao_f1">
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <!-- This visual represents the front f1 claw unit -->
     <visual>
       <geometry>
@@ -466,7 +466,7 @@
   <!-- this link represents the front f1 traction unit -->
   <link name="eixo_tracao_f1">
     <!-- This visual represents the front f1 traction unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
@@ -499,7 +499,7 @@
 
   <!-- this link represents the front f2 claw unit -->
   <link name="garra_tracao_f2">
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <!-- This visual represents the front f2 claw unit -->
     <visual>
       <geometry>
@@ -534,7 +534,7 @@
   <!-- this link represents the front f2 traction unit -->
   <link name="eixo_tracao_f2">
     <!-- This visual represents the front f2 traction unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
@@ -569,7 +569,7 @@
   </joint>
   <!-- this link represents the back t1 claw unit -->
   <link name="garra_tracao_b1">
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <!-- This visual represents the back t1 claw unit -->
     <visual>
       <geometry>
@@ -604,7 +604,7 @@
   <!-- this link represents the back t1 traction unit -->
   <link name="eixo_tracao_b1">
     <!-- This visual represents the back t1 traction unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
@@ -637,7 +637,7 @@
   </joint>
   <!-- this link represents the back t2 claw unit -->
   <link name="garra_tracao_b2">
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <!-- This visual represents the back t2 claw unit -->
     <visual>
       <geometry>
@@ -672,7 +672,7 @@
   <!-- this link represents the back t2 traction unit -->
   <link name="eixo_tracao_b2">
     <!-- This visual represents the back t2 traction unit -->
-    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of piro3 -->
+    <!-- Need to check mesh design to see if dimensions is the same as the actual dimensions of elir -->
     <visual>
       <geometry>
          <mesh filename="package://mybot_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 

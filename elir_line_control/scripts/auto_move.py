@@ -357,4 +357,4 @@ class Robot:
 
 if __name__ == '__main__':
         #Creates a object called turtle10 of the class Turtle
-        piro3 = Robot()
+        elir = Robot()

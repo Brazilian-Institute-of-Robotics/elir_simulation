@@ -449,8 +449,8 @@ void callback_hokuyo2(const sensor_msgs::LaserScan::ConstPtr& data){
 }
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "Piro3_move");
-  Robot piro3;
+  ros::init(argc, argv, "Elir3_move");
+  Robot elir;
 
 
   // ros::NodeHandle n;
