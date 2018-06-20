@@ -2,19 +2,42 @@
 
 Scripts for simulate ELIR on gazebo!
 
-## Installing Package Dependencies
-Considering that you already have ROS Kinetic installed, go to install folder:
+## RequIREMENTS 
+
+  * [Ubuntu 16.04 LTS (Xenial)](http://releases.ubuntu.com/14.04/) 
+  * [ROS Kinetic Kame](http://wiki.ros.org/indigo/Installation/Ubuntu) 
+  * [ROS Workspace](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+  * [Gazebo 7+](http://gazebosim.org/download)
+
+
+
+## Installation
+Go to the install folder
 ```
-$ ~/catkin_ws/src/elir_simulation/install
+$ cd ~/catkin_ws/src/elir_simulation/install
 ```
 
-Run the insall.sh file
-
+Run the insall.sh file 
 ```
 $ ./install.sh
 ```
+Remember to compile you do a catkin_make in your workspace.
 
-You can check with rospack list in terminal to see if the following packages were installed:
+Go to the catkin_ws:
+```
+$ cd ~/catkin_ws
+```
+Run:
+```
+$ catkin_make
+```
+Case ROS doesn't find the package, remember to source your setup.bash file
+```
+$ source ~/catkin_ws/devel/setup.bash
+```
+
+### Installed Packages
+You can check with rospack list comand to see if the packages were installed:
 ```
 Velocity_controllers
 
@@ -45,56 +68,13 @@ $ roslaunch mybot_description elir_view.launch
 ```
 
 Gazebo Simulation:
-
 ```
 $ roslaunch mybot_gazebo mybot_world.launch
 ```
 
-## Manually installing the Dependencies
-Step by step guide to install package dependencies:
+## Joystick Application
+  Find your joystick-driver and clone the repository into the src folder 
 
-1. Install ROS kinetic
-
-2. Create a ros workspace
-
-3. Inside the workspace create a folder for your packages (src)
-
-4. Inside your src folder run git init to declare as a github workspace
-
-5. Git clone the url of the project
-
-6. Install some packages that are necessary in order to run the project:
-  
-  ```
-    $ sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
-  ```
-
-  ```
-    $ sudo apt-get install ros-kinetic-koint-trajectory-controller
-  ```
-
-  ```
-    $ sudo apt-get install ros-kinetic-joint-state-controller
-  ```
-
-  ```
-    $ sudo apt-get install ros-kinetic-effort-controller
-  ```
-
-  ```
-    $ sudo apt-get install ros-kinetic-position-controller
-  ```
-
-  ```
-    $ sudo apt-get install ros-kinetic-velocity-controller
-  ```
-
-## Joystick
-
-  In order to use joystick, follow the instructions below:
-  Find the joystick-driver
-  Go to the github page
-  Clone the repository into the src folder and do the following:
   ```
   $ cd ~/catkin_ws/src
   ```
@@ -107,6 +87,7 @@ Step by step guide to install package dependencies:
   $ cd ~/catkin_ws
   ```
 
+  And install libusb-dev
   ```
   $ sudo apt-get install libusb-dev
   ```
@@ -116,6 +97,12 @@ Step by step guide to install package dependencies:
   2. Inside catkin_ws do a catkin_make
   
   3. Launch the world
+    
 
-  ## Versions
-  The version of gazebo is the 7 and [ROS] is kinetic    
+## Contributions
+* **Cleber Couto** - [clebercoutof](https://github.com/clebercoutof)
+* **Daniel Pinha** - [DanielPínha](https://github.com/DanielPinha)
+
+## Credits
+* **Marco Reis** - [mhar-vell](https://github.com/mhar-vell)
+* **Pedro Xavier** - [pxalcantara](https://github.com/pxalcantara)
