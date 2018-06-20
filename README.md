@@ -1,8 +1,8 @@
 # ELIR Simulation
 
-Scripts for simulate ELIR on gazebo!
+Simulate ELIR on gazebo!
 
-## RequIREMENTS 
+## Requirements
 
   * [Ubuntu 16.04 LTS (Xenial)](http://releases.ubuntu.com/14.04/) 
   * [ROS Kinetic Kame](http://wiki.ros.org/indigo/Installation/Ubuntu) 
@@ -38,27 +38,27 @@ $ source ~/catkin_ws/devel/setup.bash
 
 ### Installed Packages
 You can check with rospack list comand to see if the packages were installed:
-```
-Velocity_controllers
 
-position_controllers
+* Velocity_controllers
 
-gazebo_ros
+* position_controllers
 
-gazebo_ros_control
+* gazebo_ros
 
-pluginlib
+* gazebo_ros_control
 
-librviz_tutorial
+* pluginlib
 
-Xacro
+* librviz_tutorial
 
-ps3joy
+* Xacro
 
-joint_state_controller
+* ps3joy
 
-joint_state_publisher
-```
+* joint_state_controller
+
+* joint_state_publisher
+
 ## Avaiable Applications
 
 RVIZ Visualization:
