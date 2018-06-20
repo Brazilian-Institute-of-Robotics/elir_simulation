@@ -12,13 +12,13 @@
     <!-- This visual represents the dummy link for robot base body-->
     <visual name = 'base_body'>
       <geometry>
-        <box size= "0.3219 0.1461 0.2357"/>
+        <box size= "0.01 0.01 0.01"/>
       </geometry>
   </visual>
   </link>
 
   <joint name="base_joint" type="fixed">
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <origin xyz="0.0 0.0 ${0.2357/2}" rpy="0.0 0.0 0.0"/>
     <parent link="base_link"/>
     <child link="box_link"/>
     <axis xyz="0.0 0.0 0.0"/>
