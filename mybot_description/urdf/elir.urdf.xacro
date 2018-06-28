@@ -9,12 +9,6 @@
   <xacro:property name="M_PI" value="3.141592" />
   <!-- Parametros do box_link-->
   <link name="base_link">
-    <!-- This visual represents the dummy link for robot base body-->
-    <visual name = 'base_body'>
-      <geometry>
-        <box size= "0.01 0.01 0.01"/>
-      </geometry>
-  </visual>
   </link>
 
   <joint name="base_joint" type="fixed">
