@@ -64,12 +64,12 @@ You can check with rospack list comand to see if the packages were installed:
 RVIZ Visualization:
 
 ```
-$ roslaunch mybot_description elir_view.launch
+$ roslaunch elir_description elir_view.launch
 ```
 
 Gazebo Simulation:
 ```
-$ roslaunch mybot_gazebo mybot_world.launch
+$ roslaunch elir_gazebo elir_world.launch
 ```
 
 ## Joystick Application

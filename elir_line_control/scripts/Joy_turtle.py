@@ -30,7 +30,7 @@ class Turtle:
         self.pathclaw5 = rospy.Publisher('/robot/claw_1c_controller/command', Float64, queue_size=10)
         #self.path2 = rospy.Publisher('/robot/claw_2f_controller/command', Float64, queue_size=10)
         # self.path = rospy.Publisher('/robot/joint_2f_controller/command', Twist, queue_size=10)
-        # self.path2 = rospy.Publisher('mybot/2/cmd_vel', Twist, queue_size=10)
+        # self.path2 = rospy.Publisher('elir/2/cmd_vel', Twist, queue_size=10)
         #create a variable self.pose_acquite that will subscribe (read), the
         #message type pose in the topic /turtle1/pose through the self.callback
         self.pose_acquire = rospy.Subscriber('joy',Joy,self.callback)

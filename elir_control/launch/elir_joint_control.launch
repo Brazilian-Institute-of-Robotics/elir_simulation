@@ -1,0 +1,31 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find elir_control)/config/elir_joint_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner_joint" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/robot" args="
+    joint_1f_controller
+    joint_2f_controller
+    joint_1b_controller
+    joint_2b_controller
+    claw_1c_controller
+    claw_1f_controller
+    claw_2f_controller
+    claw_1b_controller
+    claw_2b_controller
+    traction_1c_controller
+    traction_1f_controller
+    traction_2f_controller
+    traction_1b_controller
+    traction_2b_controller
+    joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher_joint" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/robot/joint_states" />
+  </node>
+
+</launch>

@@ -39,7 +39,7 @@ def values():
     return twist
 
 def keyboard():
-    pub = rospy.Publisher('mybot/cmd_vel',Twist, queue_size=1)
+    pub = rospy.Publisher('elir/cmd_vel',Twist, queue_size=1)
     rospy.init_node('teleop_py',anonymous=True)
     rate = rospy.Rate(1)
     while not rospy.is_shutdown():
