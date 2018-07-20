@@ -1,15 +1,8 @@
 <?xml version="1.0" ?>
 <robot name="elir_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:property name="PI" value="3.1415926535897931"/>
-  <!-- <link name="footprint" />
-
-  <joint name="base_joint" type="fixed">
-    <parent link="footprint"/>
-    <child link="Tower1_Mesh"/>
-  </joint> -->
 
   <link name="Tower1_Mesh">
-    <!-- <static>true</static> -->
     <visual>
       <origin xyz = "0 0 0"  rpy="0 0 0"/>
       <geometry>
@@ -26,44 +19,4 @@
       <inertia ixx="9.8478" ixy="-0.0181" ixz="-0.0877" iyy="15.5246" iyz="-0.5623" izz="9.2774"/>
     </inertial>
   </link>
-  <!-- <joint name="base_joint" type="fixed">
-    <parent link="Tower1_Mesh"/>
-    <child link="Tower2_Mesh"/>
-  </joint>
-  <link name="Tower2_Mesh">
-    <visual>
-      <pose>10 5 0 1.5707 0 0</pose>
-      <geometry>
-        <mesh filename="package://elir_description/meshes/3d-model.dae"/>
-      </geometry>
-    </visual>
-    <collision >
-      <geometry>
-        <mesh filename="package://elir_description/meshes/3d-model.dae"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="base_joint2" type="fixed">
-    <parent link="Tower2_Mesh"/>
-    <child link="tower"/>
-  </joint>
-
-  <link name='tower'>
-    <pose>0 3.5 17 0 0 0</pose>
-    <inertial>
-      <mass>1000</mass>
-    </inertial>
-    <collision>
-      <geometry>
-        <mesh filename="package://elir_description/meshes/power_line.dae"/>
-      </geometry>
-    </collision>
-    <visual>
-      <geometry>
-        <mesh filename="package://elir_description/meshes/power_line.dae" />
-     </geometry>
-    </visual>
-  </link> -->
-
 </robot>
