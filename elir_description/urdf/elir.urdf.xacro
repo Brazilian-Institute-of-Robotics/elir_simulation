@@ -26,14 +26,14 @@
       <geometry>
         <box size= "0.3219 0.1461 0.2357"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
     </visual>
     <!-- This visual represents the central stem -->
     <visual name = 'central_stem'>
       <geometry>
         <box size="0.0367 0.0367 0.279"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <!-- <xacro:insert_block name="a.test_central_stem_origin" /> -->
       <origin rpy="0 0 0" xyz="0 0.0303 0.23365"/>
     </visual>
@@ -91,7 +91,7 @@
       <geometry>
         <mesh filename="package://elir_description/meshes/claw.dae"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
     </visual>
     <!-- This collision is for the central claw unit -->
     <collision name = 'central_claw'>
@@ -155,7 +155,7 @@
       <geometry>
         <box size="0.185 0.102 0.102"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
     </visual> -->
 
@@ -164,7 +164,7 @@
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </visual>
     <visual name = 'base_left_pallet'>
@@ -230,7 +230,7 @@
       <geometry>
         <box size="0.185 0.102 0.102"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.1985 0.0 0.0"/>
     </visual> -->
 
@@ -239,7 +239,7 @@
       <geometry>
         <box size="0.19 0.100 0.05"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.20995 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back arm unit -->
@@ -302,7 +302,7 @@
       <geometry>
         <box size="0.233 0.100 0.100"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </visual>
     <!-- This visual represents the front traction claw f2 support -->
@@ -367,7 +367,7 @@
       <geometry>
         <box size="0.233 0.100 0.100"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.1165 0.0 0.0201"/>
     </visual>
     <!-- This visual represents the  back traction claw f1 support -->
@@ -431,7 +431,7 @@
       <geometry>
         <mesh filename="package://elir_description/meshes/claw.dae"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the front f1 claw unit -->
@@ -465,7 +465,7 @@
       <geometry>
          <mesh filename="package://elir_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="-0.03 0 ${-0.061/2}"/>
     </visual>
     <!-- This collision is for the front f1 traction unit -->
@@ -499,7 +499,7 @@
       <geometry>
         <mesh filename="package://elir_description/meshes/claw.dae"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the front f2 claw unit -->
@@ -533,7 +533,7 @@
       <geometry>
          <mesh filename="package://elir_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="-0.03 0 -0.03"/>
     </visual>
     <!-- This collision is for the front f2 traction unit -->
@@ -569,7 +569,7 @@
       <geometry>
         <mesh filename="package://elir_description/meshes/claw.dae"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back t1 claw unit -->
@@ -603,7 +603,7 @@
       <geometry>
          <mesh filename="package://elir_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="-0.03 0 -0.03"/>
     </visual>
     <!-- This collision is for the back t1 traction unit -->
@@ -637,7 +637,7 @@
       <geometry>
         <mesh filename="package://elir_description/meshes/claw.dae"/>
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     </visual>
     <!-- this collision is for the back t2 claw unit -->
@@ -671,7 +671,7 @@
       <geometry>
          <mesh filename="package://elir_description/meshes/wheel_elir.STL" scale="0.001 0.001 0.001"/> 
       </geometry>
-      <material name="grey"/>
+      <material name="silver"/>
       <origin rpy="0 0 0" xyz="-0.03 0 -0.03"/>
     </visual>
     <!-- This collision is for the back t2 traction unit -->

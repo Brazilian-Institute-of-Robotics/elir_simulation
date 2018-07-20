@@ -30,4 +30,7 @@
   <material name="white">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
+  <material name="silver">
+    <color rgba="${222/255} ${255/255} ${254/255} 1.0"/>
+  </material>
 </robot>
