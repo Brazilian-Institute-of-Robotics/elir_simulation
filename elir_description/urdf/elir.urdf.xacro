@@ -853,46 +853,50 @@
  
   <!-- ROS Control-->
   <!-- Juntas -->
+  
   <transmission name="tran_joint_1f">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint1_f">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo11">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <actuator name="servo13">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission>
+</transmission>
+
+  <transmission name="tran_joint_1b">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint1_b">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="servo12">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+</transmission>
+
   <transmission name="tran_joint_2f">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2_f">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo13">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
-    </actuator>
-  </transmission>
-  <transmission name="tran_joint_1t">
-    <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint1_b">
+    <actuator name="servo14">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    </joint>
-    <actuator name="servo22">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission>
-  <transmission name="tran_joint_2t">
+</transmission>
+
+  <transmission name="tran_joint_2b">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2_b">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo24">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    <actuator name="servo11">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission>
+</transmission>
   <!-- Garras -->
   <transmission name="tran_claw_c1">
     <type>transmission_interface/SimpleTransmission</type>

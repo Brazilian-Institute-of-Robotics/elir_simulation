@@ -1,0 +1,69 @@
+<launch>
+    <!-- Launch Gazebo -->
+    <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+    <arg name="paused" default="true"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+
+    <!-- We resume the logic in empty_world.launch -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="paused" value="$(arg paused)"/>
+        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        <arg name="headless" value="$(arg headless)"/>
+    </include>
+
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find elir_description)/urdf/elir.urdf.xacro' --inorder" />
+    
+	<!-- Spawn Cable --> 
+  	<node name="urdf_spawner_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"  args="-sdf -model suspension_tower -x 0.0 -y -0.018 -z 1.0 -file $(find elir_gazebo)/models/power_line/model.sdf"/> 
+ 
+  	<!-- Spawn one obstacle --> 
+  	<node name="urdf_obs_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"  args="-sdf -model obs_tower -x -1.5 -y -0.065 -z 0.98 -file $(find elir_gazebo)/models/obstacle_1/model.sdf"/> 
+ 
+  	<!-- Spawn another obstacle --> 
+  	<node name="urdf_obs_2_tower" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"  args="-sdf -model obs_2_tower -x 2.0 -y -0.05 -z 0.88 -file $(find elir_gazebo)/models/obstacle_2/model.sdf"/> 
+
+    <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+        args="-urdf -model elir -param robot_description -x 0.0 -y -0.01 -z 0.40"/> 
+
+
+
+    <!-- ros_control seven dof arm launch file -->
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find elir_control)/config/elir_joint_control.yaml" command="load"/>
+    <!-- <rosparam file="$(find dynamic_end_effector)/config/robotic_arm_gazebo_joint_states.yaml" command="load"/> -->
+
+
+    <node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+            output="screen" ns="/robot" args="joint_state_controller" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+                <param name="/use_gui" value="false"/>
+                <rosparam param="/source_list">[/robot/joint_states]</rosparam>
+    </node>
+
+    <!-- convert joint states to TF transforms for rviz, etc -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+    </node>  
+
+
+
+    <!-- ros_control trajectory control dof arm launch file -->
+    <rosparam file="$(find elir_control)/config/elir_controllers.yaml" command="load"/>
+
+    <node name="elir_robot_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/robot" args="f_arm_trajectory_controller 
+    traction_ap_controller 
+    traction_f1_controller
+    traction_f2_controller
+    traction_b1_controller
+    traction_b2_controller"/>
+
+</launch>

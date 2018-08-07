@@ -37,5 +37,19 @@
 	<!-- Spawn Elir Robot -->
 	<node name="elir_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -x 0.0 -y -0.01 -z 0.40 -model elir" />
 	<!-- Call launch to allow joint control -->
-	<include file="$(find elir_control)/launch/elir_joint_control.launch" />
+	<include file="$(find elir_control)/launch/elir_trajectory_control.launch" />
+	<!-- Spawn joint controllers -->
+	<!-- <rosparam file="$(find elir_control)/config/elir_trajectory_control.yaml" command="load"/>
+	<node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+            output="screen" ns="/robot" args="joint_state_controller" /> -->
+	<!-- Joint state Publisher -->
+	<!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="/use_gui" value="false"/>
+        <rosparam param="/source_list">[/robot/joint_states]</rosparam>
+    </node> -->
+	<!-- convert joint states to TF transforms for rviz, etc -->
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+    </node>   -->
+
 </launch>
