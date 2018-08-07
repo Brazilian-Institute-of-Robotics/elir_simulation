@@ -54,12 +54,12 @@
     </node>  
 
 
-
     <!-- ros_control trajectory control dof arm launch file -->
     <rosparam file="$(find elir_control)/config/elir_controllers.yaml" command="load"/>
 
     <node name="elir_robot_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/robot" args="f_arm_trajectory_controller 
+    output="screen" ns="/robot" args="f_arm_trajectory_controller
+    b_arm_trajectory_controller 
     traction_ap_controller 
     traction_f1_controller
     traction_f2_controller
