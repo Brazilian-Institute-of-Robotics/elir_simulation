@@ -64,6 +64,11 @@
     traction_f1_controller
     traction_f2_controller
     traction_b1_controller
-    traction_b2_controller"/>
+    traction_b2_controller
+    claw_ap_controller
+    claw_f1_controller
+    claw_f2_controller
+    claw_b1_controller
+    claw_b2_controller"/>
 
 </launch>
