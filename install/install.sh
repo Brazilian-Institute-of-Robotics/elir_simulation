@@ -3,6 +3,7 @@
 sudo apt-get install ros-kinetic-velocity-controllers
 sudo apt-get install ros-kinetic-position-controllers
 sudo apt-get install ros-kinetic-effort-controllers
+sudo apt-get install ros-kinetic-joint-trajectory-controller 
 sudo apt-get install ros-kinetic-gazebo-ros
 sudo apt-get install ros-kinetic-gazebo-ros-control
 sudo apt-get install ros-kinetic-librviz-tutorial
