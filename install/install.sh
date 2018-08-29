@@ -13,5 +13,5 @@ sudo apt-get install ros-kinetic-joint-state-controller
 sudo apt-get install ros-kinetic-joint-state-publisher
 sudo apt-get install ros-kinetic-hector-gazebo-plugins
 sudo apt-get install ros-kinetic-hector-gazebo-thermal-camera
-sudo apt-get install ros-kinetic-dynamixel-driver
+sudo apt-get install ros-kinetic-dynamixel-motor
 
