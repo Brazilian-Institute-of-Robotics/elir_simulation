@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find elir_control)/config/elir_trajectory_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner_traj" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/elir" args="traction_ap_controller 
+    traction_f1_controller
+    traction_f2_controller
+    traction_b1_controller
+    traction_b2_controller 
+    joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher_traj" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/elir/joint_states" />
+  </node>
+
+</launch>

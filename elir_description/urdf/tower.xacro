@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="elir_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="PI" value="3.1415926535897931"/>
+
+  <link name="Tower1_Mesh">
+    <visual>
+      <origin xyz = "0 0 0"  rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://elir_description/meshes/3d-model.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://elir_description/meshes/3d-model.dae"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4565"/>
+      <inertia ixx="9.8478" ixy="-0.0181" ixz="-0.0877" iyy="15.5246" iyz="-0.5623" izz="9.2774"/>
+    </inertial>
+  </link>
+</robot>
