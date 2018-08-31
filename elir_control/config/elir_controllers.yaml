@@ -1,0 +1,89 @@
+elir:
+  #Claw controllers
+  claw_ap_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_garra_ap
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  claw_f1_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_garra_tracao_f1
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  claw_f2_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_garra_tracao_f2
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  claw_b1_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_garra_tracao_b1
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  claw_b2_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_garra_tracao_b2
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+  
+  #Traction unit controllers
+  traction_ap_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: joint_eixo_tracao_ap
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  traction_f1_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: joint_eixo_tracao_f1
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  traction_f2_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: joint_eixo_tracao_f2
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  traction_b1_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: joint_eixo_tracao_b1
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+
+  traction_b2_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: joint_eixo_tracao_b2
+    pid: {p: 32.0, i: 0.01, d: 0.0}
+  
+  #Arms trajectory controllers
+  f_arm_trajectory_controller:
+    type: effort_controllers/JointTrajectoryController
+    publish_rate: 20
+    joints:
+      - joint1_f
+      - joint2_f
+
+    gains: # Required because we're controlling an effort interface
+      joint1_f: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint2_f: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+
+    state_publish_rate:  20          # Override default
+    action_monitor_rate: 20            # Override default
+    stop_trajectory_duration: 0        # Override default
+
+  
+  b_arm_trajectory_controller:
+    type: effort_controllers/JointTrajectoryController
+    publish_rate: 20
+    joints:
+      - joint1_b
+      - joint2_b
+
+    gains: # Required because we're controlling an effort interface
+      joint1_b: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+      joint2_b: {p: 32,  d: 0, i: 0.1, i_clamp: 1}
+
+    state_publish_rate:  20          # Override default
+    action_monitor_rate: 20            # Override default
+    stop_trajectory_duration: 0        # Override default
+
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 20
