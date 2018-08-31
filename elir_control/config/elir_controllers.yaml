@@ -1,4 +1,4 @@
-robot:
+elir:
   #Claw controllers
   claw_ap_controller:
     type: effort_controllers/JointPositionController
