@@ -145,7 +145,7 @@
     <child link="link1_b"/>
     <!-- <origin rpy=" 0 -0.60 3.141592" xyz="-0.13 0.0 0.079"/> -->
     <origin rpy=" 0 -0.6 ${M_PI}" xyz="-0.13 0.0 0.079"/>
-    <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
@@ -220,7 +220,7 @@
     <child link="link1_f"/>
     <!-- <origin rpy="0 -0.60 0" xyz="0.13 0.0 0.079"/> -->
     <origin rpy=" 0 -0.6 0" xyz="0.13 0.0 0.079"/>
-    <limit effort="1000.0" lower="-1.74" upper="0.7" velocity="0.5"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
@@ -284,7 +284,7 @@
     <parent link="link1_f"/>
     <child link="tracao_f"/>
     <origin rpy="0 0.57 0" xyz="0.39 0.0 0.0"/>
-    <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
@@ -377,7 +377,7 @@
     <parent link="link1_b"/>
     <child link="tracao_b"/>
     <origin rpy="0 0.57 0" xyz="0.39 0.0 0.0"/>
-    <limit effort="1000.0" lower="-1.0" upper="2.18" velocity="0.5"/>
+    <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="0.5"/>
     <axis xyz="0 1 0"/>
   </joint>
 
