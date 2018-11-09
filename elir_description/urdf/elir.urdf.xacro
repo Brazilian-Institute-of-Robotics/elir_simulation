@@ -75,7 +75,7 @@
   </link>
 
   <!-- this joint binds the base body (represented by the link box_link) with the central claw unit (represented by the link garra_ap). It can rotate with the z axis fixed, it has an upper limit of 3,14 (180 degrees) and a lower limit of -3,14 (-180 degrees) -->
-  <joint name="joint_garra_ap" type="revolute">
+  <joint name="joint_garra_tracao_ap" type="revolute">
     <parent link="box_link"/>
     <child link="garra_ap"/>
     <origin rpy="0 0 ${M_PI}" xyz="0.0 0.0722 0.3554"/>
@@ -854,147 +854,147 @@
   <!-- ROS Control-->
   <!-- Juntas -->
   
-  <transmission name="tran_joint_1f">
+  <transmission name="transmission_joint_1f">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint1_f">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo13">
+    <actuator name="servos_11_12">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
-  <transmission name="tran_joint_1b">
+  <transmission name="transmission_joint_1b">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint1_b">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo12">
+    <actuator name="servos_111_112">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
-  <transmission name="tran_joint_2f">
+  <transmission name="transmission_joint_2f">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2_f">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo14">
+    <actuator name="servos_21_22">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
-  <transmission name="tran_joint_2b">
+  <transmission name="transmission_joint_2b">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2_b">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo11">
+    <actuator name="servos_121_122">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
   <!-- Garras -->
-  <transmission name="tran_claw_c1">
+  <transmission name="transmission_claw_ap">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="joint_garra_ap">
+    <joint name="joint_garra_tracao_ap">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo9">
+    <actuator name="servo_71">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_claw_f1">
+  <transmission name="transmission_claw_f1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_garra_tracao_f1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo15">
+    <actuator name="servo_31">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_claw_f2">
+  <transmission name="transmission_claw_f2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_garra_tracao_f2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo17">
+    <actuator name="servo_41">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_claw_t1">
+  <transmission name="transmission_claw_b1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_garra_tracao_b1">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo25">
+    <actuator name="servo_131">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_claw_t2">
+  <transmission name="transmission_claw_b2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_garra_tracao_b2">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo27">
+    <actuator name="servo_141">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
   <!-- Velocity Controllers -->
-  <transmission name="tran_tracao_1c">
+  <transmission name="transmission_traction_ap">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_eixo_tracao_ap">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo10">
+    <actuator name="servo_81">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_tracao_1f">
+  <transmission name="transmission_traction_f1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_eixo_tracao_f1">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo16">
+    <actuator name="servo_51">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_tracao_2f">
+  <transmission name="transmission_traction_f2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_eixo_tracao_f2">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo18">
+    <actuator name="servo_61">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_tracao_1t">
+  <transmission name="transmission_traction_b1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_eixo_tracao_b1">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo26">
+    <actuator name="servo_151">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
-  <transmission name="tran_tracao_2t">
+  <transmission name="transmission_traction_b2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint_eixo_tracao_b2">
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="servo28">
+    <actuator name="servo_161">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
