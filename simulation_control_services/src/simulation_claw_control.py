@@ -28,7 +28,7 @@ class claw_control_services():
         self.AP_CLAW_JOINTS = ['claw_ap']
         #Opened and closed joint values
         self.OPEN_F_CLAW_POINTS = [1.57,1.57]
-        self.OPEN_B_CLAW_POINTS = [1.57,1.57]
+        self.OPEN_B_CLAW_POINTS = [-1.57,-1.57]
         self.CLOSE_POINTS = [0,0]
         self.OPEN_AP_CLAW_POINT = 1.57
         self.CLOSE_AP_CLAW_POINT = 0
