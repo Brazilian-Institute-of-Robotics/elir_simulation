@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="elir_robot">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="f_arm">
+        <joint name="joint1_f" />
+        <joint name="joint2_f" />
+        <joint name="eef_ref_tracao_f" />
+    </group>
+    <group name="eef_f">
+        <link name="eef_tracao_f" />
+    </group>
+    <group name="b_arm">
+        <joint name="joint1_b" />
+        <joint name="joint2_b" />
+        <joint name="eef_ref_tracao_b" />
+    </group>
+    <group name="eef_b">
+        <link name="eef_tracao_b" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="f_arm_line" group="f_arm">
+        <joint name="joint1_f" value="0" />
+        <joint name="joint2_f" value="0" />
+    </group_state>
+    <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+    <end_effector name="eef_f" parent_link="f_eef_ref" group="eef_f" />
+    <end_effector name="eef_b" parent_link="b_eef_ref" group="eef_b" />
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="box_link" link2="eef_tracao_b" reason="Never" />
+    <disable_collisions link1="box_link" link2="eef_tracao_f" reason="Never" />
+    <disable_collisions link1="box_link" link2="eixo_tracao_ap" reason="Never" />
+    <disable_collisions link1="box_link" link2="eixo_tracao_b2" reason="Never" />
+    <disable_collisions link1="box_link" link2="eixo_tracao_f2" reason="Never" />
+    <disable_collisions link1="box_link" link2="flir_camera" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="garra_ap" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="garra_tracao_b1" reason="Never" />
+    <disable_collisions link1="box_link" link2="garra_tracao_b2" reason="Never" />
+    <disable_collisions link1="box_link" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="box_link" link2="ground_sonar" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="link1_b" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="link1_f" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="zed_center" reason="Adjacent" />
+    <disable_collisions link1="box_link" link2="zed_left_camera" reason="Default" />
+    <disable_collisions link1="box_link" link2="zed_right_camera" reason="Default" />
+    <disable_collisions link1="eef_tracao_b" link2="eixo_tracao_b1" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="eixo_tracao_b2" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="garra_tracao_b1" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="garra_tracao_b2" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="garra_tracao_f1" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="link1_b" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="tracao_b" reason="Adjacent" />
+    <disable_collisions link1="eef_tracao_b" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eef_tracao_b" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="eixo_tracao_f1" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="eixo_tracao_f2" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="garra_ap" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="garra_tracao_f1" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="link1_f" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="tracao_f" reason="Adjacent" />
+    <disable_collisions link1="eef_tracao_f" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eef_tracao_f" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="eixo_tracao_f2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="garra_ap" reason="Adjacent" />
+    <disable_collisions link1="eixo_tracao_ap" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="link1_b" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="link1_f" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_ap" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="eixo_tracao_b2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="garra_tracao_b1" reason="Adjacent" />
+    <disable_collisions link1="eixo_tracao_b1" link2="garra_tracao_b2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="link1_b" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="tracao_b" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b1" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="garra_tracao_b1" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="garra_tracao_b2" reason="Adjacent" />
+    <disable_collisions link1="eixo_tracao_b2" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="link1_b" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="tracao_b" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_b2" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="eixo_tracao_f2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="garra_tracao_f1" reason="Adjacent" />
+    <disable_collisions link1="eixo_tracao_f1" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="link1_f" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="tracao_f" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f1" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="flir_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="garra_ap" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="garra_tracao_f1" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="garra_tracao_f2" reason="Adjacent" />
+    <disable_collisions link1="eixo_tracao_f2" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="link1_f" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="tracao_f" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="zed_center" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="eixo_tracao_f2" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="garra_ap" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="garra_tracao_b1" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="garra_tracao_b2" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="garra_tracao_f1" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="link1_b" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="link1_f" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="tracao_b" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="tracao_f" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="zed_center" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="flir_camera" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="garra_tracao_b1" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="link1_b" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="link1_f" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="zed_center" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="garra_ap" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="garra_tracao_b2" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="garra_tracao_f1" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="link1_b" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="tracao_b" reason="Adjacent" />
+    <disable_collisions link1="garra_tracao_b1" link2="zed_center" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_b1" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="link1_b" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="tracao_b" reason="Adjacent" />
+    <disable_collisions link1="garra_tracao_b2" link2="zed_center" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_b2" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="garra_tracao_f2" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="link1_f" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="tracao_f" reason="Adjacent" />
+    <disable_collisions link1="garra_tracao_f1" link2="zed_center" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_f1" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="ground_sonar" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="link1_b" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="link1_f" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="tracao_f" reason="Adjacent" />
+    <disable_collisions link1="garra_tracao_f2" link2="zed_center" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="garra_tracao_f2" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="link1_b" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="link1_f" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="tracao_b" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="tracao_f" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="zed_center" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="ground_sonar" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="link1_b" link2="tracao_b" reason="Adjacent" />
+    <disable_collisions link1="link1_b" link2="zed_center" reason="Never" />
+    <disable_collisions link1="link1_b" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="link1_b" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="link1_f" link2="tracao_f" reason="Adjacent" />
+    <disable_collisions link1="link1_f" link2="zed_center" reason="Never" />
+    <disable_collisions link1="link1_f" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="link1_f" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="tracao_b" link2="zed_center" reason="Never" />
+    <disable_collisions link1="tracao_b" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="tracao_b" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="tracao_f" link2="zed_center" reason="Never" />
+    <disable_collisions link1="tracao_f" link2="zed_left_camera" reason="Never" />
+    <disable_collisions link1="tracao_f" link2="zed_right_camera" reason="Never" />
+    <disable_collisions link1="zed_center" link2="zed_left_camera" reason="Adjacent" />
+    <disable_collisions link1="zed_center" link2="zed_right_camera" reason="Adjacent" />
+    <disable_collisions link1="zed_left_camera" link2="zed_right_camera" reason="Never" />
+</robot>

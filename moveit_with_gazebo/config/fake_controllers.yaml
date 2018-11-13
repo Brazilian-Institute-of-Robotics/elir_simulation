@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_f_arm_controller
+    joints:
+      - joint1_f
+      - joint2_f
+  - name: fake_eef_f_controller
+    joints:
+      []
+  - name: fake_b_arm_controller
+    joints:
+      - joint1_b
+      - joint2_b
+  - name: fake_eef_b_controller
+    joints:
+      []
