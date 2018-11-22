@@ -1,0 +1,5 @@
+<launch>
+<!-- Starts the line mimic command -->
+<node name="arm_control_simulate" pkg="simulation_line_control" type="arm_control_simulate.py" />
+<node name="teleop_tool" pkg="key_teleop" type="key_teleop.py" output="screen"/> 
+</launch>
