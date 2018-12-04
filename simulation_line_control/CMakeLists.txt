@@ -10,6 +10,7 @@ project(simulation_line_control)
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   rospy
+  message_generation
   std_msgs
 )
 
@@ -54,11 +55,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  LineMovement.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -105,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES simulation_line_control
-#  CATKIN_DEPENDS geometry_msgs rospy std_msgs
+ CATKIN_DEPENDS geometry_msgs rospy std_msgs message_generation
 #  DEPENDS system_lib
 )
 
