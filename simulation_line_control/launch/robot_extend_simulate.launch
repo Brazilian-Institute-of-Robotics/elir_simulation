@@ -1,0 +1,5 @@
+<launch>
+<!-- Starts the line mimic command -->
+<node name="robot_extend" pkg="simulation_line_control" type="robot_extend.py" />
+<node name="teleop_tool" pkg="key_teleop" type="key_teleop.py" output="screen"/> 
+</launch>
