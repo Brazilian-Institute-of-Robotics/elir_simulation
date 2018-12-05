@@ -1,0 +1,17 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: elir/f_arm_trajectory_controller/
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint1_f
+      - joint2_f
+  - name: elir/b_arm_trajectory_controller/
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - joint1_b
+      - joint2_b
+
