@@ -5,7 +5,7 @@ from math import pi
 from std_msgs.msg import Float64
 from std_msgs.msg import String
 from nav_msgs.msg import Odometry
-from control_services.srv import LineMovement
+from simulation_control.srv import LineMovement
 
 #!/usr/bin/env python
 
@@ -14,8 +14,7 @@ class elir_odometry():
         #Initiating odometry node
         rospy.init_node("elir_line__movement_service")
 
-        self.tr1_subs = rospy.Subscriber('elir/traction_b_controller/state', JointState, self.traction1_callback)
-        self.tr2_subs = rospy.Subscriber('elir/traction_f_controller/state', JointState, self.traction2_callback)
+        self.joint_state_subs = rospy.Subscriber('elir/join_states',JointState, self.state_callback)
         
         self.traction_f_publisher = rospy.Publisher('elir/traction_f_controller/command',Float64,queue_size = 10)
         self.traction_ap_publisher = rospy.Publisher('elir/traction_ap_controller/command', Float64,queue_size = 10)
@@ -66,7 +65,11 @@ class elir_odometry():
         self.traction_ap_publisher.publish(-value)
 
     #Callback function implementing the JointState received
-    def traction1_callback(self, data):
+    def state_callback(self, data):
+        for i in data:
+            print(i)
+
+
         angular_vel = data.velocity
         #Calculating linear velocity using the wheel radius
         linear_vel = angular_vel*self.wheel_radius
