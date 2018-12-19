@@ -100,6 +100,9 @@ Now, create one moveit_planning_execution.launch file, that loads the planning e
  <include file="$(find moveit_with_gazebo)/launch/moveit_rviz.launch"/>
 </launch>
 ```
+## Configuring the Rviz
+When you first initalize RVIZ , it doesn't come configured with the motion planning plugin, so click on add, and add the motion planning plugin,
+and change the fixed frame at global options to base_link.
 
 #Running the tests
 Launch your robot world, with the controllers and models. Then launch the moveit_planning_execution and add the motion planning plugin to the Rviz.

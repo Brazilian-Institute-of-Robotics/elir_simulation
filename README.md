@@ -59,6 +59,13 @@ You can check with rospack list comand to see if the packages were installed:
 
 * joint_state_publisher
 
+
+## Included Packages and features
+* elir_control - Contains the configurations for the elir joint controllers
+* elir_description - Contains the URDF file for Elir Robot, the meshes, and one script that convert this model to collada, in order to view it in OpenRave
+* elir_gazebo - Used to simulation with gazebo
+* simulation_control - Control applications for simulation 
+
 ## Avaiable Applications
 
 RVIZ Visualization:
@@ -72,39 +79,30 @@ Gazebo Simulation:
 $ roslaunch elir_gazebo elir_world.launch
 ```
 
-## Control Applications
-The simulation_line_control package is responsible for moving the robot on the line through keyboard user input, in order to move the robot on the line use :
-
+MoveIt! Interaction with gazebo:
 ```
-$ roslaunch simulation_line_control simulation_line_control.launch
+$ roslaunch moveit_with_gazebo new_moveit_planning_execution.launch
 ```
 
-## Joystick Application
-  Find your joystick-driver and clone the repository into the src folder 
+### Control Applications
+The simulation_control package is responsible for moving the robot on the line through keyboard user input, in order to move the robot on the line use :
 
-  ```
-  $ cd ~/catkin_ws/src
-  ```
+```
+$ roslaunch simulation__control simulation_line_control.launch
+```
 
-  ```
-  $ git clone [URL]
-  ```
+To do the robot stretch, in order to push up the central unit on the line,, based in the keyboard input, run
 
-  ```
-  $ cd ~/catkin_ws
-  ```
 
-  And install libusb-dev
-  ```
-  $ sudo apt-get install libusb-dev
-  ```
-  
-  1. Remove spacenav_node and wiimote that are inside the joystick-driver folder, they presented bugs
-    
-  2. Inside catkin_ws do a catkin_make
-  
-  3. Launch the world
+```
+$ roslaunch simulation_control robot_extend_simulate.launch
+```
 
+In order to enable the service to open and close the claw
+
+```
+$ rosrun simulation_control open_close_claw_srv.py
+```
 
 ## Contributions
 * **Cleber Couto** - [clebercoutof](https://github.com/clebercoutof)
