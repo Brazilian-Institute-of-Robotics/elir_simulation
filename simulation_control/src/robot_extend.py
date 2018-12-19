@@ -36,30 +36,41 @@ class arm_mimic_control():
             pass
 
         time = rospy.get_time()
-        #Configure b_arm parameters
-        msg_to_b_arm = JointTrajectory()                    
-        msg_to_b_arm.joint_names = self.b_arm_joints        
-        msg_to_b_arm.points = []                       
-        points_to_b_arm = JointTrajectoryPoint()            
+        #Create messages to publish on b_arm joints
+        msg_to_b_arm = JointTrajectory()
+	#Configuring joints of b_arm                    
+        msg_to_b_arm.joint_names = self.b_arm_joints
+	#Configure points to b_arm          
+        msg_to_b_arm.points = []
+        #Configure JointTractoryPoint to b_arm                         
+        points_to_b_arm = JointTrajectoryPoint() 
+        #Configure time of duration for b_arm action           
         points_to_b_arm.time_from_start = self.trajectory_duration
-
-        #Configure f_arm parameters     
-	msg_to_f_arm = JointTrajectory()                   
-        msg_to_f_arm.joint_names = self.f_arm_joints        
-        msg_to_f_arm.points = []                           
-        points_to_f_arm = JointTrajectoryPoint()        
+        #Create messages to publish on f_arm joints     
+	msg_to_f_arm = JointTrajectory()     
+	#Configuring joints of f_arm               
+        msg_to_f_arm.joint_names = self.f_arm_joints 
+	#Configure points to f_arm         
+        msg_to_f_arm.points = []
+        #Configure JointTractoryPoint to f_arm                            
+        points_to_f_arm = JointTrajectoryPoint()   
+        #Configure time of duration for f_arm action      
         points_to_f_arm.time_from_start = self.trajectory_duration  
-
 	#Creating message to publish on joints
         key_vel = self.current_joint1b + 3 * data.angular.z       
         key_vel_to_wheels = 3 * data.angular.z
+	#Points to publish on f_arm
         points_to_f_arm.positions = [key_vel, -key_vel]
+	#Points to publish on b_arm
         points_to_b_arm.positions = [key_vel, -key_vel]
+	#Message to publish on b_arm
         msg_to_b_arm.points.append(points_to_b_arm)
+	#Message to publish on f_arm
         msg_to_f_arm.points.append(points_to_f_arm)
 
         #Verifies the limits of key_vel value
         if(key_vel >= 3000 or key_vel <= -3000):
+	    #Value to publish don't change	
             key_vel = self.current_joint1b
             self.b_arm_publisher.publish(msg_to_b_arm)
             self.f_arm_publisher.publish(msg_to_f_arm)
