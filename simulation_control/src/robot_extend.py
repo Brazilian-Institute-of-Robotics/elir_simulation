@@ -25,39 +25,40 @@ class arm_mimic_control():
     #Callback function implementing the pose value received
     def callback_joints(self, msg):
         self.current_joint1b = msg.position[2]
-        self.current_joint1f = msg.position[3] 
+        self.current_joint1f = msg.position[3] 	
 
     def callback(self, data):
-        
+        #Verifies if is a null value on angular z
         if data.angular.z == 0:
             pass
-
+	#Verifies the joints position
         if(self.current_joint1b == 0 and self.current_joint1f == 0):       
             pass
-        
+
         time = rospy.get_time()
-        ####################################B_ARM MESSAGE CONFIG####################################
-        msg_to_b_arm = JointTrajectory()                    #-Creates a Joint Trajectory msg to be published on Back Arm-#
-        msg_to_b_arm.joint_names = self.b_arm_joints        #-Get joint names to back arm-#
-        msg_to_b_arm.points = []                            #-Create points array to back arm-#
-        points_to_b_arm = JointTrajectoryPoint()            #-Create point object to be published on back arm-#
-        points_to_b_arm.time_from_start = self.trajectory_duration  #-Get time to back arm trajectory duration-#
-        
-        ###################################F_ARM MENSSAGE CONFIG####################################
-        msg_to_f_arm = JointTrajectory()                    #-Creates a Joint Trajectory msg to be published on Front Arm-#
-        msg_to_f_arm.joint_names = self.f_arm_joints        #-Get joint names to front arm-#
-        msg_to_f_arm.points = []                            #-Create points array to front arm-#   
-        points_to_f_arm = JointTrajectoryPoint()            #-Create point object to be published on front arm-#         
-        points_to_f_arm.time_from_start = self.trajectory_duration    #-Get time to front arm trajectory duration-#
-        
-        ###########################################################
-        key_vel = self.current_joint1b + 3 * data.angular.z         #-Get and convert keyboard input-#
+        #Configure b_arm parameters
+        msg_to_b_arm = JointTrajectory()                    
+        msg_to_b_arm.joint_names = self.b_arm_joints        
+        msg_to_b_arm.points = []                       
+        points_to_b_arm = JointTrajectoryPoint()            
+        points_to_b_arm.time_from_start = self.trajectory_duration
+
+        #Configure f_arm parameters     
+	msg_to_f_arm = JointTrajectory()                   
+        msg_to_f_arm.joint_names = self.f_arm_joints        
+        msg_to_f_arm.points = []                           
+        points_to_f_arm = JointTrajectoryPoint()        
+        points_to_f_arm.time_from_start = self.trajectory_duration  
+
+	#Creating message to publish on joints
+        key_vel = self.current_joint1b + 3 * data.angular.z       
         key_vel_to_wheels = 3 * data.angular.z
         points_to_f_arm.positions = [key_vel, -key_vel]
         points_to_b_arm.positions = [key_vel, -key_vel]
         msg_to_b_arm.points.append(points_to_b_arm)
         msg_to_f_arm.points.append(points_to_f_arm)
-        
+
+        #Verifies the limits of key_vel value
         if(key_vel >= 3000 or key_vel <= -3000):
             key_vel = self.current_joint1b
             self.b_arm_publisher.publish(msg_to_b_arm)
@@ -66,7 +67,8 @@ class arm_mimic_control():
             self.traction_f2_publisher.publish(-key_vel_to_wheels)
             self.traction_b1_publisher.publish(-key_vel_to_wheels)
             self.traction_b2_publisher.publish(key_vel_to_wheels)
-        else:
+	#Write the values of arm joints        
+	else:
             self.b_arm_publisher.publish(msg_to_b_arm)
             self.f_arm_publisher.publish(msg_to_f_arm)
             self.traction_f1_publisher.publish(key_vel_to_wheels)
