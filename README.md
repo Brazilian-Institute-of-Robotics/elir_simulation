@@ -79,7 +79,7 @@ Gazebo Simulation:
 $ roslaunch elir_gazebo elir_world.launch
 ```
 
-MoveIt! Interaction with gazebo:
+MoveIt! Interaction with gazebo, launch your world then:
 ```
 $ roslaunch moveit_with_gazebo new_moveit_planning_execution.launch
 ```

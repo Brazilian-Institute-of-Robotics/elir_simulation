@@ -7,7 +7,7 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
 
 class claw_control_services():
-
+    """Class to implement the claw_control_services"""
     def __init__(self):
         #Creating our node,publisher and subscriber
         self.open_f_claw_service = rospy.Service('f_claw/open', Empty, self.open_f_claw)
@@ -37,6 +37,10 @@ class claw_control_services():
         
 
     def open_f_claw(self,req):
+        """
+        Open f_claw service callback
+        @param: Empty req  Empty Request
+        """
         #Get current time for header stamp
         time = rospy.get_time()
         #Joint Trajectory message
@@ -53,6 +57,10 @@ class claw_control_services():
         rospy.loginfo("f_claw opened")
 
     def close_f_claw(self,req):
+        """
+        Close f_claw service callback
+        @param: Empty req  Empty Request
+        """
         #Get current time for header stamp
         time = rospy.get_time()
         #Joint Trajectory message
@@ -69,6 +77,10 @@ class claw_control_services():
         rospy.loginfo("f_claw closed")
     
     def open_b_claw(self,req):
+        """
+        Open b_claw service callback
+        @param: Empty req  Empty Request
+        """
         #Get current time for header stamp
         time = rospy.get_time()
         #Joint Trajectory message
@@ -85,6 +97,10 @@ class claw_control_services():
         rospy.loginfo("b_claw opened")
 
     def close_b_claw(self,req):
+        """
+        Close b_claw service callback
+        @param: Empty req  Empty Request
+        """
         #Get current time for header stamp
         time = rospy.get_time()
         #Joint Trajectory message
@@ -101,10 +117,18 @@ class claw_control_services():
         rospy.loginfo("b_claw closed")
 
     def open_ap_claw(self,req):
+        """
+        Open ap_claw service callback
+        @param: Empty req  Empty Request
+        """
         self.ap_claw_publisher.publish(self.OPEN_AP_CLAW_POINT)
         rospy.loginfo("ap_claw opened")
         
     def close_ap_claw(self,req):
+        """
+        Close ap_claw service callback
+        @param: Empty req  Empty Request
+        """
         self.ap_claw_publisher.publish(self.CLOSE_AP_CLAW_POINT)
         rospy.loginfo("ap_claw closed")
 

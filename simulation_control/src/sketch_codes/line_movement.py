@@ -10,11 +10,15 @@ from simulation_control.srv import LineMovement
 #!/usr/bin/env python
 
 class elir_odometry():
+    """
+    Class to calculate the elir odometry and implement the service to an specific line displacement
+    @param: Empty req  Empty Request
+    """
     def __init__(self):
         #Initiating odometry node
         rospy.init_node("elir_line__movement_service")
 
-        self.joint_state_subs = rospy.Subscriber('elir/join_states',JointState, self.state_callback)
+        self.joint_state_subs = rospy.Subscriber('elir/joint_states',JointState, self.state_callback)
         
         self.traction_f_publisher = rospy.Publisher('elir/traction_f_controller/command',Float64,queue_size = 10)
         self.traction_ap_publisher = rospy.Publisher('elir/traction_ap_controller/command', Float64,queue_size = 10)
