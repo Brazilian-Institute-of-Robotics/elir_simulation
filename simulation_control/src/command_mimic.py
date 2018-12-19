@@ -4,7 +4,7 @@ from std_msgs.msg  import Float64
 from geometry_msgs.msg import Twist
 
 class line_mimic_control():
-
+    """Class to mimmic the key_vel topic to the traction control topics"""
     def __init__(self):
         #Creating our node,publisher and subscriber
         self.key_subscriber = rospy.Subscriber('/key_vel', Twist, self.callback)
@@ -16,7 +16,10 @@ class line_mimic_control():
 
         rospy.spin()
     #Callback function implementing the pose value received
-    def callback(self, data):
+    def callback(self, data):  
+        """Callback which sends the key values to the traction units
+        @param: Twist data Data containing a twist message type
+        """
         key_vel = 30*data.angular.z
         self.traction_f1_publisher.publish(key_vel)
         self.traction_f2_publisher.publish(-key_vel)
