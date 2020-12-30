@@ -1,0 +1,51 @@
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2020-12-30T20:00:00.553430</created>
+    <modified>2020-12-30T20:00:00.553433</modified>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_geometries>
+    <geometry id="geometry0" name="base_unidade_balanco_001">
+      <mesh>
+        <source id="cubeverts-array0">
+          <float_array count="24" id="cubeverts-array0-array">-0.01491597 0.03500259 -0.0550212 0.01486094 -0.03509259 -0.05497875 -0.0151389 -0.03499704 -0.05496382 0.01508388 0.03490703 -0.05503613 -0.01486094 0.03509259 0.05497875 0.0151389 0.03499704 0.05496382 -0.01508388 -0.03490703 0.05503613 0.01491597 -0.03500259 0.0550212</float_array>
+          <technique_common>
+            <accessor count="8" source="#cubeverts-array0-array" stride="3">
+              <param type="float" name="X"/>
+              <param type="float" name="Y"/>
+              <param type="float" name="Z"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cubenormals-array0">
+          <float_array count="36" id="cubenormals-array0-array">-0.0005002102 -0.0008182302 -0.9999995 -0.0005002102 -0.0008182302 -0.9999995 0.003184791 0.9999946 -0.0008198192 0.003184791 0.9999946 -0.0008198192 0.0005002102 0.0008182302 0.9999995 0.0005002102 0.0008182302 0.9999995 -0.003184791 -0.9999946 0.0008198192 -0.003184791 -0.9999946 0.0008198192 0.9999948 -0.0031852 -0.0004976016 0.9999948 -0.0031852 -0.0004976016 -0.9999948 0.0031852 0.0004976016 -0.9999948 0.0031852 0.0004976016</float_array>
+          <technique_common>
+            <accessor count="12" source="#cubenormals-array0-array" stride="3">
+              <param type="float" name="X"/>
+              <param type="float" name="Y"/>
+              <param type="float" name="Z"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cubeverts-array0-vertices">
+          <input semantic="POSITION" source="#cubeverts-array0"/>
+        </vertices>
+        <triangles count="12" material="materialref">
+          <input offset="0" semantic="VERTEX" source="#cubeverts-array0-vertices"/>
+          <input offset="1" semantic="NORMAL" source="#cubenormals-array0"/>
+          <p>0 0 1 0 2 0 3 1 1 1 0 1 4 2 3 2 0 2 5 3 3 3 4 3 6 4 5 4 4 4 7 5 5 5 6 5 2 6 7 6 6 6 1 7 7 7 2 7 7 8 3 8 5 8 7 9 1 9 3 9 0 10 6 10 4 10 2 11 6 11 0 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="scene">
+      <node id="node0" name="node0">
+        <instance_geometry url="#geometry0"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#scene"/>
+  </scene>
+</COLLADA>

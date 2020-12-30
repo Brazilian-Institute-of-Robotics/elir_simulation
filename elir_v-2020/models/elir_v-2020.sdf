@@ -1,0 +1,4080 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="elir_v-2020">
+    <pose>0.692453 0.073741 0.017191 0.000000 0.000000 0.000000</pose>
+    <static>false</static>
+    <self_collide>false</self_collide>
+    <link name="base_001">
+      <pose>-0.054902 0.023610 0.157064 0.000000 0.000000 0.000000</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <mass>0.818932</mass>
+        <inertia>
+          <ixx>0.009429</ixx>
+          <ixy>0.000021</ixy>
+          <ixz>0.000009</ixz>
+          <iyy>0.015542</iyy>
+          <iyz>0.000554</iyz>
+          <izz>0.010535</izz>
+        </inertia>
+      </inertial>
+      <visual name="base_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="base_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="base_fachamento_001">
+      <pose>-0.055394 -0.056986 0.122630 -0.003185 0.000498 1.569977</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.003185 0.000498 1.569977</pose>
+        <mass>0.127628</mass>
+        <inertia>
+          <ixx>0.000341</ixx>
+          <ixy>0.000003</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.001354</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.001015</izz>
+        </inertia>
+      </inertial>
+      <visual name="base_fachamento_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base_fachamento.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="base_fachamento_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base_fachamento.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="base_unidade_balanco_001">
+      <pose>-0.055027 0.017871 0.182292 1.022086 -1.569837 2.116321</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.022086 -1.569837 2.116321</pose>
+        <mass>0.231000</mass>
+        <inertia>
+          <ixx>0.000327</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000250</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000112</izz>
+        </inertia>
+      </inertial>
+      <visual name="base_unidade_balanco_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base_unidade_balanco.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="base_unidade_balanco_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/base_unidade_balanco.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="gps_001">
+      <pose>-0.055271 -0.038068 0.322457 -2.119492 1.569837 1.025287</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -2.119492 1.569837 1.025287</pose>
+        <mass>0.018834</mass>
+        <inertia>
+          <ixx>0.000003</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000005</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="gps_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/gps.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="gps_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/gps.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_001">
+      <pose>0.064503 -0.034930 0.231072 -2.119581 1.569837 -0.545600</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -2.119581 1.569837 -0.545600</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_002">
+      <pose>-0.175040 -0.034167 0.231199 1.021913 -1.569837 0.545698</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.021913 -1.569837 0.545698</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>-0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_003">
+      <pose>-0.174705 0.070753 0.231106 -2.119507 1.569837 2.596067</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -2.119507 1.569837 2.596067</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_004">
+      <pose>0.064837 0.069990 0.230994 1.022254 -1.569837 -2.596235</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.022254 -1.569837 -2.596235</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>-0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_estrutura_001">
+      <pose>-0.330993 0.018916 0.372832 -1.573981 -0.000820 2.351661</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 2.351661</pose>
+        <mass>0.067252</mass>
+        <inertia>
+          <ixx>0.000236</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000106</ixz>
+          <iyy>0.000278</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000235</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_estrutura_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_estrutura_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta2_001">
+      <pose>-0.247434 0.087871 0.288677 -1.573981 -0.000820 -0.789932</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 -0.789932</pose>
+        <mass>0.075785</mass>
+        <inertia>
+          <ixx>0.000057</ixx>
+          <ixy>-0.000015</ixy>
+          <ixz>0.000034</ixz>
+          <iyy>0.000098</iyy>
+          <iyz>0.000015</iyz>
+          <izz>0.000057</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta2_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta2_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta2_002">
+      <pose>-0.247875 -0.050709 0.288791 1.567612 0.000820 -2.351661</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567612 0.000820 -2.351661</pose>
+        <mass>0.075785</mass>
+        <inertia>
+          <ixx>0.000058</ixx>
+          <ixy>0.000015</ixy>
+          <ixz>0.000034</ixz>
+          <iyy>0.000098</iyy>
+          <iyz>-0.000015</iyz>
+          <izz>0.000057</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta2_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta2_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta1_001">
+      <pose>-0.416476 0.075844 0.459230 3.139220 0.780864 1.571950</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.139220 0.780864 1.571950</pose>
+        <mass>0.051677</mass>
+        <inertia>
+          <ixx>0.000036</ixx>
+          <ixy>0.000002</ixy>
+          <ixz>0.000025</ixz>
+          <iyy>0.000070</iyy>
+          <iyz>-0.000002</iyz>
+          <izz>0.000035</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta1_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta1_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta1_002">
+      <pose>-0.416837 -0.037325 0.459323 -0.002372 -0.780864 1.569642</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.002372 -0.780864 1.569642</pose>
+        <mass>0.051677</mass>
+        <inertia>
+          <ixx>0.000036</ixx>
+          <ixy>-0.000002</ixy>
+          <ixz>0.000025</ixz>
+          <iyy>0.000070</iyy>
+          <iyz>0.000002</iyz>
+          <izz>0.000035</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta1_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta1_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta2_003">
+      <pose>0.134075 -0.051925 0.291621 1.567612 0.000820 -0.843367</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567612 0.000820 -0.843367</pose>
+        <mass>0.075785</mass>
+        <inertia>
+          <ixx>0.000061</ixx>
+          <ixy>-0.000014</ixy>
+          <ixz>-0.000034</ixz>
+          <iyy>0.000098</iyy>
+          <iyz>-0.000016</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta2_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta2_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta2_004">
+      <pose>0.134517 0.086655 0.291508 -1.573981 -0.000820 -2.298225</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 -2.298225</pose>
+        <mass>0.075785</mass>
+        <inertia>
+          <ixx>0.000061</ixx>
+          <ixy>0.000014</ixy>
+          <ixz>-0.000034</ixz>
+          <iyy>0.000098</iyy>
+          <iyz>0.000016</iyz>
+          <izz>0.000053</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta2_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta2_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_estrutura_002">
+      <pose>0.211092 0.017191 0.377824 -1.573981 -0.000820 -2.298225</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 -2.298225</pose>
+        <mass>0.067252</mass>
+        <inertia>
+          <ixx>0.000248</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000106</ixz>
+          <iyy>0.000278</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000223</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_estrutura_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_estrutura_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta1_003">
+      <pose>0.293769 -0.039581 0.470937 -0.003915 0.727429 1.569699</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.003915 0.727429 1.569699</pose>
+        <mass>0.051677</mass>
+        <inertia>
+          <ixx>0.000038</ixx>
+          <ixy>0.000002</ixy>
+          <ixz>-0.000025</ixz>
+          <iyy>0.000070</iyy>
+          <iyz>0.000002</iyz>
+          <izz>0.000033</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta1_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta1_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="braco_aleta1_004">
+      <pose>0.294129 0.073588 0.470844 3.137678 -0.727429 1.571894</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.137678 -0.727429 1.571894</pose>
+        <mass>0.051677</mass>
+        <inertia>
+          <ixx>0.000038</ixx>
+          <ixy>-0.000002</ixy>
+          <ixz>-0.000025</ixz>
+          <iyy>0.000070</iyy>
+          <iyz>-0.000002</iyz>
+          <izz>0.000033</izz>
+        </inertia>
+      </inertial>
+      <visual name="braco_aleta1_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="braco_aleta1_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/braco_aleta1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_005">
+      <pose>0.357545 0.047612 0.524146 -3.110551 1.546843 1.605032</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.110551 1.546843 1.605032</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_006">
+      <pose>0.357349 -0.013909 0.524204 0.031041 -1.546842 1.536561</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.031041 -1.546842 1.536561</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>-0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_006_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_006_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="unidade_tracao_frontal_001">
+      <pose>0.449515 0.016581 0.552554 -0.003205 0.023940 1.569976</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.003205 0.023940 1.569976</pose>
+        <mass>0.124974</mass>
+        <inertia>
+          <ixx>0.000402</ixx>
+          <ixy>0.000002</ixy>
+          <ixz>0.000028</ixz>
+          <iyy>0.000932</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000974</izz>
+        </inertia>
+      </inertial>
+      <visual name="unidade_tracao_frontal_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/unidade_tracao_frontal.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="unidade_tracao_frontal_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/unidade_tracao_frontal.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="unidade_tracao_traseira_001">
+      <pose>-0.567587 0.019816 0.541457 3.138412 0.004611 1.571616</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.138412 0.004611 1.571616</pose>
+        <mass>0.117451</mass>
+        <inertia>
+          <ixx>0.000389</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>-0.000005</ixz>
+          <iyy>0.000829</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000877</izz>
+        </inertia>
+      </inertial>
+      <visual name="unidade_tracao_traseira_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/unidade_tracao_traseira.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="unidade_tracao_traseira_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/unidade_tracao_traseira.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_007">
+      <pose>-0.482858 0.050281 0.510216 2.962453 -1.566113 1.746753</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 2.962453 -1.566113 1.746753</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>-0.000001</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_007_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_007_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_008">
+      <pose>-0.483054 -0.011239 0.510259 -0.179135 1.566113 1.394844</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.179135 1.566113 1.394844</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_008_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_008_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mynt_001">
+      <pose>0.576247 0.016195 0.573025 1.567611 0.000820 -3.117653</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567611 0.000820 -3.117653</pose>
+        <mass>0.153719</mass>
+        <inertia>
+          <ixx>0.000362</ixx>
+          <ixy>-0.000001</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000024</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000360</izz>
+        </inertia>
+      </inertial>
+      <visual name="mynt_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mynt_eye.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mynt_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mynt_eye.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="teledyne_001">
+      <pose>-0.670237 0.020717 0.499001 1.567612 0.000820 3.136982</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567612 0.000820 3.136982</pose>
+        <mass>0.027164</mass>
+        <inertia>
+          <ixx>0.000006</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000003</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000006</izz>
+        </inertia>
+      </inertial>
+      <visual name="teledyne_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/teledyne.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="teledyne_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/teledyne.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_001">
+      <pose>0.553314 0.016206 0.497700 -1.573982 -0.000820 1.546856</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573982 -0.000820 1.546856</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_002">
+      <pose>0.534137 -0.036691 0.574799 0.031038 -1.546842 3.107360</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.031038 -1.546842 3.107360</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_003">
+      <pose>0.355875 0.069923 0.578989 0.031038 -1.546842 -0.034233</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.031038 -1.546842 -0.034233</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_004">
+      <pose>-0.658635 0.073146 0.564184 2.962459 -1.566113 -2.965642</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 2.962459 -1.566113 -2.965642</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_005">
+      <pose>-0.480323 -0.033464 0.565094 2.962453 -1.566113 0.175957</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 2.962453 -1.566113 0.175957</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_006">
+      <pose>-0.061042 -0.034869 0.502439 1.021978 -1.569837 2.116428</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.021978 -1.569837 2.116428</pose>
+        <mass>0.005060</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_006_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_006_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_001">
+      <pose>0.556083 0.016245 0.516818 -3.110554 1.546842 -1.536562</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.110554 1.546842 -1.536562</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000010</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_001">
+      <pose>0.567532 -0.003834 0.516558 3.139084 0.690374 0.001063</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.139084 0.690374 0.001063</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_002">
+      <pose>0.567658 0.035686 0.516526 -0.002508 -0.690371 -0.001063</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.002508 -0.690371 -0.001063</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_frame_eixo_001">
+      <pose>0.581199 0.015870 0.500071 -1.573982 -0.000820 -0.880422</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573982 -0.000820 -0.880422</pose>
+        <mass>0.003281</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_frame_eixo_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_frame_eixo_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_frame_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="sensores_suporte_001">
+      <pose>0.589721 0.016341 0.498460 1.567611 0.000820 2.451219</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567611 0.000820 2.451219</pose>
+        <mass>0.046171</mass>
+        <inertia>
+          <ixx>0.000019</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000007</ixz>
+          <iyy>0.000024</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000030</izz>
+        </inertia>
+      </inertial>
+      <visual name="sensores_suporte_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sensores_suporte.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="sensores_suporte_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sensores_suporte.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="hokuyo_001">
+      <pose>0.612389 0.016238 0.461480 -1.573982 -0.000820 -0.880422</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573982 -0.000820 -0.880422</pose>
+        <mass>0.247845</mass>
+        <inertia>
+          <ixx>0.000183</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000050</ixz>
+          <iyy>0.000224</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000162</izz>
+        </inertia>
+      </inertial>
+      <visual name="hokuyo_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/hokuyo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="hokuyo_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/hokuyo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="flir_lepton_placa_001">
+      <pose>0.628306 0.016725 0.505695 1.567611 0.000820 -2.261170</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567611 0.000820 -2.261170</pose>
+        <mass>0.010762</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="flir_lepton_placa_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/flir_lepton_placa.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="flir_lepton_placa_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/flir_lepton_placa.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="sensores_tampa_suporte_001">
+      <pose>0.635141 0.016052 0.506709 1.567611 0.000820 -2.261170</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567611 0.000820 -2.261170</pose>
+        <mass>0.008740</mass>
+        <inertia>
+          <ixx>0.000003</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000002</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="sensores_tampa_suporte_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sensores_tampa_suporte.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="sensores_tampa_suporte_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sensores_tampa_suporte.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="sonar_001">
+      <pose>-0.130195 0.017983 0.018572 2.505859 0.000083 -3.140637</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 2.505859 0.000083 -3.140637</pose>
+        <mass>0.037666</mass>
+        <inertia>
+          <ixx>0.000015</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000015</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000008</izz>
+        </inertia>
+      </inertial>
+      <visual name="sonar_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sonar.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="sonar_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/sonar.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_002">
+      <pose>-0.482695 -0.052635 0.565068 1.567612 0.000820 -0.004611</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567612 0.000820 -0.004611</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000012</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000010</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_003">
+      <pose>0.531765 -0.055863 0.574839 1.567611 0.000820 0.023941</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.567611 0.000820 0.023941</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000012</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000010</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_004">
+      <pose>0.358245 0.089094 0.578886 -1.573981 -0.000820 -0.023941</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 -0.023941</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000012</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000010</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_005">
+      <pose>-0.061444 -0.054046 0.502423 -1.573982 -0.000820 -0.000498</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573982 -0.000820 -0.000498</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000012</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000010</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_006">
+      <pose>-0.656263 0.092318 0.564147 -1.573981 -0.000820 0.004611</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.573981 -0.000820 0.004611</pose>
+        <mass>0.043259</mass>
+        <inertia>
+          <ixx>0.000007</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000012</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000010</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_006_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_006_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_003">
+      <pose>0.370237 0.089072 0.598646 3.134880 -0.023938 1.571700</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.134880 -0.023938 1.571700</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_004">
+      <pose>0.520733 -0.055811 0.595150 -0.014930 0.023929 1.569696</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.014930 0.023929 1.569696</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_005">
+      <pose>-0.049919 -0.054066 0.522459 -0.000500 0.000500 1.569978</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.000500 0.000500 1.569978</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_006">
+      <pose>-0.644841 0.092297 0.584241 -3.136984 0.004604 1.571652</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.136984 0.004604 1.571652</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_006_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_006_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-28_eixo_007">
+      <pose>-0.494303 -0.052581 0.585056 0.004608 -0.004604 1.569941</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.004608 -0.004604 1.569941</pose>
+        <mass>0.000754</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000000</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-28_eixo_007_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-28_eixo_007_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-28_eixo.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_inferior_001">
+      <pose>-0.049916 -0.053531 0.527335 3.141093 -0.000500 0.000818</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.141093 -0.000500 0.000818</pose>
+        <mass>0.004227</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_inferior_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_inferior_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_001">
+      <pose>-0.034377 -0.047302 0.599344 1.570297 0.000819 1.571296</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.570297 0.000819 1.571296</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_inferior_002">
+      <pose>0.370350 0.088544 0.603522 -0.006713 0.023938 -0.000904</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.006713 0.023938 -0.000904</pose>
+        <mass>0.004227</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_inferior_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_inferior_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_inferior_003">
+      <pose>0.520858 -0.055276 0.600025 3.126662 -0.023929 0.001101</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.126662 -0.023929 0.001101</pose>
+        <mass>0.004227</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_inferior_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_inferior_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_inferior_004">
+      <pose>-0.494328 -0.052046 0.589932 -3.136985 0.004604 0.000856</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.136985 0.004604 0.000856</pose>
+        <mass>0.004227</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_inferior_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_inferior_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_inferior_005">
+      <pose>-0.644861 0.091770 0.589119 0.004607 -0.004604 -0.000856</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.004607 -0.004604 -0.000856</pose>
+        <mass>0.004227</mass>
+        <inertia>
+          <ixx>0.000000</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_inferior_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_inferior_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_inferior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_002">
+      <pose>-0.065377 -0.047287 0.599359 1.570297 0.000818 1.571296</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.570297 0.000818 1.571296</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_003">
+      <pose>0.387494 0.082312 0.675158 -1.577488 -0.000904 1.546859</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.577488 -0.000904 1.546859</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_004">
+      <pose>0.356503 0.082520 0.675900 -1.577488 -0.000904 1.546859</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.577488 -0.000904 1.546859</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_005">
+      <pose>0.507180 -0.048818 0.672389 1.555893 0.001100 1.594726</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.555893 0.001100 1.594726</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000001</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_006">
+      <pose>0.538168 -0.049281 0.671648 1.555893 0.001100 1.594726</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.555893 0.001100 1.594726</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000001</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_006_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_006_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_007">
+      <pose>-0.629641 0.085720 0.661216 -1.566193 -0.000856 1.575401</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.566193 -0.000856 1.575401</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_007_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_007_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_008">
+      <pose>-0.660640 0.085577 0.661073 -1.566193 -0.000856 1.575401</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -1.566193 -0.000856 1.575401</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_008_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_008_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_009">
+      <pose>-0.510188 -0.045883 0.661876 1.575400 0.000856 1.566192</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.575400 0.000856 1.566192</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_009_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_009_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_estrutura_010">
+      <pose>-0.479188 -0.045740 0.662019 1.575400 0.000856 1.566192</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 1.575400 0.000856 1.566192</pose>
+        <mass>0.012387</mass>
+        <inertia>
+          <ixx>0.000022</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000020</iyy>
+          <iyz>-0.000003</iyz>
+          <izz>0.000002</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_estrutura_010_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_estrutura_010_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_estrutura.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_superior_001">
+      <pose>0.524517 -0.028108 0.735951 3.126662 -0.023929 -3.140492</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.126662 -0.023929 -3.140492</pose>
+        <mass>0.005360</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_superior_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_superior_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_superior_002">
+      <pose>0.373425 0.061568 0.739502 -0.006713 0.023938 3.140689</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.006713 0.023938 3.140689</pose>
+        <mass>0.005360</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_superior_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_superior_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_superior_003">
+      <pose>-0.049835 -0.026346 0.663308 3.141093 -0.000500 -3.140774</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.141093 -0.000500 -3.140774</pose>
+        <mass>0.005360</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_superior_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_superior_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_superior_004">
+      <pose>-0.495079 -0.024863 0.725902 -3.136985 0.004604 -3.140737</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.136985 0.004604 -3.140737</pose>
+        <mass>0.005360</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_superior_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_superior_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="garra_encaixe_superior_005">
+      <pose>-0.645363 0.064806 0.725135 0.004607 -0.004604 3.140737</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.004607 -0.004604 3.140737</pose>
+        <mass>0.005360</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000001</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="garra_encaixe_superior_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="garra_encaixe_superior_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/garra_encaixe_superior.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_frame_001">
+      <pose>-0.493954 -0.022258 0.732399 -3.136984 0.004604 1.571652</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.136984 0.004604 1.571652</pose>
+        <mass>0.002659</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_frame_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_frame_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_frame_002">
+      <pose>-0.646547 0.062212 0.731625 0.004608 -0.004604 1.569941</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.004608 -0.004604 1.569941</pose>
+        <mass>0.002659</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_frame_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_frame_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_frame_003">
+      <pose>-0.048664 -0.023747 0.669799 3.141093 -0.000500 1.571615</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.141093 -0.000500 1.571615</pose>
+        <mass>0.002659</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_frame_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_frame_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_frame_004">
+      <pose>0.372396 0.058986 0.746024 -0.006713 0.023938 1.569892</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.006713 0.023938 1.569892</pose>
+        <mass>0.002659</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_frame_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_frame_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_frame_005">
+      <pose>0.525877 -0.025527 0.742412 3.126663 -0.023929 1.571897</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 3.126663 -0.023929 1.571897</pose>
+        <mass>0.002659</mass>
+        <inertia>
+          <ixx>0.000001</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000000</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_frame_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_frame_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106_frame.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_009">
+      <pose>0.518960 -0.024940 0.763955 -3.110556 1.546841 1.616750</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.110556 1.546841 1.616750</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_009_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_009_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_010">
+      <pose>0.380341 0.058491 0.767212 -3.110554 1.546842 -1.533056</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -3.110554 1.546842 -1.533056</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_010_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_010_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_011">
+      <pose>-0.501493 -0.021814 0.753735 -0.179112 1.566112 -1.754515</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.179112 1.566112 -1.754515</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_011_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_011_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_012">
+      <pose>-0.639205 0.061804 0.753031 -0.179109 1.566112 1.387081</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.179109 1.566112 1.387081</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_012_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_012_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="mx-106_013">
+      <pose>-0.056091 -0.023265 0.691173 -2.120181 1.569837 2.592708</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -2.120181 1.569837 2.592708</pose>
+        <mass>0.086496</mass>
+        <inertia>
+          <ixx>0.000023</ixx>
+          <ixy>0.000001</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000033</iyy>
+          <iyz>0.000000</iyz>
+          <izz>0.000041</izz>
+        </inertia>
+      </inertial>
+      <visual name="mx-106_013_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="mx-106_013_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/mx-106.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="roldana_001">
+      <pose>-0.071798 0.019279 0.691150 -0.000499 -0.000000 -0.000818</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.000499 -0.000000 -0.000818</pose>
+        <mass>0.048608</mass>
+        <inertia>
+          <ixx>0.000012</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000013</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="roldana_001_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="roldana_001_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="roldana_002">
+      <pose>-0.517417 0.020649 0.753630 0.004604 0.000002 -0.000856</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.004604 0.000002 -0.000856</pose>
+        <mass>0.048608</mass>
+        <inertia>
+          <ixx>0.000012</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000013</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="roldana_002_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="roldana_002_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="roldana_003">
+      <pose>-0.623282 0.019340 0.753144 0.002939 1.096103 3.139721</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 0.002939 1.096103 3.139721</pose>
+        <mass>0.048608</mass>
+        <inertia>
+          <ixx>0.000012</ixx>
+          <ixy>-0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000013</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="roldana_003_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="roldana_003_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="roldana_004">
+      <pose>0.503872 0.017827 0.764288 -0.014904 -0.000008 -0.001100</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.014904 -0.000008 -0.001100</pose>
+        <mass>0.048608</mass>
+        <inertia>
+          <ixx>0.000012</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>-0.000000</ixz>
+          <iyy>0.000013</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="roldana_004_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="roldana_004_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="roldana_005">
+      <pose>0.395780 0.015850 0.766878 -0.006877 0.202516 3.140670</pose>
+      <inertial>
+        <pose>0.000000 0.000000 0.000000 -0.006877 0.202516 3.140670</pose>
+        <mass>0.048608</mass>
+        <inertia>
+          <ixx>0.000012</ixx>
+          <ixy>0.000000</ixy>
+          <ixz>0.000000</ixz>
+          <iyy>0.000013</iyy>
+          <iyz>-0.000000</iyz>
+          <izz>0.000012</izz>
+        </inertia>
+      </inertial>
+      <visual name="roldana_005_visual">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="roldana_005_collision">
+        <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+        <geometry>
+          <mesh>
+            <uri>model://elir_v-2020/meshes/roldana.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="base_fachamento_001_base_001" type="revolute">
+      <pose>-0.137449 -0.079684 0.046658 0.000000 0.000000 0.000000</pose>
+      <parent>base_fachamento_001</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_001_base_001" type="revolute">
+      <pose>0.087436 -0.028138 0.085003 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_001</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_002_base_001" type="revolute">
+      <pose>-0.087963 -0.027580 0.085091 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_002</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_003_base_001" type="revolute">
+      <pose>-0.087822 0.016760 0.085054 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_003</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_004_base_001" type="revolute">
+      <pose>0.087566 0.016183 0.062967 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_004</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta2_001_mx-106_003" type="revolute">
+      <pose>-0.015738 -0.003151 0.000014 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta2_001</parent>
+      <child>mx-106_003</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_estrutura_001_braco_aleta2_001" type="revolute">
+      <pose>-0.037422 -0.018408 0.016409 0.000000 0.000000 0.000000</pose>
+      <parent>braco_estrutura_001</parent>
+      <child>braco_aleta2_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta2_002_braco_estrutura_001" type="revolute">
+      <pose>0.067017 -0.084252 -0.046519 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta2_002</parent>
+      <child>braco_estrutura_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta1_001_braco_estrutura_001" type="revolute">
+      <pose>-0.043732 0.062493 0.065589 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta1_001</parent>
+      <child>braco_estrutura_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta1_002_braco_estrutura_001" type="revolute">
+      <pose>-0.044128 -0.062106 0.065692 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta1_002</parent>
+      <child>braco_estrutura_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta2_003_mx-106_001" type="revolute">
+      <pose>0.015738 0.003167 -0.000007 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta2_003</parent>
+      <child>mx-106_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta2_004_mx-106_004" type="revolute">
+      <pose>0.015718 -0.003253 -0.000009 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta2_004</parent>
+      <child>mx-106_004</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_estrutura_002_braco_aleta2_003" type="revolute">
+      <pose>0.036817 0.119939 0.018268 0.000000 0.000000 0.000000</pose>
+      <parent>braco_estrutura_002</parent>
+      <child>braco_aleta2_003</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_estrutura_002_braco_aleta2_004" type="revolute">
+      <pose>0.013969 -0.018554 0.038330 0.000000 0.000000 0.000000</pose>
+      <parent>braco_estrutura_002</parent>
+      <child>braco_aleta2_004</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta1_003_braco_estrutura_002" type="revolute">
+      <pose>0.042096 -0.062377 0.070114 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta1_003</parent>
+      <child>braco_estrutura_002</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta1_004_braco_estrutura_002" type="revolute">
+      <pose>0.042492 0.062222 0.070012 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta1_004</parent>
+      <child>braco_estrutura_002</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_005_braco_aleta1_004" type="revolute">
+      <pose>0.047790 0.004804 0.053657 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_005</parent>
+      <child>braco_aleta1_004</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_006_braco_aleta1_003" type="revolute">
+      <pose>0.047759 -0.005007 0.053665 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_006</parent>
+      <child>braco_aleta1_003</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_006_unidade_tracao_frontal_001" type="revolute">
+      <pose>-0.059744 -0.000295 -0.018150 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_006</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_005_unidade_tracao_frontal_001" type="revolute">
+      <pose>-0.060267 0.000629 -0.040144 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_005</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="braco_aleta1_001_mx-106_007" type="revolute">
+      <pose>0.015828 0.031481 0.000043 0.000000 0.000000 0.000000</pose>
+      <parent>braco_aleta1_001</parent>
+      <child>mx-106_007</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_008_braco_aleta1_002" type="revolute">
+      <pose>-0.050588 -0.004694 0.051037 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_008</parent>
+      <child>braco_aleta1_002</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_008_unidade_tracao_traseira_001" type="revolute">
+      <pose>0.052507 -0.000654 -0.020367 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_008</parent>
+      <child>unidade_tracao_traseira_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_007_unidade_tracao_traseira_001" type="revolute">
+      <pose>0.052611 0.000268 -0.042368 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_007</parent>
+      <child>unidade_tracao_traseira_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mynt_001_unidade_tracao_frontal_001" type="revolute">
+      <pose>0.130828 -0.000410 0.007607 0.000000 0.000000 0.000000</pose>
+      <parent>mynt_001</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>-0.023940 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="teledyne_001_unidade_tracao_traseira_001" type="revolute">
+      <pose>-0.111497 0.013311 -0.053685 0.000000 0.000000 0.000000</pose>
+      <parent>teledyne_001</parent>
+      <child>unidade_tracao_traseira_001</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_001_unidade_tracao_frontal_001" type="revolute">
+      <pose>0.089557 -0.000332 -0.057536 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_001</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>-0.023940 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_002_unidade_tracao_frontal_001" type="revolute">
+      <pose>0.098801 -0.050297 0.021903 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_002</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_003_unidade_tracao_frontal_001" type="revolute">
+      <pose>-0.091825 0.050314 0.026393 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_003</parent>
+      <child>unidade_tracao_frontal_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_004_unidade_tracao_traseira_001" type="revolute">
+      <pose>-0.105232 0.050354 0.022664 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_004</parent>
+      <child>unidade_tracao_traseira_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_005_unidade_tracao_traseira_001" type="revolute">
+      <pose>0.101447 -0.050304 0.023700 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_005</parent>
+      <child>unidade_tracao_traseira_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_006_base_001" type="revolute">
+      <pose>-0.007956 -0.055451 0.345374 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_006</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>0.003186 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_001_mx-28_frame_001" type="revolute">
+      <pose>0.018421 -0.000056 0.003739 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_001</parent>
+      <child>mx-28_frame_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_001_mx-28_001" type="revolute">
+      <pose>0.011440 -0.022724 -0.000257 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_001</parent>
+      <child>mx-28_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_002_mx-28_001" type="revolute">
+      <pose>0.011583 0.022086 -0.000294 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_002</parent>
+      <child>mx-28_001</child>
+      <axis>
+        <xyz>-0.003185 -0.999995 0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_frame_eixo_001_mx-28_eixo_001" type="revolute">
+      <pose>0.005087 -0.002262 -0.006166 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_frame_eixo_001</parent>
+      <child>mx-28_eixo_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_002_mx-28_frame_eixo_001" type="revolute">
+      <pose>-0.008457 0.016770 0.010289 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_002</parent>
+      <child>mx-28_frame_eixo_001</child>
+      <axis>
+        <xyz>0.003185 0.999995 -0.000820</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="hokuyo_001_sensores_suporte_001" type="revolute">
+      <pose>-0.023288 -0.026445 -0.022986 0.000000 0.000000 0.000000</pose>
+      <parent>hokuyo_001</parent>
+      <child>sensores_suporte_001</child>
+      <axis>
+        <xyz>0.636820 -0.002661 -0.771008</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="sonar_001_base_001" type="revolute">
+      <pose>-0.075290 -0.005609 -0.108656 0.000000 0.000000 0.000000</pose>
+      <parent>sonar_001</parent>
+      <child>base_001</child>
+      <axis>
+        <xyz>-0.000500 -0.000818 -1.000000</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_003_mx-28_frame_002" type="revolute">
+      <pose>0.015656 -0.004229 -0.000372 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_003</parent>
+      <child>mx-28_frame_002</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_004_mx-28_frame_003" type="revolute">
+      <pose>0.018334 0.004120 -0.000442 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_004</parent>
+      <child>mx-28_frame_003</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_005_mx-28_frame_006" type="revolute">
+      <pose>0.015660 -0.004229 -0.000004 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_005</parent>
+      <child>mx-28_frame_006</child>
+      <axis>
+        <xyz>-0.000500 -0.000818 -1.000000</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_006_mx-28_frame_004" type="revolute">
+      <pose>0.018339 0.004121 0.000081 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_006</parent>
+      <child>mx-28_frame_004</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_002_mx-28_frame_005" type="revolute">
+      <pose>-0.018339 -0.004121 -0.000081 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_002</parent>
+      <child>mx-28_frame_005</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_003_mx-28_004" type="revolute">
+      <pose>0.012055 -0.000020 0.022405 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_003</parent>
+      <child>mx-28_004</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_004_mx-28_003" type="revolute">
+      <pose>-0.010939 0.000055 0.024193 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_004</parent>
+      <child>mx-28_003</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_005_mx-28_005" type="revolute">
+      <pose>0.011527 -0.000018 0.022681 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_005</parent>
+      <child>mx-28_005</child>
+      <axis>
+        <xyz>-0.000500 -0.000818 -1.000000</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_006_mx-28_006" type="revolute">
+      <pose>0.011411 -0.000018 0.022740 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_006</parent>
+      <child>mx-28_006</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-28_eixo_007_mx-28_002" type="revolute">
+      <pose>-0.011620 0.000056 0.022633 0.000000 0.000000 0.000000</pose>
+      <parent>mx-28_eixo_007</parent>
+      <child>mx-28_002</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_inferior_001_mx-28_eixo_005" type="revolute">
+      <pose>0.000006 0.008003 0.003434 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_inferior_001</parent>
+      <child>mx-28_eixo_005</child>
+      <axis>
+        <xyz>-0.000500 -0.000818 -1.000000</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_inferior_002_mx-28_eixo_003" type="revolute">
+      <pose>0.000029 -0.007997 0.003446 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_inferior_002</parent>
+      <child>mx-28_eixo_003</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_inferior_003_mx-28_eixo_004" type="revolute">
+      <pose>0.000201 0.008001 0.003430 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_inferior_003</parent>
+      <child>mx-28_eixo_004</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_inferior_004_mx-28_eixo_007" type="revolute">
+      <pose>-0.000053 0.008002 0.003433 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_inferior_004</parent>
+      <child>mx-28_eixo_007</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_inferior_005_mx-28_eixo_006" type="revolute">
+      <pose>0.000021 -0.007997 0.003447 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_inferior_005</parent>
+      <child>mx-28_eixo_006</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_superior_001_garra_estrutura_005" type="revolute">
+      <pose>0.000422 0.031554 0.060626 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_superior_001</parent>
+      <child>garra_estrutura_005</child>
+      <axis>
+        <xyz>0.999602 -0.014925 -0.023927</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_superior_002_garra_estrutura_004" type="revolute">
+      <pose>0.033766 -0.031663 0.059875 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_superior_002</parent>
+      <child>garra_estrutura_004</child>
+      <axis>
+        <xyz>-0.999691 0.006711 0.023935</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_superior_003_garra_estrutura_002" type="revolute">
+      <pose>-0.001466 0.007341 0.060637 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_superior_003</parent>
+      <child>garra_estrutura_002</child>
+      <axis>
+        <xyz>1.000000 -0.000500 -0.000500</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_superior_004_garra_estrutura_009" type="revolute">
+      <pose>-0.001813 0.007334 0.060628 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_superior_004</parent>
+      <child>garra_estrutura_009</child>
+      <axis>
+        <xyz>0.999979 0.004607 0.004604</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="garra_encaixe_superior_005_garra_estrutura_008" type="revolute">
+      <pose>0.032341 -0.031290 0.060818 0.000000 0.000000 0.000000</pose>
+      <parent>garra_encaixe_superior_005</parent>
+      <child>garra_estrutura_008</child>
+      <axis>
+        <xyz>-0.999979 -0.004607 -0.004604</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_frame_001_garra_encaixe_superior_004" type="revolute">
+      <pose>0.000012 -0.008401 0.005876 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_frame_001</parent>
+      <child>garra_encaixe_superior_004</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_frame_002_garra_encaixe_superior_005" type="revolute">
+      <pose>-0.000066 0.008410 0.005861 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_frame_002</parent>
+      <child>garra_encaixe_superior_005</child>
+      <axis>
+        <xyz>0.004608 -0.000834 -0.999989</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_frame_003_garra_encaixe_superior_003" type="revolute">
+      <pose>0.000010 0.013599 0.005858 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_frame_003</parent>
+      <child>garra_encaixe_superior_003</child>
+      <axis>
+        <xyz>-0.000500 -0.000818 -1.000000</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_frame_004_garra_encaixe_superior_002" type="revolute">
+      <pose>0.000197 0.008410 0.005859 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_frame_004</parent>
+      <child>garra_encaixe_superior_002</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_frame_005_garra_encaixe_superior_001" type="revolute">
+      <pose>0.000343 0.013597 0.005852 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_frame_005</parent>
+      <child>garra_encaixe_superior_001</child>
+      <axis>
+        <xyz>-0.023941 -0.000743 -0.999713</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_009_mx-106_frame_005" type="revolute">
+      <pose>0.016480 -0.030075 0.003704 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_009</parent>
+      <child>mx-106_frame_005</child>
+      <axis>
+        <xyz>0.014903 0.999888 -0.001100</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_010_mx-106_frame_004" type="revolute">
+      <pose>-0.016531 0.029945 0.004450 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_010</parent>
+      <child>mx-106_frame_004</child>
+      <axis>
+        <xyz>-0.006691 -0.999977 0.000904</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_011_mx-106_frame_001" type="revolute">
+      <pose>0.016814 0.000080 0.004153 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_011</parent>
+      <child>mx-106_frame_001</child>
+      <axis>
+        <xyz>0.004604 -0.999989 0.000856</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_012_mx-106_frame_002" type="revolute">
+      <pose>-0.016989 0.029756 0.003972 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_012</parent>
+      <child>mx-106_frame_002</child>
+      <axis>
+        <xyz>0.004604 -0.999989 0.000856</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="mx-106_013_mx-106_frame_003" type="revolute">
+      <pose>0.016820 -0.029834 0.004091 0.000000 0.000000 0.000000</pose>
+      <parent>mx-106_013</parent>
+      <child>mx-106_frame_003</child>
+      <axis>
+        <xyz>0.000499 1.000000 -0.000818</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="roldana_001_mx-106_013" type="revolute">
+      <pose>-0.015714 0.027347 -0.000011 0.000000 0.000000 0.000000</pose>
+      <parent>roldana_001</parent>
+      <child>mx-106_013</child>
+      <axis>
+        <xyz>-0.000499 -1.000000 0.000818</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="roldana_002_mx-106_011" type="revolute">
+      <pose>-0.015854 0.027267 -0.000092 0.000000 0.000000 0.000000</pose>
+      <parent>roldana_002</parent>
+      <child>mx-106_011</child>
+      <axis>
+        <xyz>0.004604 -0.999989 0.000856</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="roldana_003_mx-106_012" type="revolute">
+      <pose>0.015854 -0.027267 0.000099 0.000000 0.000000 0.000000</pose>
+      <parent>roldana_003</parent>
+      <child>mx-106_012</child>
+      <axis>
+        <xyz>-0.004604 0.999989 -0.000856</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="roldana_004_mx-106_009" type="revolute">
+      <pose>-0.015314 0.027571 0.000350 0.000000 0.000000 0.000000</pose>
+      <parent>roldana_004</parent>
+      <child>mx-106_009</child>
+      <axis>
+        <xyz>-0.014903 -0.999888 0.001100</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+    <joint name="roldana_005_mx-106_010" type="revolute">
+      <pose>0.015540 -0.027444 -0.000348 0.000000 0.000000 0.000000</pose>
+      <parent>roldana_005</parent>
+      <child>mx-106_010</child>
+      <axis>
+        <xyz>0.006691 0.999977 -0.000904</xyz>
+        <limit>
+          <lower>-1.570796</lower>
+          <upper>1.570796</upper>
+          <effort>10.000000</effort>
+          <velocity>10.000000</velocity>
+        </limit>
+        <dynamics>
+          <friction>0.000000</friction>
+          <damping>0.000000</damping>
+        </dynamics>
+        <use_parent_model_frame>false</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

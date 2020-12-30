@@ -1,0 +1,2235 @@
+<?xml version="1.0" ?>
+<robot name="elir_v-2020" static="false">
+  <link name="roldana_005_root"/>
+  <link name="base_001">
+    <inertial>
+      <origin xyz="0.075290 0.005609 0.108656" rpy="0.000000 0.000000 0.000000"/>
+      <mass value="0.818932"/>
+      <inertia ixx="0.009429" ixy="0.000021" ixz="0.000009" iyy="0.015542" iyz="0.000554" izz="0.010535"/>
+    </inertial>
+    <visual name="base_001_visual">
+      <origin xyz="0.075290 0.005609 0.108656" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base.dae"/>
+      </geometry>
+    </visual>
+    <collision name="base_001_collision">
+      <origin xyz="0.075290 0.005609 0.108656" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="base_fachamento_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.001641 -0.000607 0.760786"/>
+      <mass value="0.127628"/>
+      <inertia ixx="0.000341" ixy="0.000003" ixz="0.000000" iyy="0.001354" iyz="-0.000000" izz="0.001015"/>
+    </inertial>
+    <visual name="base_fachamento_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base_fachamento.dae"/>
+      </geometry>
+    </visual>
+    <collision name="base_fachamento_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base_fachamento.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="base_unidade_balanco_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.002669 -0.000005 0.002670"/>
+      <mass value="0.231000"/>
+      <inertia ixx="0.000327" ixy="-0.000000" ixz="-0.000000" iyy="0.000250" iyz="-0.000000" izz="0.000112"/>
+    </inertial>
+    <visual name="base_unidade_balanco_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base_unidade_balanco.dae"/>
+      </geometry>
+    </visual>
+    <collision name="base_unidade_balanco_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/base_unidade_balanco.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="gps_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.001578 0.000003 -0.001578"/>
+      <mass value="0.018834"/>
+      <inertia ixx="0.000003" ixy="0.000000" ixz="0.000000" iyy="0.000005" iyz="-0.000000" izz="0.000002"/>
+    </inertial>
+    <visual name="gps_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/gps.dae"/>
+      </geometry>
+    </visual>
+    <collision name="gps_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/gps.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_001">
+    <inertial>
+      <origin xyz="0.342576 -0.450536 -0.087732" rpy="-0.447235 0.956593 0.446030"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_001_visual">
+      <origin xyz="0.342576 -0.450536 -0.087732" rpy="-0.087179 0.128775 0.087053"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_001_collision">
+      <origin xyz="0.342576 -0.450536 -0.087732" rpy="-0.087179 0.128775 0.087053"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_002">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.380308 -0.677202 0.380095"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="-0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_002_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_002_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_003">
+    <inertial>
+      <origin xyz="0.255268 0.361918 -0.120613" rpy="0.445396 0.963486 -0.445690"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_003_visual">
+      <origin xyz="0.255268 0.361918 -0.120613" rpy="0.087278 0.129914 -0.087308"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_003_collision">
+      <origin xyz="0.255268 0.361918 -0.120613" rpy="0.087278 0.129914 -0.087308"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_004">
+    <inertial>
+      <origin xyz="0.108144 -0.299360 0.177882" rpy="-0.445929 -0.956304 -0.447134"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="-0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_004_visual">
+      <origin xyz="0.108144 -0.299360 0.177882" rpy="-0.086989 -0.128723 -0.087114"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_004_collision">
+      <origin xyz="0.108144 -0.299360 0.177882" rpy="-0.086989 -0.128723 -0.087114"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_estrutura_001">
+    <inertial>
+      <origin xyz="-0.048394 -0.111317 0.129380" rpy="-0.305176 -0.361606 0.527589"/>
+      <mass value="0.067252"/>
+      <inertia ixx="0.000236" ixy="0.000000" ixz="0.000106" iyy="0.000278" iyz="-0.000000" izz="0.000235"/>
+    </inertial>
+    <visual name="braco_estrutura_001_visual">
+      <origin xyz="-0.048394 -0.111317 0.129380" rpy="-0.010051 -0.036878 0.023513"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_estrutura_001_collision">
+      <origin xyz="-0.048394 -0.111317 0.129380" rpy="-0.010051 -0.036878 0.023513"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta2_001">
+    <inertial>
+      <origin xyz="0.345514 0.002861 -0.151013" rpy="-0.936350 0.243094 -0.476020"/>
+      <mass value="0.075785"/>
+      <inertia ixx="0.000057" ixy="-0.000015" ixz="0.000034" iyy="0.000098" iyz="0.000015" izz="0.000057"/>
+    </inertial>
+    <visual name="braco_aleta2_001_visual">
+      <origin xyz="0.345514 0.002861 -0.151013" rpy="-0.207647 0.098055 -0.093017"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta2_001_collision">
+      <origin xyz="0.345514 0.002861 -0.151013" rpy="-0.207647 0.098055 -0.093017"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta2_002">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.268133 -0.328649 -0.475024"/>
+      <mass value="0.075785"/>
+      <inertia ixx="0.000058" ixy="0.000015" ixz="0.000034" iyy="0.000098" iyz="-0.000015" izz="0.000057"/>
+    </inertial>
+    <visual name="braco_aleta2_002_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta2_002_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta1_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.403475 0.394760 -0.084396"/>
+      <mass value="0.051677"/>
+      <inertia ixx="0.000036" ixy="0.000002" ixz="0.000025" iyy="0.000070" iyz="-0.000002" izz="0.000035"/>
+    </inertial>
+    <visual name="braco_aleta1_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta1_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta1_002">
+    <inertial>
+      <origin xyz="-0.136248 -0.166240 0.231904" rpy="0.174793 -0.753006 0.856738"/>
+      <mass value="0.051677"/>
+      <inertia ixx="0.000036" ixy="-0.000002" ixz="0.000025" iyy="0.000070" iyz="0.000002" izz="0.000035"/>
+    </inertial>
+    <visual name="braco_aleta1_002_visual">
+      <origin xyz="-0.136248 -0.166240 0.231904" rpy="0.075167 -0.120353 0.201880"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta1_002_collision">
+      <origin xyz="-0.136248 -0.166240 0.231904" rpy="0.075167 -0.120353 0.201880"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta2_003">
+    <inertial>
+      <origin xyz="0.228862 0.517231 0.386897" rpy="0.927493 -0.258523 -0.504912"/>
+      <mass value="0.075785"/>
+      <inertia ixx="0.000061" ixy="-0.000014" ixz="-0.000034" iyy="0.000098" iyz="-0.000016" izz="0.000053"/>
+    </inertial>
+    <visual name="braco_aleta2_003_visual">
+      <origin xyz="0.228862 0.517231 0.386897" rpy="0.202487 -0.102960 -0.097740"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta2_003_collision">
+      <origin xyz="0.228862 0.517231 0.386897" rpy="0.202487 -0.102960 -0.097740"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta2_004">
+    <inertial>
+      <origin xyz="0.210787 0.112247 -0.328765" rpy="-0.339552 0.378340 -0.557729"/>
+      <mass value="0.075785"/>
+      <inertia ixx="0.000061" ixy="0.000014" ixz="-0.000034" iyy="0.000098" iyz="0.000016" izz="0.000053"/>
+    </inertial>
+    <visual name="braco_aleta2_004_visual">
+      <origin xyz="0.210787 0.112247 -0.328765" rpy="-0.012713 0.042606 -0.027565"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta2_004_collision">
+      <origin xyz="0.210787 0.112247 -0.328765" rpy="-0.012713 0.042606 -0.027565"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta2.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_estrutura_002">
+    <inertial>
+      <origin xyz="0.230480 0.070063 -0.381578" rpy="-0.339552 0.378340 -0.557729"/>
+      <mass value="0.067252"/>
+      <inertia ixx="0.000248" ixy="0.000000" ixz="-0.000106" iyy="0.000278" iyz="0.000000" izz="0.000223"/>
+    </inertial>
+    <visual name="braco_estrutura_002_visual">
+      <origin xyz="0.230480 0.070063 -0.381578" rpy="-0.012713 0.042606 -0.027565"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_estrutura_002_collision">
+      <origin xyz="0.230480 0.070063 -0.381578" rpy="-0.012713 0.042606 -0.027565"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta1_003">
+    <inertial>
+      <origin xyz="0.286294 -0.675231 0.146062" rpy="-0.163252 0.703966 0.874088"/>
+      <mass value="0.051677"/>
+      <inertia ixx="0.000038" ixy="0.000002" ixz="-0.000025" iyy="0.000070" iyz="0.000002" izz="0.000033"/>
+    </inertial>
+    <visual name="braco_aleta1_003_visual">
+      <origin xyz="0.286294 -0.675231 0.146062" rpy="-0.071667 0.113504 0.207483"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta1_003_collision">
+      <origin xyz="0.286294 -0.675231 0.146062" rpy="-0.071667 0.113504 0.207483"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="braco_aleta1_004">
+    <inertial>
+      <origin xyz="-0.035153 -0.308681 0.245269" rpy="-0.420913 -0.402373 -0.071587"/>
+      <mass value="0.051677"/>
+      <inertia ixx="0.000038" ixy="-0.000002" ixz="-0.000025" iyy="0.000070" iyz="-0.000002" izz="0.000033"/>
+    </inertial>
+    <visual name="braco_aleta1_004_visual">
+      <origin xyz="-0.035153 -0.308681 0.245269" rpy="-0.018712 -0.030155 -0.007003"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </visual>
+    <collision name="braco_aleta1_004_collision">
+      <origin xyz="-0.035153 -0.308681 0.245269" rpy="-0.018712 -0.030155 -0.007003"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/braco_aleta1.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_005">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.385170 0.673839 -0.369773"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="-0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_005_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_005_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_006">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.374806 -0.679764 0.390330"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="-0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_006_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_006_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="unidade_tracao_frontal_001">
+    <inertial>
+      <origin xyz="0.101089 -0.399108 0.389435" rpy="-0.006675 0.023167 0.980669"/>
+      <mass value="0.124974"/>
+      <inertia ixx="0.000402" ixy="0.000002" ixz="0.000028" iyy="0.000932" iyz="-0.000000" izz="0.000974"/>
+    </inertial>
+    <visual name="unidade_tracao_frontal_001_visual">
+      <origin xyz="0.101089 -0.399108 0.389435" rpy="-0.002973 0.003788 0.244063"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/unidade_tracao_frontal.dae"/>
+      </geometry>
+    </visual>
+    <collision name="unidade_tracao_frontal_001_collision">
+      <origin xyz="0.101089 -0.399108 0.389435" rpy="-0.002973 0.003788 0.244063"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/unidade_tracao_frontal.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="unidade_tracao_traseira_001">
+    <inertial>
+      <origin xyz="-0.099340 0.051181 -0.024576" rpy="0.005193 0.003898 0.000010"/>
+      <mass value="0.117451"/>
+      <inertia ixx="0.000389" ixy="0.000001" ixz="-0.000005" iyy="0.000829" iyz="0.000000" izz="0.000877"/>
+    </inertial>
+    <visual name="unidade_tracao_traseira_001_visual">
+      <origin xyz="-0.099340 0.051181 -0.024576" rpy="0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/unidade_tracao_traseira.dae"/>
+      </geometry>
+    </visual>
+    <collision name="unidade_tracao_traseira_001_collision">
+      <origin xyz="-0.099340 0.051181 -0.024576" rpy="0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/unidade_tracao_traseira.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_007">
+    <inertial>
+      <origin xyz="-0.188332 0.018873 0.121574" rpy="-0.447451 -0.953981 -0.443997"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="-0.000001" ixz="-0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_007_visual">
+      <origin xyz="-0.188332 0.018873 0.121574" rpy="-0.086714 -0.128307 -0.086355"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_007_collision">
+      <origin xyz="-0.188332 0.018873 0.121574" rpy="-0.086714 -0.128307 -0.086355"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_008">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.380247 0.673864 0.382767"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="-0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_008_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_008_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mynt_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000310 -0.011559 -0.015464"/>
+      <mass value="0.153719"/>
+      <inertia ixx="0.000362" ixy="-0.000001" ixz="-0.000000" iyy="0.000024" iyz="0.000000" izz="0.000360"/>
+    </inertial>
+    <visual name="mynt_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mynt_eye.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mynt_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mynt_eye.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="teledyne_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000013 0.002714 0.003630"/>
+      <mass value="0.027164"/>
+      <inertia ixx="0.000006" ixy="-0.000000" ixz="0.000000" iyy="0.000003" iyz="0.000000" izz="0.000006"/>
+    </inertial>
+    <visual name="teledyne_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/teledyne.dae"/>
+      </geometry>
+    </visual>
+    <collision name="teledyne_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/teledyne.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_001">
+    <inertial>
+      <origin xyz="0.277668 -0.549778 0.821683" rpy="-0.751831 -0.439279 0.738742"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="0.000000" ixz="0.000000" iyy="0.000001" iyz="0.000000" izz="0.000002"/>
+    </inertial>
+    <visual name="mx-28_frame_001_visual">
+      <origin xyz="0.277668 -0.549778 0.821683" rpy="-0.099244 -0.119255 0.096811"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_001_collision">
+      <origin xyz="0.277668 -0.549778 0.821683" rpy="-0.099244 -0.119255 0.096811"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_002">
+    <inertial>
+      <origin xyz="-0.015720 0.005479 0.000439" rpy="0.002619 -0.000005 0.002682"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000002" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_002_visual">
+      <origin xyz="-0.015720 0.005479 0.000439" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_002_collision">
+      <origin xyz="-0.015720 0.005479 0.000439" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_003">
+    <inertial>
+      <origin xyz="0.144479 -0.005729 1.049864" rpy="-0.000231 -1.570796 -0.002006"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000002" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_003_visual">
+      <origin xyz="0.144479 -0.005729 1.049864" rpy="-0.000242 -0.320008 -0.000463"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_003_collision">
+      <origin xyz="0.144479 -0.005729 1.049864" rpy="-0.000242 -0.320008 -0.000463"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_004">
+    <inertial>
+      <origin xyz="-0.389025 -0.003787 0.346840" rpy="-0.000157 -1.570796 -0.002056"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="-0.000000" iyy="0.000002" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_004_visual">
+      <origin xyz="-0.389025 -0.003787 0.346840" rpy="-0.000232 -0.319922 -0.000462"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_004_collision">
+      <origin xyz="-0.389025 -0.003787 0.346840" rpy="-0.000232 -0.319922 -0.000462"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_005">
+    <inertial>
+      <origin xyz="0.018264 0.003346 0.000155" rpy="0.002679 -0.000005 0.002667"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="-0.000000" iyy="0.000002" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_005_visual">
+      <origin xyz="0.018264 0.003346 0.000155" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_005_collision">
+      <origin xyz="0.018264 0.003346 0.000155" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_006">
+    <inertial>
+      <origin xyz="-0.015731 0.004484 0.000075" rpy="0.002669 -0.000005 0.002671"/>
+      <mass value="0.005060"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000002" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_006_visual">
+      <origin xyz="-0.015731 0.004484 0.000075" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_006_collision">
+      <origin xyz="-0.015731 0.004484 0.000075" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_001">
+    <inertial>
+      <origin xyz="0.650313 -0.764166 -0.093120" rpy="-0.454106 0.945602 0.431665"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="0.000000" iyy="0.000010" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="mx-28_001_visual">
+      <origin xyz="0.650313 -0.764166 -0.093120" rpy="-0.085879 0.126819 0.083586"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_001_collision">
+      <origin xyz="0.650313 -0.764166 -0.093120" rpy="-0.085879 0.126819 0.083586"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_001">
+    <inertial>
+      <origin xyz="-0.005252 0.005986 0.006103" rpy="0.003413 0.000004 -0.001227"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="-0.000000" iyy="0.000000" iyz="-0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_001_visual">
+      <origin xyz="-0.005252 0.005986 0.006103" rpy="0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_001_collision">
+      <origin xyz="-0.005252 0.005986 0.006103" rpy="0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_002">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.001411 -0.690370 -0.000789"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="-0.000000" iyy="0.000000" iyz="-0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_002_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_002_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_frame_eixo_001">
+    <inertial>
+      <origin xyz="0.688762 -0.357731 -0.490373" rpy="-0.923596 0.270816 -0.522353"/>
+      <mass value="0.003281"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-28_frame_eixo_001_visual">
+      <origin xyz="0.688762 -0.357731 -0.490373" rpy="-0.197999 0.106011 -0.099457"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_frame_eixo_001_collision">
+      <origin xyz="0.688762 -0.357731 -0.490373" rpy="-0.197999 0.106011 -0.099457"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_frame_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sensores_suporte_001">
+    <inertial>
+      <origin xyz="0.239719 -0.077689 -0.291460" rpy="0.242297 0.324750 0.468403"/>
+      <mass value="0.046171"/>
+      <inertia ixx="0.000019" ixy="0.000000" ixz="-0.000007" iyy="0.000024" iyz="0.000000" izz="0.000030"/>
+    </inertial>
+    <visual name="sensores_suporte_001_visual">
+      <origin xyz="0.239719 -0.077689 -0.291460" rpy="0.006139 0.026837 0.016805"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sensores_suporte.dae"/>
+      </geometry>
+    </visual>
+    <collision name="sensores_suporte_001_collision">
+      <origin xyz="0.239719 -0.077689 -0.291460" rpy="0.006139 0.026837 0.016805"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sensores_suporte.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="hokuyo_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.716571 0.251832 -0.397978"/>
+      <mass value="0.247845"/>
+      <inertia ixx="0.000183" ixy="0.000000" ixz="0.000050" iyy="0.000224" iyz="-0.000000" izz="0.000162"/>
+    </inertial>
+    <visual name="hokuyo_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/hokuyo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="hokuyo_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/hokuyo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="flir_lepton_placa_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.314080 -0.350499 -0.511682"/>
+      <mass value="0.010762"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="flir_lepton_placa_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/flir_lepton_placa.dae"/>
+      </geometry>
+    </visual>
+    <collision name="flir_lepton_placa_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/flir_lepton_placa.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sensores_tampa_suporte_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.314080 -0.350499 -0.511682"/>
+      <mass value="0.008740"/>
+      <inertia ixx="0.000003" ixy="0.000000" ixz="0.000000" iyy="0.000002" iyz="0.000000" izz="0.000002"/>
+    </inertial>
+    <visual name="sensores_tampa_suporte_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sensores_tampa_suporte.dae"/>
+      </geometry>
+    </visual>
+    <collision name="sensores_tampa_suporte_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sensores_tampa_suporte.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="sonar_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 -0.000208 -0.000091"/>
+      <mass value="0.037666"/>
+      <inertia ixx="0.000015" ixy="0.000000" ixz="-0.000000" iyy="0.000015" iyz="-0.000000" izz="0.000008"/>
+    </inertial>
+    <visual name="sonar_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sonar.dae"/>
+      </geometry>
+    </visual>
+    <collision name="sonar_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/sonar.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_002">
+    <inertial>
+      <origin xyz="0.103343 0.148828 -0.022102" rpy="0.979990 -0.000581 -0.003100"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="0.000000" iyy="0.000012" iyz="-0.000000" izz="0.000010"/>
+    </inertial>
+    <visual name="mx-28_002_visual">
+      <origin xyz="0.103343 0.148828 -0.022102" rpy="0.244079 -0.000491 -0.000714"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_002_collision">
+      <origin xyz="0.103343 0.148828 -0.022102" rpy="0.244079 -0.000491 -0.000714"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_003">
+    <inertial>
+      <origin xyz="0.649851 0.831953 -0.041906" rpy="0.979955 0.008144 0.015116"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="0.000000" iyy="0.000012" iyz="-0.000000" izz="0.000010"/>
+    </inertial>
+    <visual name="mx-28_003_visual">
+      <origin xyz="0.649851 0.831953 -0.041906" rpy="0.244051 0.003447 0.003170"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_003_collision">
+      <origin xyz="0.649851 0.831953 -0.041906" rpy="0.244051 0.003447 0.003170"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_004">
+    <inertial>
+      <origin xyz="0.669563 -0.632029 -0.038125" rpy="-0.982062 0.006523 -0.015406"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="-0.000000" iyy="0.000012" iyz="-0.000000" izz="0.000010"/>
+    </inertial>
+    <visual name="mx-28_004_visual">
+      <origin xyz="0.669563 -0.632029 -0.038125" rpy="-0.244097 0.003160 -0.003326"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_004_collision">
+      <origin xyz="0.669563 -0.632029 -0.038125" rpy="-0.244097 0.003160 -0.003326"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_005">
+    <inertial>
+      <origin xyz="0.345899 -0.429690 -0.022848" rpy="-0.982099 -0.000673 -0.000476"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="-0.000000" iyy="0.000012" iyz="-0.000000" izz="0.000010"/>
+    </inertial>
+    <visual name="mx-28_005_visual">
+      <origin xyz="0.345899 -0.429690 -0.022848" rpy="-0.244127 -0.000076 -0.000154"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_005_collision">
+      <origin xyz="0.345899 -0.429690 -0.022848" rpy="-0.244127 -0.000076 -0.000154"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_006">
+    <inertial>
+      <origin xyz="0.127393 0.054672 -0.022626" rpy="-0.982097 -0.002240 0.002777"/>
+      <mass value="0.043259"/>
+      <inertia ixx="0.000007" ixy="0.000000" ixz="-0.000000" iyy="0.000012" iyz="-0.000000" izz="0.000010"/>
+    </inertial>
+    <visual name="mx-28_006_visual">
+      <origin xyz="0.127393 0.054672 -0.022626" rpy="-0.244126 -0.000781 0.000537"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_006_collision">
+      <origin xyz="0.127393 0.054672 -0.022626" rpy="-0.244126 -0.000781 0.000537"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_003">
+    <inertial>
+      <origin xyz="-0.003922 -0.001101 0.005719" rpy="-0.011486 -0.008623 -0.000110"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_003_visual">
+      <origin xyz="-0.003922 -0.001101 0.005719" rpy="-0.000000 -0.000001 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_003_collision">
+      <origin xyz="-0.003922 -0.001101 0.005719" rpy="-0.000000 -0.000001 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_004">
+    <inertial>
+      <origin xyz="0.008653 -0.435168 0.352937" rpy="-0.014148 0.019569 0.980558"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_004_visual">
+      <origin xyz="0.008653 -0.435168 0.352937" rpy="-0.004563 0.002169 0.244050"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_004_collision">
+      <origin xyz="0.008653 -0.435168 0.352937" rpy="-0.004563 0.002169 0.244050"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_005">
+    <inertial>
+      <origin xyz="0.000150 -0.365648 0.306617" rpy="-0.000415 0.000351 0.980779"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_005_visual">
+      <origin xyz="0.000150 -0.365648 0.306617" rpy="-0.000121 0.000019 0.244101"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_005_collision">
+      <origin xyz="0.000150 -0.365648 0.306617" rpy="-0.000121 0.000019 0.244101"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_006">
+    <inertial>
+      <origin xyz="-0.000021 0.007997 -0.003447" rpy="-0.000000 -0.000000 0.000000"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="-0.000000" ixz="-0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_006_visual">
+      <origin xyz="-0.000021 0.007997 -0.003447" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_006_collision">
+      <origin xyz="-0.000021 0.007997 -0.003447" rpy="0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-28_eixo_007">
+    <inertial>
+      <origin xyz="-0.001532 -0.406909 0.340498" rpy="0.003829 -0.003234 0.980761"/>
+      <mass value="0.000754"/>
+      <inertia ixx="0.000000" ixy="-0.000000" ixz="-0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+    </inertial>
+    <visual name="mx-28_eixo_007_visual">
+      <origin xyz="-0.001532 -0.406909 0.340498" rpy="0.001114 -0.000178 0.244099"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-28_eixo_007_collision">
+      <origin xyz="-0.001532 -0.406909 0.340498" rpy="0.001114 -0.000178 0.244099"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-28_eixo.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_inferior_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000666 0.000000 0.000000"/>
+      <mass value="0.004227"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_inferior_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_inferior_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.587802 0.384866 0.588202"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="-0.000000" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_inferior_002">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.003833 0.023939 -0.000497"/>
+      <mass value="0.004227"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_inferior_002_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_inferior_002_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_inferior_003">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.019884 0.000005 0.000238"/>
+      <mass value="0.004227"/>
+      <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_inferior_003_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_inferior_003_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_inferior_004">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.006141 -0.000002 0.000014"/>
+      <mass value="0.004227"/>
+      <inertia ixx="0.000000" ixy="-0.000000" ixz="-0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_inferior_004_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_inferior_004_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_inferior_005">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.002632 -0.004605 -0.000486"/>
+      <mass value="0.004227"/>
+      <inertia ixx="0.000000" ixy="-0.000000" ixz="-0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_inferior_005_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_inferior_005_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_inferior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_002">
+    <inertial>
+      <origin xyz="0.320993 -0.203171 -0.184395" rpy="0.741971 0.442266 0.742449"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="-0.000000" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_002_visual">
+      <origin xyz="0.320993 -0.203171 -0.184395" rpy="0.095588 0.118163 0.095676"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_002_collision">
+      <origin xyz="0.320993 -0.203171 -0.184395" rpy="0.095588 0.118163 0.095676"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_003">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.595384 -0.383073 0.583063"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="0.000000" ixz="-0.000000" iyy="0.000020" iyz="0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_003_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_003_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_004">
+    <inertial>
+      <origin xyz="0.173322 -0.585899 0.744455" rpy="-0.752140 -0.439832 0.737380"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="0.000000" ixz="-0.000000" iyy="0.000020" iyz="0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_004_visual">
+      <origin xyz="0.173322 -0.585899 0.744455" rpy="-0.098987 -0.119075 0.096250"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_004_collision">
+      <origin xyz="0.173322 -0.585899 0.744455" rpy="-0.098987 -0.119075 0.096250"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_005">
+    <inertial>
+      <origin xyz="0.482294 -0.139289 -0.452011" rpy="0.731414 0.443584 0.749933"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="-0.000001" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_005_visual">
+      <origin xyz="0.482294 -0.139289 -0.452011" rpy="0.092874 0.117644 0.096240"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_005_collision">
+      <origin xyz="0.482294 -0.139289 -0.452011" rpy="0.092874 0.117644 0.096240"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_006">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.579460 0.385816 0.594959"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="-0.000001" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_006_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_006_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_007">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.586155 -0.384881 0.589840"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="0.000000" iyy="0.000020" iyz="0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_007_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_007_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_008">
+    <inertial>
+      <origin xyz="-0.121025 -0.331587 0.214541" rpy="-0.740003 -0.442288 0.744410"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="-0.000000" ixz="0.000000" iyy="0.000020" iyz="0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_008_visual">
+      <origin xyz="-0.121025 -0.331587 0.214541" rpy="-0.095229 -0.118166 0.096035"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_008_collision">
+      <origin xyz="-0.121025 -0.331587 0.214541" rpy="-0.095229 -0.118166 0.096035"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_009">
+    <inertial>
+      <origin xyz="0.208586 -0.337890 0.063814" rpy="0.744410 0.442288 0.740003"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="0.000000" ixz="0.000000" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_009_visual">
+      <origin xyz="0.208586 -0.337890 0.063814" rpy="0.096035 0.118166 0.095229"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_009_collision">
+      <origin xyz="0.208586 -0.337890 0.063814" rpy="0.096035 0.118166 0.095229"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_estrutura_010">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.589840 0.384881 0.586155"/>
+      <mass value="0.012387"/>
+      <inertia ixx="0.000022" ixy="0.000000" ixz="0.000000" iyy="0.000020" iyz="-0.000003" izz="0.000002"/>
+    </inertial>
+    <visual name="garra_estrutura_010_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_estrutura_010_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_estrutura.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_superior_001">
+    <inertial>
+      <origin xyz="-0.018007 -0.013452 0.023576" rpy="0.000019 -0.023942 -0.000238"/>
+      <mass value="0.005360"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_superior_001_visual">
+      <origin xyz="-0.018007 -0.013452 0.023576" rpy="0.000000 -0.000006 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_superior_001_collision">
+      <origin xyz="-0.018007 -0.013452 0.023576" rpy="0.000000 -0.000006 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_superior_002">
+    <inertial>
+      <origin xyz="-0.000197 -0.009048 -0.005738" rpy="-0.000013 -0.000003 0.001098"/>
+      <mass value="0.005360"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_superior_002_visual">
+      <origin xyz="-0.000197 -0.009048 -0.005738" rpy="-0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_superior_002_collision">
+      <origin xyz="-0.000197 -0.009048 -0.005738" rpy="-0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_superior_003">
+    <inertial>
+      <origin xyz="-0.000353 -0.013599 -0.005536" rpy="0.000000 -0.000500 -0.000000"/>
+      <mass value="0.005360"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_superior_003_visual">
+      <origin xyz="-0.000353 -0.013599 -0.005536" rpy="0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_superior_003_collision">
+      <origin xyz="-0.000353 -0.013599 -0.005536" rpy="0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_superior_004">
+    <inertial>
+      <origin xyz="0.003441 0.008408 -0.006774" rpy="-0.000003 0.004606 -0.000014"/>
+      <mass value="0.005360"/>
+      <inertia ixx="0.000001" ixy="0.000000" ixz="-0.000000" iyy="0.000001" iyz="-0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_superior_004_visual">
+      <origin xyz="0.003441 0.008408 -0.006774" rpy="-0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_superior_004_collision">
+      <origin xyz="0.003441 0.008408 -0.006774" rpy="-0.000000 0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="garra_encaixe_superior_005">
+    <inertial>
+      <origin xyz="0.000067 -0.009043 -0.005737" rpy="0.000003 0.000002 0.001127"/>
+      <mass value="0.005360"/>
+      <inertia ixx="0.000001" ixy="0.000000" ixz="-0.000000" iyy="0.000001" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="garra_encaixe_superior_005_visual">
+      <origin xyz="0.000067 -0.009043 -0.005737" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </visual>
+    <collision name="garra_encaixe_superior_005_collision">
+      <origin xyz="0.000067 -0.009043 -0.005737" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/garra_encaixe_superior.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_frame_001">
+    <inertial>
+      <origin xyz="-0.016814 -0.000080 -0.004153" rpy="-0.000000 -0.000000 0.000000"/>
+      <mass value="0.002659"/>
+      <inertia ixx="0.000001" ixy="0.000000" ixz="-0.000000" iyy="0.000000" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-106_frame_001_visual">
+      <origin xyz="-0.016814 -0.000080 -0.004153" rpy="-0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_frame_001_collision">
+      <origin xyz="-0.016814 -0.000080 -0.004153" rpy="-0.000000 -0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_frame_002">
+    <inertial>
+      <origin xyz="0.014608 -0.456887 0.512769" rpy="0.003829 -0.003234 0.980761"/>
+      <mass value="0.002659"/>
+      <inertia ixx="0.000001" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-106_frame_002_visual">
+      <origin xyz="0.014608 -0.456887 0.512769" rpy="0.001114 -0.000178 0.244099"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_frame_002_collision">
+      <origin xyz="0.014608 -0.456887 0.512769" rpy="0.001114 -0.000178 0.244099"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_frame_003">
+    <inertial>
+      <origin xyz="-0.016821 0.029834 -0.004091" rpy="-0.000000 -0.000000 -0.000000"/>
+      <mass value="0.002659"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="-0.000000" iyy="0.000000" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-106_frame_003_visual">
+      <origin xyz="-0.016821 0.029834 -0.004091" rpy="-0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_frame_003_collision">
+      <origin xyz="-0.016821 0.029834 -0.004091" rpy="-0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_frame_004">
+    <inertial>
+      <origin xyz="0.028500 -0.484722 0.520567" rpy="-0.008911 0.022091 0.980638"/>
+      <mass value="0.002659"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-106_frame_004_visual">
+      <origin xyz="0.028500 -0.484722 0.520567" rpy="-0.003449 0.003303 0.244061"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_frame_004_collision">
+      <origin xyz="0.028500 -0.484722 0.520567" rpy="-0.003449 0.003303 0.244061"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_frame_005">
+    <inertial>
+      <origin xyz="-0.019806 0.024564 0.001876" rpy="-0.006010 -0.004512 -0.000099"/>
+      <mass value="0.002659"/>
+      <inertia ixx="0.000001" ixy="-0.000000" ixz="-0.000000" iyy="0.000000" iyz="0.000000" izz="0.000001"/>
+    </inertial>
+    <visual name="mx-106_frame_005_visual">
+      <origin xyz="-0.019806 0.024564 0.001876" rpy="-0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_frame_005_collision">
+      <origin xyz="-0.019806 0.024564 0.001876" rpy="-0.000000 -0.000000 -0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106_frame.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_009">
+    <inertial>
+      <origin xyz="0.751186 0.788232 -0.110020" rpy="0.450873 0.966424 -0.429695"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="-0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_009_visual">
+      <origin xyz="0.751186 0.788232 -0.110020" rpy="0.086621 0.130286 -0.084441"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_009_collision">
+      <origin xyz="0.751186 0.788232 -0.110020" rpy="0.086621 0.130286 -0.084441"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_010">
+    <inertial>
+      <origin xyz="0.723297 -0.684821 0.014183" rpy="-0.454539 0.941488 0.432123"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="-0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_010_visual">
+      <origin xyz="0.723297 -0.684821 0.014183" rpy="-0.085687 0.126126 0.083400"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_010_collision">
+      <origin xyz="0.723297 -0.684821 0.014183" rpy="-0.085687 0.126126 0.083400"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_011">
+    <inertial>
+      <origin xyz="0.446269 0.268676 0.138026" rpy="0.444864 0.956434 -0.449851"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="-0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_011_visual">
+      <origin xyz="0.446269 0.268676 0.138026" rpy="0.087125 0.128767 -0.087647"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_011_collision">
+      <origin xyz="0.446269 0.268676 0.138026" rpy="0.087125 0.128767 -0.087647"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_012">
+    <inertial>
+      <origin xyz="0.430275 -0.158355 0.261391" rpy="-0.444677 0.968269 0.448144"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="-0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_012_visual">
+      <origin xyz="0.430275 -0.158355 0.261391" rpy="-0.087868 0.130745 0.088233"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_012_collision">
+      <origin xyz="0.430275 -0.158355 0.261391" rpy="-0.087868 0.130745 0.088233"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="mx-106_013">
+    <inertial>
+      <origin xyz="0.542156 0.482615 0.015985" rpy="0.445749 0.960260 -0.446041"/>
+      <mass value="0.086496"/>
+      <inertia ixx="0.000023" ixy="0.000001" ixz="0.000000" iyy="0.000033" iyz="0.000000" izz="0.000041"/>
+    </inertial>
+    <visual name="mx-106_013_visual">
+      <origin xyz="0.542156 0.482615 0.015985" rpy="0.087134 0.129377 -0.087165"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </visual>
+    <collision name="mx-106_013_collision">
+      <origin xyz="0.542156 0.482615 0.015985" rpy="0.087134 0.129377 -0.087165"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/mx-106.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="roldana_001">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000285 -0.000000 -0.000468"/>
+      <mass value="0.048608"/>
+      <inertia ixx="0.000012" ixy="0.000000" ixz="-0.000000" iyy="0.000013" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="roldana_001_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </visual>
+    <collision name="roldana_001_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="roldana_002">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.002631 0.000001 -0.000489"/>
+      <mass value="0.048608"/>
+      <inertia ixx="0.000012" ixy="-0.000000" ixz="-0.000000" iyy="0.000013" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="roldana_002_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </visual>
+    <collision name="roldana_002_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="roldana_003">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.002174 0.000008 0.003561"/>
+      <mass value="0.048608"/>
+      <inertia ixx="0.000012" ixy="-0.000000" ixz="-0.000000" iyy="0.000013" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="roldana_003_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </visual>
+    <collision name="roldana_003_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="roldana_004">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.008516 -0.000005 -0.000629"/>
+      <mass value="0.048608"/>
+      <inertia ixx="0.000012" ixy="0.000000" ixz="-0.000000" iyy="0.000013" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="roldana_004_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </visual>
+    <collision name="roldana_004_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="roldana_005">
+    <inertial>
+      <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000030 -0.000001 0.000295"/>
+      <mass value="0.048608"/>
+      <inertia ixx="0.000012" ixy="0.000000" ixz="0.000000" iyy="0.000013" iyz="-0.000000" izz="0.000012"/>
+    </inertial>
+    <visual name="roldana_005_visual">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </visual>
+    <collision name="roldana_005_collision">
+      <origin xyz="0.000000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+      <geometry>
+        <mesh filename="package://elir_v-2020/meshes/roldana.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="roldana_005_root" type="fixed">
+    <origin xyz="1.088233 0.089591 0.784068" rpy="-0.000030 -0.000001 0.000295"/>
+    <parent link="roldana_005_root"/>
+    <child link="roldana_005"/>
+  </joint>
+  <joint name="base_fachamento_001_base_001" type="revolute">
+    <origin xyz="-0.136914 -0.092908 0.172825" rpy="0.000709 0.001326 -0.489894"/>
+    <parent link="base_fachamento_001"/>
+    <child link="base_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_001_base_001" type="revolute">
+    <origin xyz="0.310606 -0.420135 -0.076737" rpy="0.272616 -0.335664 -0.272329"/>
+    <parent link="mx-106_001"/>
+    <child link="base_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_002_base_001" type="revolute">
+    <origin xyz="0.030776 0.275865 0.258602" rpy="-0.324233 0.385715 -0.324152"/>
+    <parent link="mx-106_002"/>
+    <child link="base_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_003_base_001" type="revolute">
+    <origin xyz="0.287249 0.331534 -0.109601" rpy="-0.272310 -0.338012 0.272380"/>
+    <parent link="mx-106_003"/>
+    <child link="base_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_004_base_001" type="revolute">
+    <origin xyz="0.075970 -0.329557 0.166919" rpy="0.272265 0.335732 0.272553"/>
+    <parent link="mx-106_004"/>
+    <child link="base_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta2_001_mx-106_003" type="revolute">
+    <origin xyz="0.402504 -0.017408 -0.208571" rpy="0.747841 0.365399 -0.097347"/>
+    <parent link="braco_aleta2_001"/>
+    <child link="mx-106_003"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_estrutura_001_braco_aleta2_001" type="revolute">
+    <origin xyz="-0.002257 -0.060769 0.061634" rpy="-0.550760 0.538076 -0.524873"/>
+    <parent link="braco_estrutura_001"/>
+    <child link="braco_aleta2_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta2_002_braco_estrutura_001" type="revolute">
+    <origin xyz="-0.091370 0.146990 0.243781" rpy="-0.173371 0.076774 0.429549"/>
+    <parent link="braco_aleta2_002"/>
+    <child link="braco_estrutura_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta1_001_braco_estrutura_001" type="revolute">
+    <origin xyz="0.212377 0.165333 -0.110863" rpy="-0.379915 -0.696868 0.375726"/>
+    <parent link="braco_aleta1_001"/>
+    <child link="braco_estrutura_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta1_002_braco_estrutura_001" type="revolute">
+    <origin xyz="-0.094533 -0.172105 0.211105" rpy="-0.261623 -0.143547 -0.151197"/>
+    <parent link="braco_aleta1_002"/>
+    <child link="braco_estrutura_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta2_003_mx-106_001" type="revolute">
+    <origin xyz="0.175028 0.537393 0.326341" rpy="-0.643842 1.570796 0.324941"/>
+    <parent link="braco_aleta2_003"/>
+    <child link="mx-106_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta2_004_mx-106_004" type="revolute">
+    <origin xyz="0.156825 0.092329 -0.389288" rpy="-0.213861 -1.012552 -0.052899"/>
+    <parent link="braco_aleta2_004"/>
+    <child link="mx-106_004"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_estrutura_002_braco_aleta2_003" type="revolute">
+    <origin xyz="0.190280 0.120886 -0.449513" rpy="0.670305 -0.759030 -0.174099"/>
+    <parent link="braco_estrutura_002"/>
+    <child link="braco_aleta2_003"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_estrutura_002_braco_aleta2_004" type="revolute">
+    <origin xyz="0.167874 0.120973 -0.429564" rpy="-0.012341 0.042614 -0.026777"/>
+    <parent link="braco_estrutura_002"/>
+    <child link="braco_aleta2_004"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta1_003_braco_estrutura_002" type="revolute">
+    <origin xyz="0.245713 -0.680835 0.123064" rpy="0.008855 0.166650 -0.652926"/>
+    <parent link="braco_aleta1_003"/>
+    <child link="braco_estrutura_002"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta1_004_braco_estrutura_002" type="revolute">
+    <origin xyz="-0.075698 -0.302855 0.222261" rpy="0.051237 0.753792 -0.146905"/>
+    <parent link="braco_aleta1_004"/>
+    <child link="braco_estrutura_002"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_005_braco_aleta1_004" type="revolute">
+    <origin xyz="0.585083 0.835113 -0.220212" rpy="-0.576469 -0.767757 0.328795"/>
+    <parent link="mx-106_005"/>
+    <child link="braco_aleta1_004"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_006_braco_aleta1_003" type="revolute">
+    <origin xyz="-0.035287 0.447557 0.499726" rpy="-0.503509 1.093451 0.157640"/>
+    <parent link="mx-106_006"/>
+    <child link="braco_aleta1_003"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_006_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="0.012956 0.508432 0.509529" rpy="-0.260607 0.568431 0.353409"/>
+    <parent link="mx-106_006"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_005_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="0.632412 0.773932 -0.232303" rpy="-0.387080 -0.195328 0.985713"/>
+    <parent link="mx-106_005"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="braco_aleta1_001_mx-106_007" type="revolute">
+    <origin xyz="0.120072 0.165686 -0.039026" rpy="-0.519264 -1.285531 -0.070858"/>
+    <parent link="braco_aleta1_001"/>
+    <child link="mx-106_007"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_008_braco_aleta1_002" type="revolute">
+    <origin xyz="0.406791 -0.288102 0.136452" rpy="0.520476 -1.143958 0.138974"/>
+    <parent link="mx-106_008"/>
+    <child link="braco_aleta1_002"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_008_unidade_tracao_traseira_001" type="revolute">
+    <origin xyz="0.359136 -0.226921 0.147182" rpy="0.326160 -0.377834 -0.324876"/>
+    <parent link="mx-106_008"/>
+    <child link="unidade_tracao_traseira_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_007_unidade_tracao_traseira_001" type="revolute">
+    <origin xyz="-0.220449 -0.011324 0.110448" rpy="0.275154 0.339903 0.272075"/>
+    <parent link="mx-106_007"/>
+    <child link="unidade_tracao_traseira_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mynt_001_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="-0.002687 0.006951 0.000815" rpy="-0.003848 0.026307 0.616351"/>
+    <parent link="mynt_001"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="-0.023940 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="teledyne_001_unidade_tracao_traseira_001" type="revolute">
+    <origin xyz="-0.007447 0.011006 -0.011030" rpy="0.002222 0.001187 -0.001557"/>
+    <parent link="teledyne_001"/>
+    <child link="unidade_tracao_traseira_001"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_001_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="0.263426 -0.549734 0.819002" rpy="0.318286 0.305998 0.481077"/>
+    <parent link="mx-28_frame_001"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="-0.023940 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_002_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="-0.001541 0.008455 0.000097" rpy="-0.007034 0.015258 0.608546"/>
+    <parent link="mx-28_frame_002"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_003_unidade_tracao_frontal_001" type="revolute">
+    <origin xyz="0.146296 -0.008756 1.049823" rpy="0.174937 0.775873 0.764815"/>
+    <parent link="mx-28_frame_003"/>
+    <child link="unidade_tracao_frontal_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_004_unidade_tracao_traseira_001" type="revolute">
+    <origin xyz="-0.403209 -0.006763 0.346777" rpy="0.003580 0.760647 0.001756"/>
+    <parent link="mx-28_frame_004"/>
+    <child link="unidade_tracao_traseira_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_005_unidade_tracao_traseira_001" type="revolute">
+    <origin xyz="0.032447 0.006322 0.000218" rpy="0.001076 0.003901 -0.001143"/>
+    <parent link="mx-28_frame_005"/>
+    <child link="unidade_tracao_traseira_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_006_base_001" type="revolute">
+    <origin xyz="-0.017547 0.007511 0.000073" rpy="-0.001144 0.000001 -0.001145"/>
+    <parent link="mx-28_frame_006"/>
+    <child link="base_001"/>
+    <axis xyz="0.003186 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_001_mx-28_frame_001" type="revolute">
+    <origin xyz="0.665965 -0.764260 -0.108499" rpy="-0.134379 -1.057875 0.131965"/>
+    <parent link="mx-28_001"/>
+    <child link="mx-28_frame_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_001_mx-28_001" type="revolute">
+    <origin xyz="-0.005261 0.003341 0.006105" rpy="-0.262701 0.610852 0.252698"/>
+    <parent link="mx-28_eixo_001"/>
+    <child link="mx-28_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_002_mx-28_001" type="revolute">
+    <origin xyz="0.029405 -0.000727 0.818971" rpy="-0.243355 1.570796 0.234695"/>
+    <parent link="mx-28_eixo_002"/>
+    <child link="mx-28_001"/>
+    <axis xyz="-0.003185 -0.999995 0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_frame_eixo_001_mx-28_eixo_001" type="revolute">
+    <origin xyz="0.680182 -0.379697 -0.480052" rpy="0.365016 -0.324776 0.140624"/>
+    <parent link="mx-28_frame_eixo_001"/>
+    <child link="mx-28_eixo_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_002_mx-28_frame_eixo_001" type="revolute">
+    <origin xyz="0.034481 -0.006417 0.812807" rpy="-0.650654 0.963917 -0.427235"/>
+    <parent link="mx-28_eixo_002"/>
+    <child link="mx-28_frame_eixo_001"/>
+    <axis xyz="0.003185 0.999995 -0.000820" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="hokuyo_001_sensores_suporte_001" type="revolute">
+    <origin xyz="0.684719 -0.463902 -0.535209" rpy="0.486576 -0.134537 0.399183"/>
+    <parent link="hokuyo_001"/>
+    <child link="sensores_suporte_001"/>
+    <axis xyz="0.636820 -0.002661 -0.771008" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="sonar_001_base_001" type="revolute">
+    <origin xyz="-0.000005 0.000020 0.029947" rpy="-0.000000 0.000208 0.000039"/>
+    <parent link="sonar_001"/>
+    <child link="base_001"/>
+    <axis xyz="-0.000500 -0.000818 -1.000000" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_003_mx-28_frame_002" type="revolute">
+    <origin xyz="0.667879 0.846896 -0.042317" rpy="-0.453123 -0.009857 -0.002550"/>
+    <parent link="mx-28_003"/>
+    <child link="mx-28_frame_002"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_004_mx-28_frame_003" type="revolute">
+    <origin xyz="0.685527 -0.647080 -0.038465" rpy="0.580010 -1.570796 -0.206011"/>
+    <parent link="mx-28_004"/>
+    <child link="mx-28_frame_003"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_005_mx-28_frame_006" type="revolute">
+    <origin xyz="0.361963 -0.414741 -0.022836" rpy="0.455781 -0.000462 0.001587"/>
+    <parent link="mx-28_005"/>
+    <child link="mx-28_frame_006"/>
+    <axis xyz="-0.000500 -0.000818 -1.000000" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_006_mx-28_frame_004" type="revolute">
+    <origin xyz="0.143360 0.039621 -0.022508" rpy="0.581196 -1.496925 -0.211272"/>
+    <parent link="mx-28_006"/>
+    <child link="mx-28_frame_004"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_002_mx-28_frame_005" type="revolute">
+    <origin xyz="0.087376 0.163879 -0.022156" rpy="-0.453161 0.002187 0.002286"/>
+    <parent link="mx-28_002"/>
+    <child link="mx-28_frame_005"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_003_mx-28_004" type="revolute">
+    <origin xyz="-0.003859 -0.001099 0.008364" rpy="-0.604869 0.016374 -0.010615"/>
+    <parent link="mx-28_eixo_003"/>
+    <child link="mx-28_004"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_004_mx-28_003" type="revolute">
+    <origin xyz="0.008746 -0.435165 0.356819" rpy="0.694922 0.270968 -0.438437"/>
+    <parent link="mx-28_eixo_004"/>
+    <child link="mx-28_003"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_005_mx-28_005" type="revolute">
+    <origin xyz="0.000151 -0.365647 0.309263" rpy="-0.686105 -0.262802 -0.449809"/>
+    <parent link="mx-28_eixo_005"/>
+    <child link="mx-28_005"/>
+    <axis xyz="-0.000500 -0.000818 -1.000000" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_006_mx-28_006" type="revolute">
+    <origin xyz="-0.000033 0.007999 -0.000802" rpy="-0.609817 -0.002120 0.001571"/>
+    <parent link="mx-28_eixo_006"/>
+    <child link="mx-28_006"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-28_eixo_007_mx-28_002" type="revolute">
+    <origin xyz="-0.001544 -0.406907 0.343143" rpy="0.684318 0.260709 -0.451854"/>
+    <parent link="mx-28_eixo_007"/>
+    <child link="mx-28_002"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_inferior_001_mx-28_eixo_005" type="revolute">
+    <origin xyz="-0.000007 0.007788 -0.001443" rpy="-0.000573 0.000315 0.609811"/>
+    <parent link="garra_encaixe_inferior_001"/>
+    <child link="mx-28_eixo_005"/>
+    <axis xyz="-0.000500 -0.000818 -1.000000" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_inferior_002_mx-28_eixo_003" type="revolute">
+    <origin xyz="0.016326 -0.013987 -0.026729" rpy="-0.001099 -0.032559 0.000405"/>
+    <parent link="garra_encaixe_inferior_002"/>
+    <child link="mx-28_eixo_003"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_inferior_003_mx-28_eixo_004" type="revolute">
+    <origin xyz="-0.000105 0.025455 -0.001451" rpy="-0.018862 0.015312 0.609526"/>
+    <parent link="garra_encaixe_inferior_003"/>
+    <child link="mx-28_eixo_004"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_inferior_004_mx-28_eixo_007" type="revolute">
+    <origin xyz="0.000072 0.006549 -0.001443" rpy="0.005277 -0.002898 0.609796"/>
+    <parent link="garra_encaixe_inferior_004"/>
+    <child link="mx-28_eixo_007"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_inferior_005_mx-28_eixo_006" type="revolute">
+    <origin xyz="-0.003511 -0.006727 -0.001339" rpy="-0.002631 0.004607 0.000479"/>
+    <parent link="garra_encaixe_inferior_005"/>
+    <child link="mx-28_eixo_006"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_superior_001_garra_estrutura_005" type="revolute">
+    <origin xyz="-0.034922 -0.002607 0.020641" rpy="0.343701 0.464907 0.354023"/>
+    <parent link="garra_encaixe_superior_001"/>
+    <child link="garra_estrutura_005"/>
+    <axis xyz="0.999602 -0.014925 -0.023927" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_superior_002_garra_estrutura_004" type="revolute">
+    <origin xyz="0.016647 -0.019759 -0.009465" rpy="-0.354771 -0.436070 0.346109"/>
+    <parent link="garra_encaixe_superior_002"/>
+    <child link="garra_estrutura_004"/>
+    <axis xyz="-0.999691 0.006711 0.023935" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_superior_003_garra_estrutura_002" type="revolute">
+    <origin xyz="-0.017361 -0.027199 -0.008848" rpy="0.347595 0.438099 0.347862"/>
+    <parent link="garra_encaixe_superior_003"/>
+    <child link="garra_estrutura_002"/>
+    <axis xyz="1.000000 -0.000500 -0.000500" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_superior_004_garra_estrutura_009" type="revolute">
+    <origin xyz="-0.013480 -0.005278 -0.010172" rpy="0.348365 0.432477 0.345916"/>
+    <parent link="garra_encaixe_superior_004"/>
+    <child link="garra_estrutura_009"/>
+    <axis xyz="0.999979 0.004607 0.004604" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="garra_encaixe_superior_005_garra_estrutura_008" type="revolute">
+    <origin xyz="0.017131 -0.019561 -0.008981" rpy="-0.346398 -0.437704 0.348399"/>
+    <parent link="garra_encaixe_superior_005"/>
+    <child link="garra_estrutura_008"/>
+    <axis xyz="-0.999979 -0.004607 -0.004604" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_frame_001_garra_encaixe_superior_004" type="revolute">
+    <origin xyz="-0.017927 -0.011086 -0.004773" rpy="-0.000001 0.004606 -0.000006"/>
+    <parent link="mx-106_frame_001"/>
+    <child link="garra_encaixe_superior_004"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_frame_002_garra_encaixe_superior_005" type="revolute">
+    <origin xyz="0.015727 -0.445882 0.512140" rpy="-0.002022 -0.000727 -0.453924"/>
+    <parent link="mx-106_frame_002"/>
+    <child link="garra_encaixe_superior_005"/>
+    <axis xyz="0.004608 -0.000834 -0.999989" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_frame_003_garra_encaixe_superior_003" type="revolute">
+    <origin xyz="-0.017982 0.040834 -0.004724" rpy="0.000000 -0.000500 -0.000000"/>
+    <parent link="mx-106_frame_003"/>
+    <child link="garra_encaixe_superior_003"/>
+    <axis xyz="-0.000500 -0.000818 -1.000000" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_frame_004_garra_encaixe_superior_002" type="revolute">
+    <origin xyz="0.029725 -0.473731 0.519905" rpy="0.007597 -0.003489 -0.453884"/>
+    <parent link="mx-106_frame_004"/>
+    <child link="garra_encaixe_superior_002"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_frame_005_garra_encaixe_superior_001" type="revolute">
+    <origin xyz="-0.020823 0.035580 0.001267" rpy="0.002583 -0.019423 -0.000066"/>
+    <parent link="mx-106_frame_005"/>
+    <child link="garra_encaixe_superior_001"/>
+    <axis xyz="-0.023941 -0.000743 -0.999713" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_009_mx-106_frame_005" type="revolute">
+    <origin xyz="0.774583 0.757570 -0.127859" rpy="-0.275810 -0.348695 0.268165"/>
+    <parent link="mx-106_009"/>
+    <child link="mx-106_frame_005"/>
+    <axis xyz="0.014903 0.999888 -0.001100" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_010_mx-106_frame_004" type="revolute">
+    <origin xyz="0.698821 -0.654381 -0.002555" rpy="0.196780 -0.467327 0.419121"/>
+    <parent link="mx-106_010"/>
+    <child link="mx-106_frame_004"/>
+    <axis xyz="-0.006691 -0.999977 0.000904" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_011_mx-106_frame_001" type="revolute">
+    <origin xyz="0.470622 0.268313 0.120842" rpy="-0.272207 -0.334810 0.273398"/>
+    <parent link="mx-106_011"/>
+    <child link="mx-106_frame_001"/>
+    <axis xyz="0.004604 -0.999989 0.000856" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_012_mx-106_frame_002" type="revolute">
+    <origin xyz="0.405944 -0.128192 0.243957" rpy="0.209065 -0.482428 0.412140"/>
+    <parent link="mx-106_012"/>
+    <child link="mx-106_frame_002"/>
+    <axis xyz="0.004604 -0.999989 0.000856" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="mx-106_013_mx-106_frame_003" type="revolute">
+    <origin xyz="0.566405 0.452299 -0.001298" rpy="-0.272297 -0.337096 0.272366"/>
+    <parent link="mx-106_013"/>
+    <child link="mx-106_frame_003"/>
+    <axis xyz="0.000499 1.000000 -0.000818" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="roldana_001_mx-106_013" type="revolute">
+    <origin xyz="0.000039 -0.014927 -0.000064" rpy="0.260091 0.614785 -0.259251"/>
+    <parent link="roldana_001"/>
+    <child link="mx-106_013"/>
+    <axis xyz="-0.000499 -1.000000 0.000818" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="roldana_002_mx-106_011" type="revolute">
+    <origin xyz="-0.000360 -0.013730 -0.000067" rpy="0.256848 0.611167 -0.261535"/>
+    <parent link="roldana_002"/>
+    <child link="mx-106_011"/>
+    <axis xyz="0.004604 -0.999989 0.000856" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="roldana_003_mx-106_012" type="revolute">
+    <origin xyz="0.000087 0.013027 0.000237" rpy="-0.259198 0.617224 0.259814"/>
+    <parent link="roldana_003"/>
+    <child link="mx-106_012"/>
+    <axis xyz="-0.004604 0.999989 -0.000856" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="roldana_004_mx-106_009" type="revolute">
+    <origin xyz="0.001319 -0.032148 -0.000097" rpy="0.269620 0.623753 -0.249688"/>
+    <parent link="roldana_004"/>
+    <child link="mx-106_009"/>
+    <axis xyz="-0.014903 -0.999888 0.001100" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+  <joint name="roldana_005_mx-106_010" type="revolute">
+    <origin xyz="0.000103 0.014999 0.000007" rpy="-0.261321 0.608013 0.252368"/>
+    <parent link="roldana_005"/>
+    <child link="mx-106_010"/>
+    <axis xyz="0.006691 0.999977 -0.000904" use_parent_model_frame="false"/>
+    <limit lower="-1.570796" upper="1.570796" effort="10.000000" velocity="10.000000"/>
+    <dynamics friction="0.000000" damping="0.000000"/>
+  </joint>
+</robot>

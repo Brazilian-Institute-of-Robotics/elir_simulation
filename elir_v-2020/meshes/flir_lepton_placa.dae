@@ -1,0 +1,51 @@
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2020-12-30T20:00:08.299421</created>
+    <modified>2020-12-30T20:00:08.299424</modified>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_geometries>
+    <geometry id="geometry0" name="flir_lepton_placa_001">
+      <mesh>
+        <source id="cubeverts-array0">
+          <float_array count="48" id="cubeverts-array0-array">0.01502118 0.01469431 -0.009661991 -0.01177347 0.01479235 0.005819519 -0.003446606 0.01477147 0.01269723 0.00669432 0.0147152 -0.0165397 0.01492721 -0.01480553 -0.009637806 0.006600352 -0.01478464 -0.01651552 -0.01186744 -0.01470749 0.005843704 -0.003540574 -0.01472837 0.01272142 -0.003531018 -0.01172839 0.01271896 -0.01185788 -0.0117075 0.005841245 -0.0156788 -0.01169154 0.01046729 -0.007351939 -0.01171242 0.017345 -0.007277084 0.01178745 0.01732574 -0.01560395 0.01180833 0.01044802 -0.003456162 0.01177148 0.01269969 -0.01178302 0.01179237 0.005821978</float_array>
+          <technique_common>
+            <accessor count="16" source="#cubeverts-array0-array" stride="3">
+              <param type="float" name="X"/>
+              <param type="float" name="Y"/>
+              <param type="float" name="Z"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cubenormals-array0">
+          <float_array count="84" id="cubenormals-array0-array">0.003185341 0.9999946 -0.000819858 0.003185341 0.9999946 -0.000819858 0.6368203 -0.002660621 -0.7710077 0.6368203 -0.002660621 -0.7710077 -0.003185341 -0.9999946 0.000819858 -0.003185341 -0.9999946 0.000819858 -0.6368203 0.002660621 0.7710077 -0.6368203 0.002660621 0.7710077 -0.003185341 -0.9999946 0.000819858 -0.003185341 -0.9999946 0.000819858 -0.6368203 0.002660621 0.7710077 -0.6368203 0.002660621 0.7710077 0.003185341 0.9999946 -0.000819858 0.003185341 0.9999946 -0.000819858 -0.6368203 0.002660621 0.7710077 -0.6368203 0.002660621 0.7710077 -0.7710057 0.00193382 -0.6368253 -0.7710057 0.00193382 -0.6368253 -0.7710057 0.00193382 -0.6368253 -0.7710057 0.00193382 -0.6368253 -0.7710057 0.00193382 -0.6368253 -0.7710057 0.00193382 -0.6368253 0.7710057 -0.00193382 0.6368253 0.7710057 -0.00193382 0.6368253 0.7710057 -0.00193382 0.6368253 0.7710057 -0.00193382 0.6368253 0.7710057 -0.00193382 0.6368253 0.7710057 -0.00193382 0.6368253</float_array>
+          <technique_common>
+            <accessor count="28" source="#cubenormals-array0-array" stride="3">
+              <param type="float" name="X"/>
+              <param type="float" name="Y"/>
+              <param type="float" name="Z"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cubeverts-array0-vertices">
+          <input semantic="POSITION" source="#cubeverts-array0"/>
+        </vertices>
+        <triangles count="28" material="materialref">
+          <input offset="0" semantic="VERTEX" source="#cubeverts-array0-vertices"/>
+          <input offset="1" semantic="NORMAL" source="#cubenormals-array0"/>
+          <p>0 0 1 0 2 0 3 1 1 1 0 1 3 2 0 2 4 2 3 3 4 3 5 3 6 4 4 4 7 4 6 5 5 5 4 5 8 6 9 6 7 6 7 7 9 7 6 7 10 8 8 8 11 8 9 9 8 9 10 9 11 10 12 10 10 10 12 11 13 11 10 11 14 12 15 12 13 12 14 13 13 13 12 13 2 14 1 14 14 14 14 15 1 15 15 15 15 16 9 16 10 16 15 17 10 17 13 17 5 18 6 18 9 18 3 19 15 19 1 19 3 20 5 20 9 20 3 21 9 21 15 21 11 22 14 22 12 22 8 23 14 23 11 23 7 24 4 24 8 24 14 25 0 25 2 25 8 26 0 26 14 26 4 27 0 27 8 27</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="scene">
+      <node id="node0" name="node0">
+        <instance_geometry url="#geometry0"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#scene"/>
+  </scene>
+</COLLADA>

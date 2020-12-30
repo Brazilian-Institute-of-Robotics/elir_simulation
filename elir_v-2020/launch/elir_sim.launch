@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Spawn ELIR -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+	      args="-file $(find elir_v-2020)/models/elir_v-2020.urdf -urdf -z 1 -model elir" />
+</launch>

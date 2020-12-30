@@ -1,0 +1,749 @@
+<?xml version="1.0" ?>
+<robot name="elir_v-2020">
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/elir_v-2020</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+  <transmission name="base_fachamento_001_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="base_fachamento_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="base_fachamento_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_001_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_002_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_002_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_002_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_003_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_003_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_003_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_004_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_004_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_004_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta2_001_mx-106_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta2_001_mx-106_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta2_001_mx-106_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_estrutura_001_braco_aleta2_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_estrutura_001_braco_aleta2_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_estrutura_001_braco_aleta2_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta2_002_braco_estrutura_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta2_002_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta2_002_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta1_001_braco_estrutura_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta1_001_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta1_001_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta1_002_braco_estrutura_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta1_002_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta1_002_braco_estrutura_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta2_003_mx-106_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta2_003_mx-106_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta2_003_mx-106_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta2_004_mx-106_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta2_004_mx-106_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta2_004_mx-106_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_estrutura_002_braco_aleta2_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_estrutura_002_braco_aleta2_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_estrutura_002_braco_aleta2_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_estrutura_002_braco_aleta2_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_estrutura_002_braco_aleta2_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_estrutura_002_braco_aleta2_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta1_003_braco_estrutura_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta1_003_braco_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta1_003_braco_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta1_004_braco_estrutura_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta1_004_braco_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta1_004_braco_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_005_braco_aleta1_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_005_braco_aleta1_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_005_braco_aleta1_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_006_braco_aleta1_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_006_braco_aleta1_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_006_braco_aleta1_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_006_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_006_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_006_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_005_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_005_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_005_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="braco_aleta1_001_mx-106_007">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="braco_aleta1_001_mx-106_007">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="braco_aleta1_001_mx-106_007">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_008_braco_aleta1_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_008_braco_aleta1_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_008_braco_aleta1_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_008_unidade_tracao_traseira_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_008_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_008_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_007_unidade_tracao_traseira_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_007_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_007_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mynt_001_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mynt_001_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mynt_001_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="teledyne_001_unidade_tracao_traseira_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="teledyne_001_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="teledyne_001_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_001_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_001_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_001_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_002_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_002_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_002_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_003_unidade_tracao_frontal_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_003_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_003_unidade_tracao_frontal_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_004_unidade_tracao_traseira_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_004_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_004_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_005_unidade_tracao_traseira_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_005_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_005_unidade_tracao_traseira_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_006_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_006_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_006_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_001_mx-28_frame_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_001_mx-28_frame_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_001_mx-28_frame_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_001_mx-28_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_001_mx-28_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_001_mx-28_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_002_mx-28_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_002_mx-28_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_002_mx-28_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_frame_eixo_001_mx-28_eixo_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_frame_eixo_001_mx-28_eixo_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_frame_eixo_001_mx-28_eixo_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_002_mx-28_frame_eixo_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_002_mx-28_frame_eixo_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_002_mx-28_frame_eixo_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="hokuyo_001_sensores_suporte_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="hokuyo_001_sensores_suporte_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="hokuyo_001_sensores_suporte_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="sonar_001_base_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="sonar_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sonar_001_base_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_003_mx-28_frame_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_003_mx-28_frame_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_003_mx-28_frame_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_004_mx-28_frame_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_004_mx-28_frame_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_004_mx-28_frame_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_005_mx-28_frame_006">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_005_mx-28_frame_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_005_mx-28_frame_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_006_mx-28_frame_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_006_mx-28_frame_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_006_mx-28_frame_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_002_mx-28_frame_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_002_mx-28_frame_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_002_mx-28_frame_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_003_mx-28_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_003_mx-28_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_003_mx-28_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_004_mx-28_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_004_mx-28_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_004_mx-28_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_005_mx-28_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_005_mx-28_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_005_mx-28_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_006_mx-28_006">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_006_mx-28_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_006_mx-28_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-28_eixo_007_mx-28_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-28_eixo_007_mx-28_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-28_eixo_007_mx-28_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_inferior_001_mx-28_eixo_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_inferior_001_mx-28_eixo_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_inferior_001_mx-28_eixo_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_inferior_002_mx-28_eixo_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_inferior_002_mx-28_eixo_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_inferior_002_mx-28_eixo_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_inferior_003_mx-28_eixo_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_inferior_003_mx-28_eixo_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_inferior_003_mx-28_eixo_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_inferior_004_mx-28_eixo_007">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_inferior_004_mx-28_eixo_007">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_inferior_004_mx-28_eixo_007">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_inferior_005_mx-28_eixo_006">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_inferior_005_mx-28_eixo_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_inferior_005_mx-28_eixo_006">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_superior_001_garra_estrutura_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_superior_001_garra_estrutura_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_superior_001_garra_estrutura_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_superior_002_garra_estrutura_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_superior_002_garra_estrutura_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_superior_002_garra_estrutura_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_superior_003_garra_estrutura_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_superior_003_garra_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_superior_003_garra_estrutura_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_superior_004_garra_estrutura_009">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_superior_004_garra_estrutura_009">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_superior_004_garra_estrutura_009">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="garra_encaixe_superior_005_garra_estrutura_008">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="garra_encaixe_superior_005_garra_estrutura_008">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="garra_encaixe_superior_005_garra_estrutura_008">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_frame_001_garra_encaixe_superior_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_frame_001_garra_encaixe_superior_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_frame_001_garra_encaixe_superior_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_frame_002_garra_encaixe_superior_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_frame_002_garra_encaixe_superior_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_frame_002_garra_encaixe_superior_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_frame_003_garra_encaixe_superior_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_frame_003_garra_encaixe_superior_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_frame_003_garra_encaixe_superior_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_frame_004_garra_encaixe_superior_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_frame_004_garra_encaixe_superior_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_frame_004_garra_encaixe_superior_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_frame_005_garra_encaixe_superior_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_frame_005_garra_encaixe_superior_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_frame_005_garra_encaixe_superior_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_009_mx-106_frame_005">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_009_mx-106_frame_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_009_mx-106_frame_005">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_010_mx-106_frame_004">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_010_mx-106_frame_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_010_mx-106_frame_004">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_011_mx-106_frame_001">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_011_mx-106_frame_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_011_mx-106_frame_001">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_012_mx-106_frame_002">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_012_mx-106_frame_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_012_mx-106_frame_002">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="mx-106_013_mx-106_frame_003">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="mx-106_013_mx-106_frame_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="mx-106_013_mx-106_frame_003">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="roldana_001_mx-106_013">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="roldana_001_mx-106_013">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="roldana_001_mx-106_013">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="roldana_002_mx-106_011">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="roldana_002_mx-106_011">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="roldana_002_mx-106_011">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="roldana_003_mx-106_012">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="roldana_003_mx-106_012">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="roldana_003_mx-106_012">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="roldana_004_mx-106_009">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="roldana_004_mx-106_009">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="roldana_004_mx-106_009">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+  <transmission name="roldana_005_mx-106_010">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="roldana_005_mx-106_010">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="roldana_005_mx-106_010">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+</robot>

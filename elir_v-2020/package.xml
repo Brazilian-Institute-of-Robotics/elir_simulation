@@ -1,0 +1,17 @@
+<package format="2">
+  <name>elir_v-2020</name>
+  <version>1.2.4</version>
+  <description>
+  elir simulation package
+  </description>
+  <maintainer email="breno.portela@fieb.org.br">Breno Portela</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+</package>
