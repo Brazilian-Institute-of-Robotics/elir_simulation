@@ -72,6 +72,13 @@ Gazebo Simulation:
 $ roslaunch elir_gazebo elir_world.launch
 ```
 
+## Control Applications
+The simulation_line_control package is responsible for moving the robot on the line through keyboard user input, in order to move the robot on the line use :
+
+```
+$ roslaunch simulation_line_control simulation_line_control.launch
+```
+
 ## Joystick Application
   Find your joystick-driver and clone the repository into the src folder 
 
@@ -97,7 +104,7 @@ $ roslaunch elir_gazebo elir_world.launch
   2. Inside catkin_ws do a catkin_make
   
   3. Launch the world
-    
+
 
 ## Contributions
 * **Cleber Couto** - [clebercoutof](https://github.com/clebercoutof)

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: elir_description
+    relative_path: urdf/elir.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/elir_robot.srdf
+  CONFIG:
+    author_name: Mandruvah Team
+    author_email: mandruvah.team@gmail.com
+    generated_timestamp: 1542132740
